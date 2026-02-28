@@ -1,8 +1,10 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function HRSettingsPage() {
+// useSearchParams를 사용하는 내부 컴포넌트를 따로 분리
+function HRSettingsContent() {
     const searchParams = useSearchParams();
     let statusMessage = null;
     if (searchParams.get('calendar_connected') === 'true') {
@@ -12,7 +14,6 @@ export default function HRSettingsPage() {
     }
 
     const handleGoogleConnect = () => {
-        // 구글 OAuth 시작 엔드포인트로 이동
         window.location.href = '/api/auth/google';
     };
 
@@ -35,7 +36,6 @@ export default function HRSettingsPage() {
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div className="flex items-start gap-4">
                             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-2 shadow-sm border border-slate-100 shrink-0">
-                                {/* Google Calendar Icon Placeholder */}
                                 <svg viewBox="0 0 24 24" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke="#4285F4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     <path d="M16 2V6" stroke="#4285F4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -71,5 +71,14 @@ export default function HRSettingsPage() {
                 </div>
             </div>
         </div>
+    );
+}
+
+// Suspense로 감싸서 빌드 에러 방지
+export default function HRSettingsPage() {
+    return (
+        <Suspense fallback={<div className="p-6 text-slate-500">불러오는 중...</div>}>
+            <HRSettingsContent />
+        </Suspense>
     );
 }
