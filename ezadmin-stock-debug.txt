@@ -1,0 +1,743 @@
+=== 재고 페이지 분석 ===
+로그인...
+로그인 OK: https://ga16.ezadmin.co.kr/index.htm
+재고 페이지 접속...
+재고 페이지 URL: https://ga16.ezadmin.co.kr/template35.htm?template=I100
+HTML 저장 (크기: 297018)
+SELECT: [
+ {
+  "name": "shop_id",
+  "id": "shop_id",
+  "options": [
+   "0:전체"
+  ]
+ },
+ {
+  "name": "sub_domain_seq",
+  "id": "sub_domain_seq",
+  "options": [
+   "29:IDWS"
+  ]
+ },
+ {
+  "name": "str_supply_code",
+  "id": "str_supply_code",
+  "options": [
+   "0:전체",
+   "20036:IDWS공급처"
+  ]
+ },
+ {
+  "name": "tags",
+  "id": "tags",
+  "options": [
+   "ACC:ACC",
+   "AW2024:AW2024",
+   "BAG:BAG",
+   "BOTTOM:BOTTOM",
+   "COAT:COAT",
+   "GLOVES:GLOVES",
+   "HAT:HAT",
+   "INNER:INNER",
+   "JACKET:JACKET",
+   "KEYCHAIN:KEYCHAIN",
+   "LONGSLEEVE:LONGSLEEVE",
+   "M:M",
+   "OUTER:OUTER",
+   "PANTS:PANTS",
+   "SCARF:SCARF",
+   "SHIRT:SHIRT",
+   "SKIRT:SKIRT",
+   "TEE:TEE",
+   "U:U",
+   "W:W",
+   "ZIPHOODIE:ZIPHOODIE",
+   "백팩:백팩",
+   "숄더백:숄더백",
+   "크로스백:크로스백",
+   "토트백:토트백"
+  ]
+ },
+ {
+  "name": "product_tag_include_type",
+  "id": "",
+  "options": [
+   "1:전체포함",
+   "2:부분포함",
+   "3:선택만"
+  ]
+ },
+ {
+  "name": "query_type",
+  "id": "query_type",
+  "options": [
+   "name:상품명",
+   "options:옵션",
+   "shop_product_name:판매처별상품명",
+   "name_options:상품명+옵션",
+   "name_maker:상품명+제조사",
+   "name_brand:상품명+공급처상품명",
+   "product_id:상품코드",
+   "barcode:바코드",
+   "barcode_part:바코드부분",
+   "name_barcode:상품명+바코드부분",
+   "supply:공급처명",
+   "brand:공급처 상품명",
+   "supply_options:공급처 옵션",
+   "brand_options:공급처상품명+옵션",
+   "location:로케이션",
+   "stock_alarm1:재고경고상품",
+   "stock_alarm2:재고위험상품",
+   "origin:원산지",
+   "maker:제조사",
+   "product_memo:상품메모",
+   "link_id:연동코드",
+   "product_gift:상품 사은품",
+   "product_desc:상품설명1",
+   "product_desc2:상품설명2",
+   "product_md:md",
+   "manager1:관리자(정)",
+   "manager2:관리자(부)",
+   "trans_fee:택배비",
+   "extra_column1:추가항목1",
+   "extra_column2:추가항목2",
+   "extra_column3:추가항목3",
+   "extra_column4:추가항목4",
+   "extra_column5:추가항목5",
+   "extra_column6:옵션추가항목1",
+   "extra_column7:옵션추가항목2",
+   "extra_column8:옵션추가항목3",
+   "extra_column9:옵션추가항목4",
+   "extra_column10:옵션추가항목5",
+   "name_extra_column1:상품명+추가항목1",
+   "name_extra_column2:상품명+추가항목2",
+   "name_extra_column3:상품명+추가항목3",
+   "name_extra_column4:상품명+추가항목4",
+   "name_extra_column5:상품명+추가항목5",
+   "name_extra_column6:상품명+옵션추가항목1",
+   "name_extra_column7:상품명+옵션추가항목2",
+   "name_extra_column8:상품명+옵션추가항목3",
+   "name_extra_column9:상품명+옵션추가항목4",
+   "name_extra_column10:상품명+옵션추가항목5"
+  ]
+ },
+ {
+  "name": "stock_type",
+  "id": "stock_type",
+  "options": [
+   "0:정상재고",
+   "1:불량재고",
+   "17:옵션총재고-정상",
+   "18:옵션총재고-불량",
+   "2:입고대기",
+   "8:교환대기",
+   "9:잔대기",
+   "15:창고총재고",
+   "3:정상+창고재고",
+   "400:원더플레이스재고",
+   "7:가용재고",
+   "13:정상+창고 가용재고",
+   "4:원가",
+   "5:판매가",
+   "6:공급가",
+   "10:재고경고수량",
+   "11:재고위험수량",
+   "16:이지체인요청수량"
+  ]
+ },
+ {
+  "name": "notrans_status",
+  "id": "notrans_status",
+  "options": [
+   "0:접수+송장",
+   "1:접수",
+   "2:송장"
+  ]
+ },
+ {
+  "name": "stock_status",
+  "id": "stock_status",
+  "options": [
+   "0:전체",
+   "1:재고경고",
+   "2:재고위험",
+   "3:재고부족",
+   "4:재고경고+위험",
+   ":---------",
+   "5:창고경고",
+   "6:창고위험",
+   "7:창고경고+위험",
+   ":---------",
+   "8:재고+창고 경고",
+   "9:재고+창고 위험",
+   "10:재고+창고 경고+위험"
+  ]
+ },
+ {
+  "name": "is_set",
+  "id": "is_set",
+  "options": [
+   "0:전체",
+   "1:세트상품",
+   "2:세트제외"
+  ]
+ },
+ {
+  "name": "date_period_sel",
+  "id": "date_period_sel",
+  "options": [
+   "0:선택",
+   "1:오늘",
+   "2:어제",
+   "13:내일",
+   "3:이번주",
+   "4:지난주",
+   "5:최근한주",
+   "6:이번달",
+   "7:지난달",
+   "8:최근한달",
+   "9:최근세달",
+   "11:다음주",
+   "12:이후한달",
+   "10:이후세달"
+  ]
+ },
+ {
+  "name": "work_type",
+  "id": "work_type",
+  "options": [
+   "stockin:입고",
+   "stockout:출고",
+   "trans:배송",
+   "order:발주",
+   "no_order:발주없음",
+   "arrange:조정",
+   "arrange_all:조정전체",
+   "retin:반품입고",
+   "retout:반품출고",
+   "stockin+stockout+trans+arrange+movein+moveout+retin+retout:전체작업"
+  ]
+ },
+ {
+  "name": "inout_type",
+  "id": "inout_type",
+  "options": [
+   "0:정상",
+   "1:불량"
+  ]
+ },
+ {
+  "name": "product_date",
+  "id": "product_date",
+  "options": [
+   ":상품기간설정",
+   "reg_date:상품등록일",
+   "represent_reg_date:대표상품등록일",
+   "sale_stop_date:상품품절일",
+   "temp_soldout_date:일시품절일",
+   "stockin_enable_sale_date:입고시 품절해제일",
+   "stockin_enable_temp_sale_date:입고시 일시품절해제일",
+   "stockin_ready_date:입고예정일",
+   "sale_date:판매시작일",
+   "last_stockin_date:마지막입고일"
+  ]
+ },
+ {
+  "name": "date_period_sel2",
+  "id": "date_period_sel2",
+  "options": [
+   "0:선택",
+   "1:오늘",
+   "2:어제",
+   "13:내일",
+   "3:이번주",
+   "4:지난주",
+   "5:최근한주",
+   "6:이번달",
+   "7:지난달",
+   "8:최근한달",
+   "9:최근세달",
+   "11:다음주",
+   "12:이후한달",
+   "10:이후세달"
+  ]
+ },
+ {
+  "name": "products_sort",
+  "id": "products_sort",
+  "options": [
+   "1:상품명",
+   "111:상품명(내림차순)",
+   "11:상품코드",
+   "2:공급처 > 상품명",
+   "3:등록일 > 상품명",
+   "4:등록일 > 공급처 > 상품명",
+   "8:로케이션",
+   "9:로케이션 > 상품명",
+   "12:재고 > 상품명",
+   "13:바코드",
+   "14:품절일",
+   "15:제조사",
+   "16:공급처상품명",
+   "17:카테고리",
+   "18:연동코드"
+  ]
+ },
+ {
+  "name": "category",
+  "id": "",
+  "options": [
+   "0:전체",
+   "6:",
+   "5:ACC",
+   "4:BOTTOM",
+   "3:INNER",
+   "2:OUTER",
+   "-999:미지정"
+  ]
+ },
+ {
+  "name": "except_soldout",
+  "id": "except_soldout",
+  "options": [
+   "0:전체",
+   "1:품절제외",
+   "2:품절",
+   "8:전체품절",
+   "3:부분품절",
+   "4:소진시 품절",
+   "5:소진시 품절제외",
+   "6:입고시 품절해제",
+   "7:입고시 품절해제제외"
+  ]
+ },
+ {
+  "name": "temp_soldout",
+  "id": "temp_soldout",
+  "options": [
+   "0:전체",
+   "2:일시품절제외",
+   "1:일시품절",
+   "4:소진시 일시품절",
+   "5:입고시 일시품절해제"
+  ]
+ },
+ {
+  "name": "location",
+  "id": "",
+  "options": [
+   "0:전체",
+   "1:지정",
+   "2:미지정"
+  ]
+ },
+ {
+  "name": "select_field",
+  "id": "select_field",
+  "options": [
+   "I100:조회항목1",
+   "I100_1:조회항목2",
+   "I100_2:조회항목3",
+   "I100_3:조회항목4",
+   "I100_4:조회항목5",
+   "I100_5:조회항목6",
+   "I100_6:조회항목7",
+   "I100_7:조회항목8",
+   "I100_8:조회항목9",
+   "I100_9:\b3PL_조회",
+   "I100_10:조회항목11",
+   "I100_11:조회항목12",
+   "I100_12:조회항목13",
+   "I100_13:조회항목14",
+   "I100_14:조회항목15",
+   "I100_15:조회항목16",
+   "I100_16:조회항목17",
+   "I100_17:조회항목18",
+   "I100_18:조회항목19",
+   "I100_19:조회항목20",
+   "I100_20:조회항목21",
+   "I100_21:조회항목22",
+   "I100_22:조회항목23",
+   "I100_23:조회항목24",
+   "I100_24:조회항목25",
+   "I100_25:조회항목26",
+   "I100_26:조회항목27",
+   "I100_27:조회항목28",
+   "I100_28:조회항목29",
+   "I100_29:조회항목30"
+  ]
+ },
+ {
+  "name": "print_type",
+  "id": "print_type",
+  "options": [
+   "current:현재고(정상)",
+   "normal_in:정상입고",
+   "bad_in:불량입고",
+   "normal_out:정상출고",
+   "bad_out:불량출고",
+   "trans:배송",
+   "retin:반품입고",
+   "retout:반품출고",
+   "move_normal:정상이동",
+   "move_bad:불량이동"
+  ]
+ },
+ {
+  "name": "download_field",
+  "id": "download_field",
+  "options": [
+   "I100_file:다운로드항목1",
+   "I100_file_1:다운로드항목2",
+   "I100_file_2:다운로드항목3",
+   "I100_file_3:다운로드항목4",
+   "I100_file_4:다운로드항목5",
+   "I100_file_5:기타기타",
+   "I100_file_6:다운로드항목7",
+   "I100_file_7:다운로드항목8",
+   "I100_file_8:다운로드항목9",
+   "I100_file_9:SCM_이진영",
+   "I100_file_10:다운로드항목11",
+   "I100_file_11:다운로드항목12",
+   "I100_file_12:벤스골프(재고)",
+   "I100_file_13:다운로드항목14",
+   "I100_file_14:다운로드항목15",
+   "I100_file_15:다운로드항목16",
+   "I100_file_16:한달발주합계",
+   "I100_file_17:다운로드항목18",
+   "I100_file_18:다운로드항목19",
+   "I100_file_19:다운로드항목20",
+   "I100_file_20:다운로드항목21",
+   "I100_file_21:다운로드항목22",
+   "I100_file_22:다운로드항목23",
+   "I100_file_23:다운로드항목24",
+   "I100_file_24:다운로드항목25",
+   "I100_file_25:다운로드항목26",
+   "I100_file_26:다운로드항목27",
+   "I100_file_27:다운로드항목28",
+   "I100_file_28:IDWS 재고조회",
+   "I100_file_29:보일테일 집계장 재고조회"
+  ]
+ },
+ {
+  "name": "",
+  "id": "",
+  "options": [
+   "50:50",
+   "100:100",
+   "300:300",
+   "500:500"
+  ]
+ }
+]
+BUTTONS: [
+ {
+  "text": "닫기",
+  "onclick": null
+ },
+ {
+  "text": "기본정보관리",
+  "onclick": null
+ },
+ {
+  "text": "상품관리",
+  "onclick": null
+ },
+ {
+  "text": "주문배송관리",
+  "onclick": null
+ },
+ {
+  "text": "C/S 관리",
+  "onclick": null
+ },
+ {
+  "text": "재고관리",
+  "onclick": null
+ },
+ {
+  "text": "정산통계",
+  "onclick": null
+ },
+ {
+  "text": "고객센터",
+  "onclick": null
+ },
+ {
+  "text": "CS창",
+  "onclick": "javascript:popup_new_cs(0);"
+ },
+ {
+  "text": "1688",
+  "onclick": "javascript:popup_new_1688();"
+ },
+ {
+  "text": "새 탭",
+  "onclick": "open_ntab();"
+ },
+ {
+  "text": "",
+  "onclick": "excel_modal_popup('exceldownload')"
+ },
+ {
+  "text": "아이돈워너셀님 (reto123)",
+  "onclick": null
+ },
+ {
+  "text": "파랑",
+  "onclick": null
+ },
+ {
+  "text": "초록",
+  "onclick": null
+ },
+ {
+  "text": "남색",
+  "onclick": null
+ },
+ {
+  "text": "오렌지",
+  "onclick": null
+ },
+ {
+  "text": "핑크",
+  "onclick": null
+ },
+ {
+  "text": "보라",
+  "onclick": null
+ },
+ {
+  "text": "전체메뉴",
+  "onclick": null
+ },
+ {
+  "text": "",
+  "onclick": "javascript:refresh_excel_download();"
+ },
+ {
+  "text": "닫기",
+  "onclick": null
+ },
+ {
+  "text": "메뉴 닫기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "셋팅",
+  "onclick": null
+ },
+ {
+  "text": "",
+  "onclick": null
+ },
+ {
+  "text": "즐겨찾기",
+  "onclick": null
+ },
+ {
+  "text": "도움말",
+  "onclick": null
+ },
+ {
+  "text": "영상메뉴얼",
+  "onclick": null
+ },
+ {
+  "text": "닫기",
+  "onclick": null
+ },
+ {
+  "text": "이전",
+  "onclick": null
+ },
+ {
+  "text": "다음",
+  "onclick": null
+ },
+ {
+  "text": "상품태그",
+  "onclick": null
+ },
+ {
+  "text": "",
+  "onclick": null
+ },
+ {
+  "text": "",
+  "onclick": null
+ }
+]
+TABLES: [
+ {
+  "idx": 0,
+  "rows": 11,
+  "headers": []
+ },
+ {
+  "idx": 1,
+  "rows": 1,
+  "headers": []
+ },
+ {
+  "idx": 2,
+  "rows": 2,
+  "headers": []
+ },
+ {
+  "idx": 3,
+  "rows": 1,
+  "headers": []
+ },
+ {
+  "idx": 4,
+  "rows": 1,
+  "headers": []
+ },
+ {
+  "idx": 5,
+  "rows": 1,
+  "headers": []
+ },
+ {
+  "idx": 6,
+  "rows": 1,
+  "headers": []
+ },
+ {
+  "idx": 7,
+  "rows": 4,
+  "headers": [
+   "",
+   "정상",
+   "불량",
+   "원더플레이스",
+   "정상+창고"
+  ]
+ },
+ {
+  "idx": 8,
+  "rows": 3,
+  "headers": [
+   "",
+   "정상",
+   "불량",
+   "원더플레이스",
+   "정상+창고"
+  ]
+ },
+ {
+  "idx": 9,
+  "rows": 1,
+  "headers": [
+   "",
+   "",
+   "상품코드",
+   "공급처상품명",
+   "상품명",
+   "옵션",
+   "가용재고",
+   "정상재고",
+   "송장",
+   "발주",
+   "접수",
+   "배송",
+   "작업",
+   "바코드",
+   "원가",
+   "원가합",
+   "원가합(정상재고+불량재고)",
+   "원가합(창고재고)",
+   "3일발주합계",
+   "1주발주합계",
+   "2주발주합계",
+   "3주발주합계",
+   "한달발주합계",
+   "6주발주합계",
+   "12주발주합계",
+   "1일발주합계",
+   "2일발주합계",
+   "4일발주합계",
+   "5일발주합계",
+   "6일발주합계"
+  ]
+ },
+ {
+  "idx": 10,
+  "rows": 1,
+  "headers": []
+ },
+ {
+  "idx": 11,
+  "rows": 2,
+  "headers": []
+ },
+ {
+  "idx": 12,
+  "rows": 1,
+  "headers": []
+ }
+]
+PAGINATION: not found
+BODY: 3개월이 지난 주문 관련 정보는 | 백업됩니다. | 발주일과 배송일이 다른 경우, 조회 시기에 따라 데이터에 차이가 | 날 수 있습니다. | 이지어드민 사용 종료 30일 이후 기존 데이터는 | 삭제됩니다. | 해당 기간 중 대표자 직인이 포함된 자료열람신청서를 등기 발송 | 하면 필요한 자료를 열람할 수 있습니다. | 백업 시간에는 서비스 이용이 일시 | 중단됩니다. | 이지어드민의 서버는 매일 새벽 4~5시에 자동 백업이 진행되며 | 이 시간 중에는 서비스 이용이 중단됩니다. | 택배계약코드 변경 후에는 반영 여부를 반드시 | 확인해야 합니다. | 출력된 송장이 해당 택배사의 전산에 변경된 코드로 정상 반영 | 되었는지 재확인해야 합니다. | 이지어드민에서는 배송 이전 단계까지의 정보를 | 제공합니다. | 배송 후 물품 분실이나 배송완료의 경우는 해당 택배사를 통해 | 배송 정보를 확인할 수 있습니다. | 업무 외 시간 사용료 입금도 정상적으로 | 처리됩니다. | 업무 외 시간 및 공휴일에 가상계좌로 사용료를 입금하면 | 이지어드민 사용이 자동 연장됩니다. | 기본정보관리 | 상품관리 | 주문배송관리 | C/S 관리 | 재고관리 | 정산통계 | 고객센터 | CS창 | 1688 | 새 탭 | 3 | 아이돈워너셀님 (reto123) | 로그아웃 | 전체메뉴 | 작업관리자 | 다운로드 관리자 |  | 현재 화면에서는 오늘 작업 내역만 조회됩니다. |  | 과거 다운로드 이력은 [다운로드관리자]에서 확인할 수 있습니다. |  | 상단 새로고침을 누르면 다운로드 현황이 업데이트 됩니다. |  | 닫기 | 메뉴 닫기 
+완료!

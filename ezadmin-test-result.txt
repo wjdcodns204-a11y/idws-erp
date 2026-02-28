@@ -1,0 +1,67 @@
+=== v5 ===
+브라우저 OK
+접속중...
+로드완료
+입력완료
+RSA 암호화 완료
+제출 성공, URL: https://www.ezadmin.co.kr/login_process40.php
+최종 URL: https://ga16.ezadmin.co.kr/index.htm
+타이틀: 이지어드민V3.5+
+메뉴 수: 50
+  계정정보 관리 -> https://ga16.ezadmin.co.kr/template35.htm?template=BA00
+  공지사항1 -> https://ga16.ezadmin.co.kr/template35.htm?template=H100
+  쿠폰관리 -> https://ga16.ezadmin.co.kr/template35.htm?template=BA10
+  로그아웃 -> https://ga16.ezadmin.co.kr/logout.php
+  로그아웃 -> https://ga16.ezadmin.co.kr/logout.php
+  다운로드관리자 -> https://ga16.ezadmin.co.kr/template40.htm?template=BL30
+  모듈다운로드 -> https://ga16.ezadmin.co.kr/template35.htm?template=HB00
+  FAQ -> https://ga16.ezadmin.co.kr/template35.htm?template=H900
+  이지리플 -> https://stock.ezapps.co.kr/login_redirect.php?key=2EuNKoOdI133qb1IJtunU8AsJiUq2cwp01INgSkBDTpBV7iHNSg4F2iWel7Tu52h&method=openssl
+  필수설정 -> https://ga16.ezadmin.co.kr/template35.htm?template=HD00
+  영상가이드 -> https://www.youtube.com/playlist?list=PL2QlHA46MclTVYw7WG3Iqs3eaxxa0lVYK
+  다운로드 관리자 -> https://ga16.ezadmin.co.kr/template40.htm?template=BL30
+  이지리플 -> https://www.ezadmin.co.kr/sub_01_08.html
+  알림톡 -> https://www.ezadmin.co.kr/sub_01_13.html
+  이지데스크 -> https://www.ezadmin.co.kr/sub_01_12.html
+  이지콜센터 -> https://www.ezadmin.co.kr/sub_01_05.html
+  이지스마티 -> https://www.ezadmin.co.kr/sub_01_07.html
+  이지피킹 -> https://www.ezadmin.co.kr/sub_01_116.html
+  리얼패킹 -> https://www.ezadmin.co.kr/sub_09_12.html
+  유통기한관리 -> https://www.ezadmin.co.kr/sub_01_90.html
+  퀵파인더 -> https://www.ezadmin.co.kr/sub_09_25.html
+  대량송장출력 -> https://www.ezadmin.co.kr/sub_01_65.html
+  이지체인 -> https://www.ezadmin.co.kr/sub_01_03.html
+  바코드이미지 -> https://www.ezadmin.co.kr/sub_01_68.html
+  이지API -> https://ga16.ezadmin.co.kr/index.htm#
+  추가창고 -> https://ga16.ezadmin.co.kr/index.htm#
+  DB서버 -> https://ga16.ezadmin.co.kr/index.htm#
+  부가서비스 한눈에보기 -> https://www.ezadmin.co.kr/sub_01_94.html
+  이지WMS 매뉴얼 영상 -> https://www.youtube.com/playlist?list=PL2QlHA46MclQT5RZDb9B4CoTlCsyHGbhV
+  개발단가표 -> https://ga16.ezadmin.co.kr/price_policy.html
+  전체상품목록 -> https://ga16.ezadmin.co.kr/index.htm#
+  0 (02/22 ~) -> https://ga16.ezadmin.co.kr/template35.htm?winmode=none&template=DL03&chk_reg=0&order_by=0&act=1&start_date=2026-02-22
+  62 -> https://ga16.ezadmin.co.kr/template35.htm?winmode=none&template=E807&act=action&view=1
+  0 (02/10 ~) -> https://ga16.ezadmin.co.kr/template35.htm?winmode=none&template=EN00&search=1&start_date=2026-02-10
+  0 (12/25 ~ 02/09) -> https://ga16.ezadmin.co.kr/template35.htm?winmode=none&template=EN00&search=1&start_date=2025-12-25&end_date=2026-02-09
+  더보기 -> https://ga16.ezadmin.co.kr/template35.htm?template=H100
+  더보기 -> https://ga16.ezadmin.co.kr/template35.htm?template=H400
+  더보기 -> https://ga16.ezadmin.co.kr/template40.htm?template=H410
+  전체공지
+				도매꾹 자동발주 정상화 안내 -> https://ga16.ezadmin.co.kr/template35.htm?template=H101&no=2626
+  전체공지
+				무신사 자동취소 정상화 공지 -> https://ga16.ezadmin.co.kr/template35.htm?template=H101&no=2613
+  [이지어드민] Vip 사은품 증정 -> https://ga16.ezadmin.co.kr/template35.htm?template=H401&no=874
+  [이지어드민] 비밀번호 찾기 / 로그인 제한 해제 -> https://ga16.ezadmin.co.kr/template35.htm?template=H401&no=873
+  [이지어드민] 쉬운 판매처등록 -> https://ga16.ezadmin.co.kr/template35.htm?template=H401&no=872
+  [이지어드민] 재고수불부 -> https://ga16.ezadmin.co.kr/template35.htm?template=H401&no=871
+  【개인정보처리위탁(제공) 계약서】 안내 -> https://ga16.ezadmin.co.kr/template35.htm?template=H411&no=25
+  【개인정보 수집 및 이용】 동의에 대한 약관 안내 -> https://ga16.ezadmin.co.kr/template35.htm?template=H411&no=24
+  20 -> https://ga16.ezadmin.co.kr/template35.htm?template=DS00&search=1&start_date=2026-02-16&start_hour=00&end_date=2026-02-23&end_hour=23&&date_type=collect_date&date_period_sel=0&status_sel=2&order_cs_sel=10&sub_domain=29
+  357 -> https://ga16.ezadmin.co.kr/template35.htm?template=DS00&search=1&start_date=2026-02-23&start_hour=00&end_date=2026-02-23&end_hour=23&&date_type=trans_date_pos&date_period_sel=0&status_sel=4&sub_domain=29
+  0
+				견적대기 -> https://ga16.ezadmin.co.kr/template35.htm?template=IS00&search=1&start_date=2025-11-23&end_date=2026-02-23&date_type=crdate&stat=0
+  0
+				고객확인 -> https://ga16.ezadmin.co.kr/template35.htm?template=IS00&search=1&start_date=2025-11-23&end_date=2026-02-23&date_type=crdate&stat=1
+본문(500): 3개월이 지난 주문 관련 정보는 | 백업됩니다. | 발주일과 배송일이 다른 경우, 조회 시기에 따라 데이터에 차이가 | 날 수 있습니다. | 이지어드민 사용 종료 30일 이후 기존 데이터는 | 삭제됩니다. | 해당 기간 중 대표자 직인이 포함된 자료열람신청서를 등기 발송 | 하면 필요한 자료를 열람할 수 있습니다. | 백업 시간에는 서비스 이용이 일시 | 중단됩니다. | 이지어드민의 서버는 매일 새벽 4~5시에 자동 백업이 진행되며 | 이 시간 중에는 서비스 이용이 중단됩니다. | 택배계약코드 변경 후에는 반영 여부를 반드시 | 확인해야 합니다. | 출력된 송장이 해당 택배사의 전산에 변경된 코드로 정상 반영 | 되었는지 재확인해야 합니다. | 이지어드민에서는 배송 이전 단계까지의 정보를 | 제공합니다. | 배송 후 물품 분실이나 배송완료의 경우는 해당 택배사를 통해 | 배송 정보를 확인할 수 있습니다. | 업무 외 시간 사용료 입금도 정상적으로 | 처리됩니다. | 업무 외 시간 및
+HTML 저장됨
+완료!

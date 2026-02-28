@@ -1,0 +1,1967 @@
+﻿    <!--headerArea-->
+	<!DOCTYPE html>
+<html lang="ko">
+<head>
+            <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>이지어드민- 쇼핑몰 통합관리 솔루션</title>
+    <meta name='application-name' content='이지어드민- 쇼핑몰 통합관리 솔루션'/>
+    <meta name='msapplication-tooltip' content='이지어드민- 쇼핑몰 통합관리 솔루션' />
+
+    <meta name="description" content="주문 수집부터 배송까지 원스톱으로! 성공한 쇼핑몰들의 성공 비결을 알고 싶다면? 이지어드민">
+	<meta name="keywords" content="이지어드민,핌즈,주문자동발주,주문통합관리,쇼핑몰 통합관리 솔루션, 상품관리, 주문관리, 재고관리, 고객관리가 모두 가능한 솔루션">
+	<meta name="robot" content="index,follow"/>
+	<meta name="Yeti" content="All"/>
+	<meta name="Yeti" content="index,follow"/>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="이지어드민- 쇼핑몰 통합관리 솔루션">
+    <meta property="og:description" content="주문 수집부터 배송까지 원스톱으로! 성공한 쇼핑몰들의 성공 비결을 알고 싶다면? 이지어드민">
+    <meta property="og:image" content="https://www.ezadmin.co.kr/images/2022/ezadmin_info.png">
+    <meta property="og:url" content="https://www.ezadmin.co.kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="application/ld+json">
+	{
+	 "@context": "http://schema.org",
+	 "@type": "Organization",
+	 "name": "이지어드민",
+	 "url": "https://www.ezadmin.co.kr",
+	 "sameAs": [
+		"https://blog.naver.com/ezadm",
+	    "https://www.youtube.com/channel/UC8Gvzdd0GWc9Btwax6kxN5A",
+		"https://www.facebook.com/ezadmin",
+		"https://www.instagram.com/ezadmin"
+	 ]
+	}
+	</script>
+	<link rel="canonical" href="https://ezadmin.co.kr/" />
+
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/ezadmin.css?ver=20260223200231">
+    <link rel="stylesheet" href="../css/header.css?ver=20260223200231">
+    <link rel="stylesheet" href="../css/banner.css?ver=20260223200231">
+	<link rel="stylesheet" href="../css/reference.css"> 
+    <link rel="stylesheet" href="../css/_pc.css">
+    <link rel="stylesheet" href="../css/mobile.css?ver=20260223200231">
+	<link rel="icon" href="images/ezadmin_logo.png">
+	<link rel="canonical" href="https://www.ezadmin.co.kr/index.html">
+
+	<link rel="stylesheet" href="/fontawesome6/css/fontawesome.css" />
+	<link rel="stylesheet" href="/fontawesome6/css/regular.css" />
+	<link rel="stylesheet" href="/fontawesome6/css/light.css" />
+	<link rel="stylesheet" href="/fontawesome6/css/solid.css" />
+	<link rel="stylesheet" href="/fontawesome6/css/thin.css" />
+
+    <script src="../js/jquery-1.12.3.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/fingerprint2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <script src="../js/jquery.fullPage.min.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+        
+	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+	<!-- google ad -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2056244927639930" crossorigin="anonymous"></script>
+
+	<!-- pushEngage 2020.10.26 
+	<script> window._peq = window._peq || []; window._peq.push(["init"]); </script>
+	<script src="https://clientcdn.pushengage.com/core/58c1d219-c44c-4ea6-8655-8dcf3c09.js" async></script>
+	-->
+
+	<script type="text/javascript">
+	$(function () {
+		var murmur = "";
+		if (window.requestIdleCallback) {
+			requestIdleCallback(function () {
+				Fingerprint2.get(function (components) {
+					//console.log(components) // an array of components: {key: ..., value: ...}
+				  
+					var values = components.map(function (component) { return component.value })
+					murmur = Fingerprint2.x64hash128(values.join(''), 31)
+					$("#identifier").val(murmur);
+				})
+			})
+		} else {
+			setTimeout(function () {
+				Fingerprint2.get(function (components) {
+					//console.log(components) // an array of components: {key: ..., value: ...}
+					
+					var values = components.map(function (component) { return component.value })
+					murmur = Fingerprint2.x64hash128(values.join(''), 31)
+					
+					$("#identifier").val(murmur);
+			
+				})  
+			}, 500)
+		}
+		banner_setting();		
+
+		if( $(window).width() < 1025 )
+			$('.popup_04').hide();
+
+//document.addEventListener('touchstart', handler, {passive: true});
+
+	});
+/*
+		(function(p,u,s,h){
+			p._pcq=p._pcq||[];
+			p._pcq.push(['_currentTime',Date.now()]);
+			s=u.createElement('script');
+			s.type='text/javascript';
+			s.async=true;
+			s.src='https://cdn.pushcrew.com/js/95b858f08c4514f3cad61486e72d2025.js';
+			h=u.getElementsByTagName('script')[0];
+			h.parentNode.insertBefore(s,h);
+		})(window,document);
+*/
+
+
+	
+		function banner_setting()	
+		{
+			var identifier = $("#ez").val();
+			if(identifier) {
+				//console.log("on");
+//				if( $(window).width() > 950 )
+//					$("#login-popup").css("display", "block");
+
+				//21.02.24 bxslider안쓰는 페이지에서 오류나서 content_sub01.html 페이지로 옮김
+				//visualSlider();
+			} else {
+				//console.log("off");
+				//21.02.24 bxslider안쓰는 페이지에서 오류나서 content_sub01.html 페이지로 옮김
+				//visualSlider();
+			}
+		}
+/*
+		function visualSlider(){
+			var sliderOptions = {
+				mode:'fade',
+				auto: true,
+				//pagerCustom: '#bx-pager',
+				nextSelector: '#slider-next',
+				prevSelector: '#slider-prev',
+				nextText: "<img src='/images/banner_arrow_r.png?ver=202102231340'>",
+				prevText: "<img src='/images/banner_arrow_l.png?ver=202102231340'>",
+				controls:true,
+				autoControls: true,
+				autoControlsCombine:true,
+				pause: 5000,
+				speed: 1200,
+				stopAutoOnClick:true,
+				useCSS:false,
+				touchEnabled:false,
+				swipeThreshold: 40,
+				onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
+					$('.active-slide').removeClass('active-slide');
+					$('#js-slider > li').eq(currentSlideHtmlObject).addClass('active-slide');
+				},
+				onSliderLoad: function () {
+					$(".slider_img").css("visibility", "visible").animate({opacity:1});
+					setTimeout(function(){
+						$('#js-slider > li').eq(0).addClass('active-slide')
+					}, 1000);
+				}
+			}
+			var bxSlider =  $('#js-slider').bxSlider(sliderOptions);
+			$(window).on('resize load', function(e){
+			  width = $(this).width();
+			  if (width <= 1199) {
+				 sliderOptions.touchEnabled = false;
+				 sliderOptions.pager= true;
+				 sliderOptions.preloadImages = 'all';
+			  } else {
+				 sliderOptions.touchEnabled = false;
+				 sliderOptions.pager= true;
+			  }
+			  //bxSlider.reloadSlider(); 
+			});
+
+		}
+*/
+	</script>
+
+
+
+        <script src="js/slick.min.js"></script>
+    <script src="js/header.js?dummy=20260223200231"></script>
+    <script src="js/main.js?dummy=20260223200231"></script>
+    <script>
+        $(document).ready(function(){
+
+			//모바일 메뉴에서 로그인 클릭시 팝업
+			$('.mlogin').click(function(){
+				//$('#login-popup').css('display','block');
+				//alert("12월 16일 오후 10시 ~ 12월 17일 새벽2시 서버점검 중입니다.");
+			});
+
+			//고객사 페이지 슬라이드
+			if( $('.client_slick_wrap').length > 0 )
+			{
+				$('.client_slick_wrap').slick({
+					infinite: true,
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					centerMode: true,
+					focusOnSelect: true,
+					autoplay: true,
+					autoplaySpeed: 3000,
+					centerMode:true,
+					variableWidth: true
+				});
+			}
+
+			//WMS 고객사 페이지 슬라이드
+			if( $('.wms_client_slick_wrap').length > 0 )
+			{
+				$('.wms_client_slick_wrap').slick({
+					infinite: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					focusOnSelect: true,
+					autoplay: true,
+					autoplaySpeed: 3000,
+					centerMode:true,
+//					centerPadding:'60px',
+//					draggable:false,
+					variableWidth: true
+				});
+			}
+
+			change951(0);			
+
+			$(window).resize(function(){
+				change951(1);			
+			});
+
+
+			// 우측 하단 바로가기 버튼 툴팁
+			if( $('[data-toggle="tooltip"]').length > 0 )
+				$('[data-toggle="tooltip"]').tooltip();
+
+			//화면 크기에 따라서 효과 변경
+			//매개변수 0 => 로드시, 1 => 화면 가로 resize시
+			function change951( resize ){
+				if( $(window).width() > 951 )
+				{
+					$(document).on('click','#main-fourth-section .service',function(){
+						$(this).parent().addClass('active').siblings().removeClass('active').addClass('off');
+						$(this).parent().siblings().find('.business_caption').hide();
+						var target = $(this).find('.business_caption');
+						setTimeout(function() {
+							//console.log('실행');
+						 target.stop().slideDown(300);
+						}, 300);
+					});
+
+					if( $('.footer').hasClass('m_footer') )
+						$(this).removeClass('m_footer');
+
+					$('.btn_request').attr('href','sub_03_01.html');
+
+					
+					//슬라이드배너 중 비플로우는 950px 분기부터 문구 변경
+					$('.main_visual .slidebg09').find('h2').text('NO.1 패션 통합 채널 솔루션 B-FLOW');
+					$('.main_visual .slidebg09').find('p').html('<b>비플로우x이지어드민</b><br>이지어드민을 통해 가입하면<br>서비스플랜 50%할인');
+
+					if( resize )
+						$('.service-list.slick-initialized').slick('unslick').removeClass('slick-initialized');
+				}
+				else
+				{
+					$('.business_caption').show();
+					$('#main-fourth-section .service').off();
+					$('#main-fourth-section .service').css('width','85%');
+					$('.service-list').not('.slick-initialized').slick({
+						slidesToShow: 1,
+						slidesToScroll: 1
+					});
+
+					if( !$('.footer').hasClass('m_footer') )
+						$('.footer').addClass('m_footer');
+
+					//모바일 버전의 경우 '무료 체험' 링크도 모바일로 연결되도록 변경
+					$('.btn_request').attr('href','/ezadmin_mobile/sub_03_01.html');
+	
+					//슬라이드배너 중 비플로우는 950px 분기부터 문구 변경
+					$('.main_visual .slidebg09').find('h2').text('비플로우 x 이지어드민');
+					$('.main_visual .slidebg09').find('p').html('이지어드민을 통해 가입하면<br><b>서비스 플랜 50% 할인</b>');
+
+					if( resize )
+						$('.main-third .slick-slide').css('width',$(window).width());
+				}
+			}
+
+			function setCookie( name, value, expiredays ) {
+				var todayDate = new Date();
+				todayDate.setDate( todayDate.getDate() + expiredays ); 
+				document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+			}
+		});
+
+    $(function () {
+        var murmur = "";
+        if (window.requestIdleCallback) {
+            requestIdleCallback(function () {
+                Fingerprint2.get(function (components) {
+                    //console.log(components) // an array of components: {key: ..., value: ...}
+                  
+                    var values = components.map(function (component) { return component.value })
+                    murmur = Fingerprint2.x64hash128(values.join(''), 31)
+                    $("#identifier").val(murmur);
+                    $(".identifier").val(murmur);
+                })
+            })
+        } else {
+            setTimeout(function () {
+                Fingerprint2.get(function (components) {
+                    //console.log(components) // an array of components: {key: ..., value: ...}
+                    
+                    var values = components.map(function (component) { return component.value })
+                    murmur = Fingerprint2.x64hash128(values.join(''), 31)
+                    
+                    $("#identifier").val(murmur);
+                    $(".identifier").val(murmur);
+            
+                })  
+            }, 500)
+        }
+    });
+    </script>
+
+    <style>
+.sub-left-box {
+    position: absolute;
+    top: 135px;
+    left: 130px;
+    width: 135px;
+    height: 538px;
+    border-right: 1px solid #e5e5e5;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+	z-index:1000;
+}
+
+#headerWrap.styleB .sub-left-box {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#headerWrap:not(.styleB) .sub-left-box {
+    transition: none;
+}
+
+</style>
+</head>
+<body class="ezadmin-main-body">
+    <header class="ezadmin-header">
+
+	<div id="headerWrap" class="pc-menu-list">
+		<div id="header">
+			<h1><a href="/index.html"></a></h1>
+
+            
+			<div id="gnb">
+				<ul>
+					<li class="subDeth"><a href="sub_01_02.html" onclick="return false;">메인서비스</a>
+						<div class="sub_class"></div>
+						<ul>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_02.html" onclick="link_click_stat('이지어드민_랜딩', 'header')" style="color:#2c77f4; font-weight:bold;">이지어드민</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_118.html" onclick="link_click_stat('이지엔터프라이즈-케어_랜딩', 'header')">엔터프라이즈</a><span>new</span></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_117.html" onclick="link_click_stat('이지WMS_랜딩', 'header')">이지WMS</a><span class="hit_tag"></span></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_79.html" onclick="link_click_stat('이지WMS(백화정)_랜딩', 'header')">이지WMS(백화점)</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_03.html" onclick="link_click_stat('이지체인_랜딩', 'header')">이지체인</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_09_03.html" onclick="link_click_stat('글로박스_랜딩', 'header')">글로박스</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_74.html" onclick="link_click_stat('이지SOHO_랜딩', 'header')">이지SOHO</a></li>
+							<li><a href="https://www.ezadmin.co.kr/api/index.html" onclick="link_click_stat('이지어드민API_랜딩', 'header')">이지어드민API</a></li>
+							<li><a id="ezadmin_video">소개동영상</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_121.html">고닷</a><span class="hot_tag"></span></li>
+												</ul>
+					</li>
+					<li class="subDeth"><a href="sub_01_94.html" onclick="return false;">부가서비스</a>
+						<div class="sub_class"></div>
+						<ul>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_94.html" onclick="link_click_stat('맞춤 추천_랜딩', 'header')" style="color:#2c77f4; font-weight:bold;">맞춤 추천</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_116.html" onclick="link_click_stat('이지피킹_랜딩', 'header')">이지피킹</a><span>new</span></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_68.html" onclick="link_click_stat('이미지바코드라벨_랜딩', 'header')">이미지바코드라벨</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_67.html" onclick="link_click_stat('지역그룹설정_랜딩', 'header')">지역그룹설정</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_65.html" onclick="link_click_stat('대량송장출력_랜딩', 'header')">대량송장출력</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_08.html" onclick="link_click_stat('이지리플_랜딩', 'header')">이지리플</a><span class="hit_tag"></span></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_12.html" onclick="link_click_stat('이지데스크_랜딩', 'header')">이지데스크</a><span class="hit_tag"></span></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_88.html" onclick="link_click_stat('이지ARS_랜딩', 'header')">이지ARS</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_134.html" onclick="link_click_stat('이지싱크플러스_랜딩', 'header')">이지싱크플러스</a><span class="hit_tag"></span></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_13.html" onclick="link_click_stat('알림톡_랜딩', 'header')">알림톡</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_93.html" onclick="link_click_stat('실시간주문알림_랜딩', 'header')">실시간주문알림</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_61.html" onclick="link_click_stat('이지반품톡_랜딩', 'header')">이지반품톡</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_05.html" onclick="link_click_stat('이지콜센터_랜딩', 'header')">이지콜센터</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_07.html" onclick="link_click_stat('이지스마티_랜딩', 'header')">이지스마티</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_84.html" onclick="link_click_stat('이지로그인_랜딩', 'header')">이지로그인</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_90.html" onclick="link_click_stat('유통기한/LOT_랜딩', 'header')">유통기한/LOT</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_127.html" onclick="link_click_stat('이지로케이션_랜딩', 'header')">이지로케이션</a><span>new</span></li>
+						</ul>
+					</li>
+					<li class="subDeth"><a href="sub_09.html?type=dstr" onclick="return false;">제휴서비스</a>
+						<div class="sub_class"></div>
+											<ul>
+							<li><a href="https://www.ezadmin.co.kr/sub_09.html?type=dstr">물류</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_12.html">물류로봇</a><span>new</span></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_09.html?type=prsn">상품연동</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_09.html?type=csrv">고객관리</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_09.html?type=mrkt">마케팅</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_09_28.html" onclick="link_click_stat('SAP_랜딩', 'header')">SAP</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_129.html" onclick="link_click_stat('1688_랜딩', 'header')">1688</a></li>
+						</ul>
+										</li>
+					<li class="subDeth"><a href="sub_02_01.html" onclick="return false;">클라이언트</a>
+						<div class="sub_class"></div>
+						<ul>
+							<li><a href="https://www.ezadmin.co.kr/sub_02_01.html">고객사소개</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_02_02.html">업종별 고객사</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_02_03.html">연동 쇼핑몰</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_08_01.html">사용후기</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_04_01.html">교육신청</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_01_78.html">다이어리 후기</a></li>
+						</ul>
+					</li>
+					<li class="subDeth"><a href="sub_06_05.html" onclick="return false;">고객센터</a>
+						<div class="sub_class"></div>
+						<ul>
+							<li><a href="https://www.ezadmin.co.kr/sub_06_05.html">공고</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_06_01.html?type=notice">공지사항</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_05_01.html">고객문의</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_07_01.html">회사소개</a></li>
+						</ul>
+					</li>
+					<li class="subDeth"><a href="sub_11_01.html" onclick="return false;"><b>ON AIR</b><span class="on_air"></span></a>
+						<div class="sub_class"></div>
+						<ul>
+							<li><a href="https://www.ezadmin.co.kr/sub_11_01.html">영상</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_11_02.html">이벤트</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_11_03.html">보도자료</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_11_04.html">SNS</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_11_05.html">성장스토리</a></li>
+							<li><a href="https://www.ezadmin.co.kr/sub_11_06.html"><b>제주도의 푸른 밤</b><span class="on_air"></span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<span id="gnbOverBar"></span>
+			<div class="utilWrap">
+				<ul class="topMenu">
+					<li class="cs_phone" onclick="popup_login('login_sms.html', 650, 840);"><a><span class="img_cs_phone"></span><i>가입문의</i> <b>1668-2343</b></a></li>
+					<li class="login"><a><span class="img_login"></span>로그인</a></li>
+					<li class="request"><a href="/sub_03_01.html" class="img_request">무료사용신청</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<h1 class="ezadmin-logo">
+		<a href="/index.html"><span>이지어드민</span></a>
+	</h1>
+	<button type="button" class="m-menu-btn">
+		<div class="hamburger-menu"></div>
+		<span class="ele-invisible">메뉴열기</span>
+	</button>
+	<a class="mobile_request" href="/sub_03_01.html">무료사용신청</a>
+	<nav class="ezadmin-nav" style="overflow:auto;">
+		<ul class="m-menu-list">
+			<li class="m-munu-item">
+				<a class="menu-detail-link" href="/sub_01_02.html">이지어드민</a>
+			</li>
+			<li class="m-munu-item">
+				<a class="menu-detail-link" href="/sub_01_118.html">이지엔터프라이즈</a>
+			</li>
+			<li class="m-munu-item">
+				<a class="menu-detail-link" href="/sub_01_117.html">이지WMS</a>
+			</li>
+			<li class="m-munu-item">
+				<a class="menu-detail-link" href="/sub_01_03.html">이지체인</a>
+			</li>
+			<li class="m-munu-item">
+				<a class="menu-detail-link" href="/sub_09_03.html">글로박스</a>
+			</li>
+			<li class="m-munu-item">
+				<a class="menu-detail-link" href="/sub_01_121.html">고닷</a>
+			</li>
+            <li class="m-munu-item">
+                <a href="javascript:" class="menu-detail-link">부가서비스<i class="menu-arrow-bg"></i></a>
+                <ul class="detail-menu-list" style="overflow:auto; /*height:40vh;*/">
+					<li><a href="/sub_01_116.html">이지피킹</a></li>
+					<li><a href="/sub_01_08.html">이지리플</a></li>
+					<li><a href="/sub_01_12.html">이지데스크</a></li>
+					<li><a href="/sub_01_05.html">이지콜센터</a></li>
+					<li><a href="/sub_01_07.html">이지스마티</a></li>
+                </ul>
+            </li>
+			            <li class="m-munu-item">
+                <a href="javascript:" class="menu-detail-link">제휴서비스<i class="menu-arrow-bg"></i></a>
+                <ul class="detail-menu-list" style="overflow:auto; height:25vh;">
+					<li><a href="https://www.ezadmin.co.kr/sub_09.html?type=dstr">물류</a></li>
+                    <li><a href="https://www.ezadmin.co.kr/sub_12.html">물류로봇</a></li>
+					<li><a href="https://www.ezadmin.co.kr/sub_09.html?type=prsn">상품연동</a></li>
+					<li><a href="https://www.ezadmin.co.kr/sub_09.html?type=csrv">고객관리</a></li>
+					<li><a href="https://www.ezadmin.co.kr/sub_09.html?type=mrkt">마케팅</a></li>
+					<li><a href="https://www.ezadmin.co.kr/sub_09_28.html">SAP</a></li>
+					<li><a href="https://www.ezadmin.co.kr/sub_01_129.html">1688</a></li>
+                </ul>
+            </li>
+						<li class="m-munu-item">
+                <a href="javascript:" class="menu-detail-link">클라이언트<i class="menu-arrow-bg"></i></a>
+                <ul class="detail-menu-list" style="overflow:auto; height:20vh;">
+                    <li><a href="/sub_02_01.html">고객사소개</a></li>
+                    <li><a href="/sub_02_02.html">업종별고객사</a></li>
+                    <li><a href="/sub_11_01.html">영상인터뷰</a></li>
+                </ul>
+            </li>
+			<li class="m-munu-item">
+				<a class="menu-detail-link" href="/sub_02_03.html">연동쇼핑몰</a>
+			</li>
+			<li class="m-munu-item">
+                <a href="javascript:" class="menu-detail-link">ON AIR<i class="menu-arrow-bg"></i></a>
+                <ul class="detail-menu-list" style="overflow:auto; height:25vh;">
+                    <li><a href="/sub_11_02.html">이벤트</a></li>
+                    <li><a href="/sub_11_03.html">보도자료</a></li>
+                    <li><a href="/sub_11_04.html">SNS</a></li>
+                    <li><a href="/sub_11_05.html">성장스토리</a></li>
+                </ul>
+            </li>
+			<li class="m-munu-item">
+				<a class="menu-detail-link mlogin" href="javascript:login_popup();">로그인</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="login">
+        <!-- 간편로그인/일반로그인 -->
+		
+<script type="text/javascript" src="../RSA/javascript/jsbn.js"></script>
+<script type="text/javascript" src="../RSA/javascript/prng4.js"></script>
+<script type="text/javascript" src="../RSA/javascript/rng.js"></script>
+<script type="text/javascript" src="../RSA/javascript/rsa.js"></script>
+
+<script>
+        
+           
+    
+    function encrypt(d) 
+    {
+        var rsa = new RSAKey();
+        rsa.setPublic("80863e5e41076dbff1e46891a0eed30bff4a87528e6841088245585455d5bbcfaa2f16e7f8a46f0e3624deeab2d2e9fbf0f981feb77749a739542712db60708f6f870282259f5fa6d2252e6c00cbc36d95cf94710a0d456641edfd60cfd53e5d6a3ebc5ef943ce8aed0b5f39dc58bba0da677f5dfc97950dded75334714661c5", "010001");
+        
+        return rsa.encrypt( d );
+    }
+
+</script>
+
+<script type="text/javascript">
+$(function() {
+
+	$("#login-domain").focus();
+	$("#login-domain").keydown(function(e){
+        var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+		/*
+        if(key == 9)
+		{
+			e.preventDefault();
+			$('#login-id').focus().select();
+		}
+		*/
+        if(key == 13)
+        {
+            e.preventDefault();
+            setTimeout(function(){ login_check(null); }, 1000);     
+        }
+	});
+
+	$("#login-id").keydown(function(e){
+        var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+        /*
+		if(key == 9)
+		{
+			e.preventDefault();
+			$('#login-pwd').focus().select();
+		}
+		*/
+        if(key == 13)
+        {
+            e.preventDefault();
+            setTimeout(function(){ login_check(null); }, 1000);     
+        }
+	});
+
+	$("#login-pwd").keydown(function(e){
+        var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+        /*
+		if(key == 9)
+		{
+			e.preventDefault();
+			$('#captchaCode').focus().select();
+		}
+		*/
+        if(key == 13)
+        {
+            e.preventDefault();
+            setTimeout(function(){ login_check(null); }, 1000);     
+        }
+	});
+
+	$("#savedomain_chk").click(function(e){
+		savedomain();	
+	});
+});
+
+
+function login_check(event)
+{
+	if ( event != null )
+		event.preventDefault();
+
+	if ($('#login-domain').val() == '도메인' || !$("#login-domain").val()) {
+		alert('도메인 정보를 입력하세요');
+		$('#login-domain').focus();
+		return;
+	}
+	if (!$('#login-id').val()) {
+		alert('아이디를  입력하세요');
+		$('#login-id').focus();
+		return;
+	}
+	if (!$('#login-pwd').val()) {
+		alert('비밀번호를 입력하세요');
+		$('#login-pwd').focus();
+		return;
+	}
+    
+    //var patt =  /[\u4E00-\u9FD5\s]/g; 
+    var patt =  /[\u4E00-\u9FD5]/g; 
+    if(patt.test($('#login-id').val()) == true)
+    {
+        alert('유효하지 않은 입력 값입니다.');
+		$('#login-id').focus();
+		return;
+    }
+    
+    if(patt.test($('#login-pwd').val()) == true)
+    {
+        alert('유효하지 않은 입력 값입니다.');
+		$('#login-pwd').focus();
+		return;
+    }
+    
+    //try 
+    //{
+    //    var dev_matches = $('#login-domain').val().match(/devezadmin\d+/);
+    //    var qa_matches  = $('#login-domain').val().match(/ezadminqa\d+/);
+    //    if(dev_matches != null || qa_matches != null)
+    //        $("#encform").attr("action","login_process40.php");
+    //    else
+    //        $("#encform").attr("action","login_process2.php");
+    //}
+    //catch(error) 
+    //{
+    //    $("#encform").attr("action","login_process2.php");
+    //}
+    
+        $("#encform").attr("action","/login_process40.php");    
+	do_login();
+}
+
+function do_login()
+{
+	$("#encpar").val(encrypt($(loginform).serialize()));
+	$(encform).submit();
+	
+	return false;
+}
+
+</script>
+<div id="login-popup">
+    <div class="popup-head">
+        <h2 class="logo-w">이지어드민</h2>
+        <span class="login-popup-close">닫기버튼</span>
+    </div>
+    <div class="content-inner">
+        <h3>로그인</h3>
+        <p class="txt">도메인, 아이디, 비밀번호를 입력하세요.</p>
+<form name="encform" id="encform" method=post action='login_process2.php'>
+  <input type=hidden name="encpar" id="encpar" value="">
+</form>
+
+<form name="loginform" method="post" autocomplete="off">
+
+	<input type="hidden" name="ezsaved" id="ezsaved" value="" />
+	<input type="hidden" name="identifier" id="identifier" value="" />
+	<input type="hidden" name="crdate" id="crdate" value="2026-02-23" />
+	
+	<div class="left" style="text-align: center;">
+		<input type="text" id="login-domain" name="domain" required class="required box" maxlength="20" value="" style="text-align:center;" placeholder="도메인">
+		<br>
+		<input type="text" id="login-id" name="userid" required class="required box" maxlength="20" value="" style="text-align:center;" placeholder="아이디">
+		<br>
+		<input type="password" name="passwd" id="login-pwd" required class="required box" maxlength="20" value="" style="text-align:center;" placeholder="비밀번호">
+		<br>
+		<div class="check-save-login" style="margin-top:15px;">
+			<div style="float:left;">
+				<input type="checkbox" name="savedomain" id="savedomain" >
+				<label for="savedomain" id="auto_login_label" > &nbsp;아이디 저장</label>
+				&nbsp;
+			</div>
+			<div style="float:right;">
+				<a href="/login_pw.html">비밀번호 찾기</a>	 <!-- 2022/09/26 sojlee -->
+			</div>
+		</div>
+		</div>
+		<input class="login-btn" type="button" value="로그인" onclick="login_check(event);" style="margin-top: 43px;">
+	
+		<style>
+.ezadmin_kakao {
+	margin:20px 0px 0px 0px;
+	display: inline-flex;
+	width:100%;
+    border: 1px solid #c2c2c2;
+    border-radius: 16px;
+    letter-spacing: -0.4px;
+	padding: 14px 10px 14px 20px;
+}
+.ezadmin_kakao_qr {
+	display: inline-block;
+	width:25%;
+	margin: 10px 0px;
+	border: 1px solid #c2c2c2;
+    border-radius: 6px;
+	padding: 10px 0;
+}
+.ezadmin_kakao_channel {
+	display: inline-block; 
+	width:75%;
+	line-height: 16px;
+	text-align: left;
+    padding: 13px 5px 13px 16px;
+}
+.ezadmin_kakao_channel_str {
+    font-family: "Pretendard" !important;
+	margin-top : 10px;
+}
+.ekc_str1 {
+	font-size:17px;
+
+}
+.ekc_str2 {
+	letter-spacing: -0.2px;
+	font-size:11px;
+}
+</style>
+<div class="ezadmin_kakao">
+	<div class="ezadmin_kakao_qr">
+		<img src="/img/ezadmin_kakao_qr.png">
+	</div>  
+	<div class="ezadmin_kakao_channel">
+		<a href="https://pf.kakao.com/_UxmmxoE" target="new"><img src="/img/ezadmin_kakao_channel.png"></a>
+		<div class="ezadmin_kakao_channel_str">
+			<span class="ekc_str1"><b>카카오톡 채널</b>을 추가해 주세요.</span><br>
+			<span class="ekc_str2">중요한 공지를 카카오톡으로 받아볼 수 있습니다.</span>
+		</div>
+	</div>  
+</div>  
+</form>
+        <!--h3 class="cc-info"><span>전화아이콘</span>고객센터 1661-1774</h3-->
+    </div>
+</div>
+
+	</div>
+
+	<script>
+$(document).ready(function() {
+    $("#ezadmin_video").click(function() {
+        show_video_guide();
+    });
+	$(".info_video").click(function(){
+		show_video_guide();
+	});
+    $("#videoGuide a.layer_close").click(function() {
+		close_video_guide();
+    });
+
+	//cafe24 랜딩 사례 동영상
+	$(".exam_video").click(function(){
+		show_video_guide('example');
+	});
+});
+
+function show_video_guide(sort)
+{
+	//인자 default 정의
+	sort = (typeof(sort) !== 'undefined' ? sort : 'ezadmin');
+
+	if( sort == 'example' )
+		$("#videoGuide .layer_wrap .layer_cont iframe").attr('src', 'https:\//www.youtube.com/embed/V0YxOlq5JOo?autohide=1&autoplay=1&color=red&theme=light&loop=1&vq=hd1080&rel=0');
+	else if( sort == 'ezadmin' )
+		$("#videoGuide .layer_wrap .layer_cont iframe").attr('src', 'https:\//www.youtube.com/embed/Nv833h6o3i8?autohide=1&autoplay=1&color=red&theme=light&loop=1&vq=hd1080&rel=0');
+//		$("#videoGuide .layer_wrap .layer_cont iframe").attr('src', 'https:\//www.youtube.com/embed/NxGiESRuEtA?autohide=1&autoplay=1&color=red&theme=light&loop=1&vq=hd1080&rel=0');
+	else if( sort == 'sellerkb')
+		$("#videoGuide .layer_wrap .layer_cont iframe").attr('src', 'https:\//www.youtube.com/embed/o0el0tPkeL4?autohide=1&autoplay=1&color=red&theme=light&loop=1&vq=hd1080&rel=0');
+	else if( sort == 'v1' )
+		$("#videoGuide .layer_wrap .layer_cont iframe").attr('src', 'https:\//www.youtube.com/embed/I1h9YpUZ10Q?autohide=1&autoplay=1&color=red&theme=light&loop=1&vq=hd1080&rel=0');
+	else if( sort == 'v2' )
+		$("#videoGuide .layer_wrap .layer_cont iframe").attr('src', 'https:\//www.youtube.com/embed/8V9kQOd3gCY?autohide=1&autoplay=1&color=red&theme=light&loop=1&vq=hd1080&rel=0');
+	else if( sort == 'v3' )
+		$("#videoGuide .layer_wrap .layer_cont iframe").attr('src', 'https:\//www.youtube.com/embed/DPqCdvszcwY?autohide=1&autoplay=1&color=red&theme=light&loop=1&vq=hd1080&rel=0');
+
+    $("#videoGuide").css('display', 'block');
+}
+
+function close_video_guide()
+{
+	$("#videoGuide .layer_wrap .layer_cont iframe").attr('src', '');
+	//$("#videoGuide .layer_wrap .layer_cont iframe").attr('src', 'https://www.youtube.com/embed/ECWF9Bj1uak?autohide=1&autoplay=0&color=red&theme=light&loop=1&vq=hd1080&rel=0');
+    $("#videoGuide").css('display', 'none');
+}
+</script>
+<style>
+#videoGuide, #video_simple_trans {
+	display:none
+}
+#videoGuide .filter, #video_simple_trans .filter {
+	z-index: 9999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	filter: alpha(opacity=80);
+	opacity: 0.8
+}
+#videoGuide .layer_wrap, #video_simple_trans .layer_wrap {
+	z-index: 9999;
+	position: fixed;
+	top: 80px;
+	right: 0;
+	bottom: 80px;
+	left: 0;
+	width: 100%
+}
+#videoGuide .layer_cont, #video_simple_trans .layer_cont {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 100%;
+	margin: 0 auto
+}
+#videoGuide a.layer_close, #video_simple_trans a.layer_close {
+	position: absolute;
+	top: -55px;
+	right: 0;
+	width: 40px;
+	height: 41px;
+	background:url('/images/btn_video_close.png') no-repeat;
+	font: 0/0 dotum;
+	color: transparent;
+	cursor: pointer;
+}
+#videoGuide a.layer_close:hover, #video_simple_trans a.layer_close:hover {
+	cursor: pointer;
+}
+
+@media all and (max-width: 1280px){
+	#videoGuide .layer_cont, #video_simple_trans .layer_cont {
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: -webkit-fill-available !important;
+		margin: 0 !important;
+	}
+}
+
+</style>
+<!-- 이지어드민 소개영상 -->
+<div id="videoGuide">
+  <div class="filter"></div>
+  <div class="layer_wrap">
+    <div class="layer_cont" style="height: 720px; width: 1280px; margin-left: -640px; margin-top: -360px;">
+      <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen=""></iframe>
+      <a class="layer_close" href="javascript:close_video_guide();">닫기</a>
+    </div>
+  </div>
+</div>
+
+
+	</header>
+
+<script>
+//$(document).ready(function() {
+//	get_scroll();
+//});
+//$(window).on("load resize", function() {
+//	get_scroll();
+//});
+//
+//function get_scroll()
+//{
+////console.log("asdf");
+//	var window_height = $(window).innerHeight();
+//	var items_height = $(".ezadmin-header").innerHeight();
+//	$(".m-munu-item").each(function() {
+//		items_height += $(this).innerHeight();
+//	});
+//	items_height -= $(".detail-menu-list").innerHeight();
+//
+//	var cur_height = window_height - items_height - 250;
+//	
+////console.log(window_height+" - "+items_height);
+//	$("ul.detail-menu-list").css("height", cur_height+"px");
+//}
+
+
+// 랜딩 클릭 수 디비 저장
+function link_click_stat(link, type)
+{
+	var url="link_click_process.php";
+	$.ajax({
+		type:"POST",
+		url:url,
+		data:{"action": "set_link_click", "link" : link, "type": type, "uuid": $("#identifier").val()},
+		success:function(args){
+			console.log(args);
+		},
+		error:function(e){
+			console.log(e.responseText);
+		}
+	});
+}
+
+function click_popup_board(no, type)
+{
+	var url="link_click_process.php";
+	$.ajax({
+		type:"POST",
+		url:url,
+		data:{"action": "click_popup_board", "no" : no, "type": type, "uuid": $("#identifier").val()},
+		success:function(args){
+			console.log(args);
+		},
+		error:function(e){
+			console.log(e.responseText);
+		}
+	});
+}
+
+function login_popup()
+{
+	$("#login-popup").show();
+}
+</script>
+
+<!-- 네이버 추적 공통 -->
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "53072339b800bc";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+<!-- 네이버 추적 공통 -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-30L4XB2GVG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-30L4XB2GVG');
+</script>
+    <main class="ezadmin-main">
+		<input type="hidden" name="ez" id="ez" value="">
+        <div id="fullpage">
+			<div class="popup_06">
+
+
+</div>
+<style>
+.popup_06 {
+	display: inline-block;
+    width: 500px;
+    height: 500px;
+/*
+	width: 400px;
+	height: 400px;
+*/
+    position: absolute;
+    z-index: 101;
+    text-indent: -9999px;
+    top: 200px;
+    left: calc(50% - 250px);
+/*
+    top: 150px;
+    left: 3%;
+	top: 495px;
+	right: 7%;
+*/
+    padding: 7px;
+    /*background: #eee;*/
+    border-radius: 5px;
+}
+.popup_06 .list{
+	position: relative;
+	height: 100%;
+}
+.popup_06 .list img{
+	width: 100%;
+	height: 100%;
+}
+.popup_06 .list button{
+	position: absolute;
+	top: 10px;
+	right: 8px;
+	z-index: 102;
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+	cursor: pointer;
+	background: none !important;
+}
+.popup_06 .list a{
+    position: absolute;
+    display: inline-block;
+    text-indent: -9999px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.popup_06 .list a:hover {
+	cursor:pointer;
+}
+
+/*
+.popup_06 .list.erp a, .popup_06 .list.ezwms a,
+.popup_06 .list a {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+}
+.popup_06 .list.coopang a{
+	left: 50%;
+	margin-left: -60px;
+	width: 120px;
+}
+.popup_06 .list.dubal a{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+}
+.popup_06 .list.srookpay a{
+    width: 58%;
+    height: 56px;
+    bottom: 92px;
+    left: 50%;
+    margin-left: -29%;
+    border-radius: 50px;
+}
+.popup_06 .list.bmw a{
+	bottom: 9px;
+    left: 8px;
+    width: 96%;
+    height: 35px;
+}
+*/
+.popup_06 .slick-arrow{
+	position: absolute;
+	z-index: 102;
+	top: 50%;
+	margin-top: -25px;
+	text-indent: -9999px;
+	width: 26px;
+	height: 50px;
+}
+.popup_06 .slick-prev {
+	left: 10px;
+	background: url(../images/ezevent/arrow_l.png) no-repeat center/contain;
+}
+.popup_06 .slick-next {
+	right: 10px;
+	background: url(../images/ezevent/arrow_r.png) no-repeat center/contain;
+}
+@media (max-width: 950px){
+	.popup_06{
+		display: none;
+	}
+}
+</style>
+<script>
+//	$('.popup_06 button').click(function(){
+//		$(this).parent().hide();
+//	});
+
+	$(document).ready(function(){
+console.log($(".popup_06 .list").length);
+		if( $(".popup_06 .list").length > 0 ) {
+			$('.popup_06').slick({
+				 autoplay: true
+				,autoplaySpeed: 4000
+			});
+		} else {
+			$(".popup_06").hide();
+		}
+	});
+
+	$('.remove-slide').on('click', function() {
+		  i = $(".popup_06 .slick-active").attr("data-slick-index");
+		  $(".popup_06").slick('slickRemove', i);
+
+		if( !$(".popup_06 .list").length )
+			$(".popup_06").hide();
+
+		  var j = 0;
+		  $(".popup_06 .slick-slide:not(.slick-cloned)").each(function(){
+			$(this).attr("data-slick-index",j);
+			j++;
+		  });
+
+	});
+
+</script>
+			
+
+<div id="emergency_notice" style="">
+	<div class='subj'>
+		</div>
+	<div class='text'>
+		</div>
+	<button type='button' class='btn_close' onclick="hide_popup('emergency_notice');">닫기</button>
+<!--
+	<div class='enf_date btn_close'>
+		</div>
+-->
+<!--
+		안녕하세요. 이지어드민입니다.<br>	
+<span style="color: #000;">KT 통신사 장애</span>가 발생하여<br>
+잠시 통신이 원활하지 않았습니다.<br>
+<span style="color: #E76E54;">현재는 복구 완료되었으며,</span><br>
+이용에 불편을 드려 죄송합니다.
+		<span class='notice_top'>통신 오류 관련 안내</span>	
+<span class='notice_content'>안녕하세요. 이지어드민입니다.<br>
+KT 통신사 장애가 발생하여 잠시 통신이 원활하지 않았습니다.<br>
+<font color="#4145f2"><b>현재는 복구 완료되었으며,</b></font> 이용에 불편을 드려 죄송합니다.</span>
+<span class='notice_bottom'>2021년 11월 3일 11시~12시</span>
+-->
+</div>
+<style>
+div#emergency_notice, #emergency_notice div, #emergency_notice span{ 
+/*	font-family: 'GmarketSans-BOLD' !important; */
+	font-weight: bold;
+}
+#emergency_notice{
+	display: none;
+    width: 400px;
+    position: absolute;
+/*
+    top: 149px;
+*/
+	top: 130px;
+    left: 5%;
+    z-index: 101;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+#emergency_notice .btn_close{
+	width: 100%;
+	height: 40px;
+	background: #eee;
+}
+#emergency_notice .subj{
+    width: 100%;
+	height: 220px;
+	background: url('images/2021/emergency_notice4_cut.png') no-repeat center/contain;
+}
+#emergency_notice .subj p{
+	width: 100%;
+    padding: 156px 20px 0;
+	font-family: 'GmarketSans-BOLD' !important; 
+	color: #fff;
+	font-size: 31px;
+    text-align: center;
+}
+#emergency_notice .enf_date{
+	position: absolute;
+    bottom: 37px;
+    left: 110px;
+    font-weight: normal;	
+}
+#emergency_notice .text{
+	padding: 37px 25px;
+    font-size: 18px;
+	color: #000;
+	font-weight: normal;
+	text-align: center;
+}
+#rm_pop {
+    bottom: 13px;
+    position: absolute;
+    left: 50%;
+    margin-left: -55px;
+}
+
+#emergency_notice .notice_top {
+	color:#fff;
+	font-family: 'GmarketSans-BOLD' !important; 
+	position: absolute;
+	top: 35%;
+	font-size:33px;
+}
+#emergency_notice .notice_content {
+	
+}
+#emergency_notice .notice_bottom {
+	font-weight: normal;
+    position: absolute;
+    left: 32%;
+    bottom: 9.5%;
+    font-size: 16px;
+}
+</style>
+<script>
+$(function(){
+//    if ($.cookie('emergency_notice') == 'ok') {
+//		hide_popup();
+//    } else {
+//		$("#emergency_notice").css("display", "inline-block");
+//	}
+
+});
+function hide_popup(id) {
+//	if($("#rm_pop").is(":checked")) {
+//		rm_pop('emergency_notice');
+//		$("#emergency_notice").hide();
+//	}
+//	else
+		$("#"+id).hide();
+}
+function rm_pop(id)
+{
+    setCookie(id, 'ok', 365);
+}
+
+function setCookie(c_name,value,exdays)
+{
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+</script>
+			
+<div id="global_notice" style=''>
+	<div class='wrapper'>
+		<div class='tit'>
+			<h3>Notice</h3>
+			<button type='button' style='margin-left: 10px;' onclick="hide_popup('global_notice');"><img src='images/newmain/close.png'></button>
+		</div>
+		<div class='list'>
+			<ul>
+					</ul>
+		</div>
+		<div class='foot'>
+			<a href='sub_06_01.html?type=global'>더보기</a>
+		</div>
+	</div>
+</div>
+
+<style>
+#global_notice{
+	display: none;
+    width: 400px;
+	padding: 30px;
+	background: rgba(49,127,227,.9);
+    position: absolute;
+    top: 549px;
+    right: 7%;
+    z-index: 101;
+}
+#global_notice .tit {
+	display: flex;
+	display: -ms-flexbox;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+#global_notice .tit h3{
+	margin: 0;
+	font-size: 17px;
+	font-weight: bold;
+	color: #EABE1B;
+}
+#global_notice li, #global_notice a, #global_notice button{ color: #fff; }
+#global_notice .list ul{ margin-bottom: 0; }
+#global_notice .list li{
+	display: block;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+#global_notice .list li:before{
+	content: '·';
+	display: inline-block;
+	margin-right: 5px;
+}
+#global_notice .list li> a{
+	line-height: 1.8;
+	font-weight: normal;
+}
+#global_notice .foot{
+	display: flex;
+	display: -ms-flexbox;
+	flex-direction: row-reverse;
+}
+</style>
+
+
+
+<script>
+$(function(){
+
+//    if ($.cookie('global_notice') == 'ok') {
+//		hide_popup();
+//    } else {
+//		$("#global_notice").css("display", "block");
+//	}
+
+});
+function hide_popup(id) {
+//	if($("#rm_pop").is(":checked")) {
+//		rm_pop('global_notice');
+//		$("#global_notice").hide();
+//	}
+//	else
+		$("#"+id).hide();
+}
+function rm_pop(id)
+{
+    setCookie(id, 'ok', 365);
+}
+
+function setCookie(c_name,value,exdays)
+{
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+</script>
+			<section class="ezadmin-section fp-section fp-table main-first" id="main-first-section">
+  <div class="main_visual" id="js-slider-area">
+    <!-- slider -->
+    <style>
+.main_visual {
+    width:100vw;
+    height:100vh;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-bg iframe,
+.video-bg .video-poster {
+  position: absolute;
+  top: 50%; left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  width: 520%;
+}
+
+.text-slider {
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:100%;
+    color:#FFFFFF;
+    width:900px;
+    text-align:left;
+    margin: 350px 400px 0 0;
+}
+
+.slider-nav {
+    padding-bottom:40px;
+    display:flex;
+    align-items:center;
+    width:900px;
+}
+
+.dot {
+    display:inline-block;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#FFFFFF99;
+    margin: 0 5px;
+    cursor:pointer;
+}
+
+.dot.active {
+    background:#FFFFFF;
+    width:16px;
+    height:16px;
+}
+
+.slide-container {
+    position:relative;
+    width:900px;
+    max-width:900px;
+}
+
+.slide {
+    display:none;
+}
+
+.slide.active {
+    display:block;
+    animation: fadeIn 1s;
+    padding: 0 0 0 8px;
+}
+
+.text-wrap {
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.main-text span.highlight {
+    background:#198CFF;
+    padding:4px 3px 0 4px;
+}
+
+.cta-button {
+    display:inline-block;
+    background:#198CFF;
+    color:#FFFFFF;
+    border-radius:5px;
+    text-decoration:none;
+    margin-top:30px;
+	font-size: clamp(0.875rem, 1.1vw, 2rem);
+    padding: 12px 18px 9px 18px;
+}
+
+@keyframes fadeIn {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+
+.main-text {
+    font-size: clamp(1.75rem, 2.8vw, 4rem);
+	color:#FFFFFF;
+    line-height:1.3;
+    padding-bottom:25px;
+}
+.detail-text {
+	font-size: clamp(0.875rem, 1.15vw, 2rem);
+	line-height: 40px;
+}
+
+.text-slider,
+.slider-nav,
+.slide-container {
+    max-width: min(900px, 90vw);
+}
+
+@media (min-width: 2390px) {
+  .video-bg iframe,
+  .video-bg .video-poster {
+	height:200%;
+  }
+}
+
+@media (max-width: 1280px) {
+    .text-slider { 
+        margin: 360px 8vw 0 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .text-slider { 
+        margin: 340px 6vw 0 0;
+    }
+    .slider-nav { 
+        padding-bottom: 32px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .text-slider { 
+        margin: 320px 4vw 0 4vw;
+    }
+    .main-text { 
+        line-height: 1.35; 
+    }
+    .dot { 
+        width: 10px; height: 10px; 
+    }
+    .dot.active { 
+        width: 14px; height: 14px; 
+    }
+}
+
+@media (max-width: 560px) {
+    .text-slider { 
+        margin: 300px 4vw 0 4vw; 
+    }
+    .main-text { 
+        font-size: clamp(1.5rem, 6.5vw, 2rem);
+        line-height: 1.4;
+        padding-bottom: 18px;
+    }
+	.detail-text {
+		font-size: clamp(0.875rem, 3.7vw, 1rem);
+		line-height:10px;
+	}
+    .slider-nav { 
+        width: 100%; 
+        padding-bottom: 24px; 
+    }
+    .cta-button { 
+        font-size: clamp(0.875rem, 3.5vw, 0.95rem);
+        padding: 10px 16px 8px 16px;
+        border-radius: 4px;
+    }
+}
+
+.mobile-br {
+  display: none;
+}
+
+@media (max-width: 768px) {
+.mobile-br {
+    display: inline;
+  }
+.pc-br {
+	display:none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slide.active { 
+        animation: none; 
+    }
+}
+</style>
+
+<div class="section_wrap">
+    <div class="video-bg">
+		<img src="images/2025/ezadmin_homepage_mainvideo_initialscreen_re.png" alt="loading" class="video-poster" id="video-poster">
+        <div id="vimeo-player"></div>
+    </div>
+
+    <div class="text-wrap">
+        <div class="text-slider">
+            <div class="slider-nav">
+                <span class="dot active" onclick="change_slide(0)"></span>
+                <span class="dot" onclick="change_slide(1)"></span>
+                <span class="dot" onclick="change_slide(2)"></span>
+                <span class="dot" onclick="change_slide(3)"></span>
+            </div>
+
+            <div class="slide-container">
+                <div class="slide active">
+                    <h2 class="main-text"><span>이지어드민이 <span class="mobile-br"><br></span>당신의 이커머스 성공을<br>응원합니다</span></h2>
+                </div>
+
+                <div class="slide">
+                    <h2 class="main-text"><span>판매가 더 쉬워지는 </span><span class="highlight">이지어드민</span></h2>
+                    <span class="detail-text">온라인 판매가 잘 돼 주문이 많아지면 이지어드민을 체험해 보세요.<span class="pc-br"><br></span><span class="mobile-br">&nbsp;</span>자동 주문수집, 송장출력 등 판매가 훨씬 쉬워집니다.</span><br>
+                    <a href="https://www.ezadmin.co.kr/sub_01_02.html" class="cta-button" target="_blank">자세히 보기</a>
+                </div>
+
+                <div class="slide">
+                    <h2 class="main-text"><span>물류의 가치를 연결하는 </span><span class="highlight">글로박스</span></h2>
+                    <span class="detail-text">창고가 필요할 때, 잘 운영하고 싶을 때는 글로박스 플랫폼을 이용하세요.<span class="pc-br"><br></span><span class="mobile-br">&nbsp;</span>IT 시스템과 설비, 운영 인력까지 모두 해결할 수 있습니다.</span><br>
+                    <a href="https://www.globox.co.kr/v2/index.html" class="cta-button" target="_blank">자세히 보기</a>
+                </div>
+
+                <div class="slide">
+                    <h2 class="main-text"><span>스마트 물류의 시작 </span><span class="highlight">물류자동화</span></h2>
+                    <span class="detail-text">물류센터에 자동화 설비를 도입하면 생산성은 오르고 비용은 내려갑니다.<span class="pc-br"><br></span><span class="mobile-br">&nbsp;</span>로봇이 피킹하고 자동으로 포장하는 스마트 물류, 지금 시작하세요.</span><br>
+                    <a href="https://www.globox.co.kr/v2/globox_automation.html" class="cta-button" target="_blank">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+let current_slide = 0;
+let slide_count = $(".slide").length;
+let manual_mode = false;
+let manual_timer = null;
+
+function show_slide(n) {
+    $(".slide").removeClass("active").eq(current_slide).removeClass("active");
+    $(".dot").removeClass("active").eq(current_slide).removeClass("active");
+
+    current_slide = n;
+
+    $(".slide").eq(current_slide).addClass("active");
+    $(".dot").eq(current_slide).addClass("active");
+}
+
+function change_slide(n) {
+    manual_mode = true;
+    clearTimeout(manual_timer);
+
+    show_slide(n);
+
+    manual_timer = setTimeout(function() {
+        manual_mode = false;
+    }, 4250);
+}
+
+function next_slide() {
+    let next = (current_slide + 1) % slide_count;
+    show_slide(next);
+}
+
+const vimeo_options = {
+    id: 1122737204,
+    autoplay: true,
+    muted: true,
+    loop: true,
+    background: true
+};
+
+const vimeo_player = new Vimeo.Player('vimeo-player', vimeo_options);
+
+const part_durations = [3.6, 4.2, 4.8, 4.4]; 
+
+let part_boundaries = [];
+let total = 0;
+for (let i = 0; i < part_durations.length; i++) {
+    total += part_durations[i];
+    part_boundaries.push(total);
+}
+
+function show_slide(n) {
+    $(".slide").removeClass("active").eq(n).addClass("active");
+    $(".dot").removeClass("active").eq(n).addClass("active");
+    current_slide = n;
+}
+
+vimeo_player.on('timeupdate', function(data) {
+    if (manual_mode) return;
+
+    $('#video-poster').fadeOut(600);
+
+    const sec = data.seconds;
+    let slide_index = 0;
+
+    for (let i = 0; i < part_boundaries.length; i++) {
+        if (sec < part_boundaries[i]) {
+            slide_index = i;
+            break;
+        }
+    }
+
+    if (slide_index !== current_slide) {
+        show_slide(slide_index);
+    }
+});
+
+$(".dot").each(function(i) {
+    $(this).on("click", function() {
+        change_slide(i);
+    });
+});
+</script>
+    <!-- //slider -->
+  </div>
+</section>
+			            <section class="ezadmin-section fp-section main-second" id="main-second-section">
+				<div>
+					<h2 class="tit">클라이언트</h2>
+					<div class="client_slick_wrap">
+						<div class="item item01">
+							<div class="detail-img detail-img09"></div>
+							<a class="all-client" href="sub_02_01.html">클라이언트 더보기</a>
+						</div>
+						<div class="item item02">
+							<div class="detail-img detail-img10"></div>
+							<a class="all-client" href="sub_02_01.html">클라이언트 더보기</a>
+						</div>
+						<div class="item item03">
+							<div class="detail-img detail-img11"></div>
+							<a class="all-client" href="sub_02_01.html">클라이언트 더보기</a>
+						</div>
+						<div class="item item04">
+							<div class="detail-img detail-img12"></div>
+							<a class="all-client" href="sub_02_01.html">클라이언트 더보기</a>
+						</div>
+						<div class="item item05">
+							<div class="detail-img detail-img13"></div>
+							<a class="all-client" href="sub_02_01.html">클라이언트 더보기</a>
+						</div>
+						<div class="item item06">
+							<div class="detail-img detail-img14"></div>
+							<a class="all-client" href="sub_02_01.html">클라이언트 더보기</a>
+						</div>
+						<div class="item item07">
+							<div class="detail-img detail-img15"></div>
+							<a class="all-client" href="sub_02_01.html">클라이언트 더보기</a>
+						</div>
+						<div class="item item08">
+							<div class="detail-img detail-img16"></div>
+							<a class="all-client" href="sub_02_01.html">클라이언트 더보기</a>
+						</div>
+					</div>
+				</div>
+            </section>
+				<section class="ezadmin-section fp-section main-third fp-block" id="main-third-section">
+    <div class="tit">고객사 인터뷰</div>
+    <div class="sub_tit mb30">이지어드민 고객의 사용 후기를 들어보세요.</div>
+    <div class="w1000">
+        <div class="section3_video">
+            <iframe width="" height="480" src="https://www.youtube.com/embed/j2mmjcblhOA" frameborder="0"></iframe>
+        </div>
+        <div class="tile_wrap al-c mt15 pc">
+            <div class="tile" onclick="javascript:show_video_guide('v1');">
+                <div>
+                    <iframe width="300" height="181" src="https://www.youtube.com/embed/I1h9YpUZ10Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="txt_box">
+                    <p class="txt_title">[고객사인터뷰]</p>
+                    <p>이건 첫 번째 레슨, 중국사입은 이지어드민이 필수! - 스타일여신 편</p>
+                </div>
+            </div>
+			<div class="tile" onclick="javascript:show_video_guide('v2');">
+                <div>
+                    <iframe width="300" height="181" src="https://www.youtube.com/embed/8V9kQOd3gCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="txt_box">
+                    <p class="txt_title">[고객사인터뷰]</p>
+                    <p>상품 오출고 고민? 이지어드민 쓰니 오-출구열림! - 제우인터내셔날 편</p>
+                </div>
+            </div>
+            <div class="tile" onclick="javascript:show_video_guide('v3');">
+                <div>
+                    <iframe width="300" height="181" src="https://www.youtube.com/embed/DPqCdvszcwY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="txt_box">
+                    <p class="txt_title">[고객사인터뷰]</p>
+                    <p>배송과 헤어질 결심 이것때문에 가능! - 제이원컴퍼니 편</p>
+                </div>
+            </div>
+		</div>
+		<div class="tile_wrap al-c mt15 mobile">
+            <div class="tile" onclick="javascript:show_video_guide('v1');">
+                <div>
+                    <iframe width="300" height="181" src="https://www.youtube.com/embed/ArKuf0kRqqU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="tile" onclick="javascript:show_video_guide('v2');">
+                <div>
+                    <iframe width="300" height="181" src="https://www.youtube.com/embed/JuDNOyrArOE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="tile" onclick="javascript:show_video_guide('v3');">
+                <div>
+                    <iframe width="300" height="181" src="https://www.youtube.com/embed/m0aAIUAoThk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+		</div>
+	</div>
+	</section>
+				<section class="ezadmin-section fp-section fp-table main-fourth" id="main-fourth-section">
+		<div class="fp-tableCell">
+			<div class="additional-service">
+				<h2 class="tit">이지어드민 부가서비스</h2>
+				<ul class="service-list">
+					<li class="off active">
+						<div class="service service01">
+							<div class="business_caption">
+								<div class="mobile bg01"></div>
+								<a href="https://www.ezadmin.co.kr/sub_01_12.html">
+									<h2>이지데스크</h2>
+									<p>카카오 플친,네이버 톡톡,SMS 상담 통합 관리</p>
+									<span class="a_plus"></span>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="off">
+						<div class="service service02">
+							<div class="business_caption">
+								<div class="mobile bg02"></div>
+								<a href="https://www.ezadmin.co.kr/sub_01_08.html">
+									<h2>이지리플</h2>
+									<p>흩어져 있는 판매처 문의글 통합 관리</p>
+									<span class="a_plus"></span>
+								</a>
+							</div>
+						</div>
+					<li class="off">
+						<div class="service service03">
+							<div class="business_caption">
+								<div class="mobile bg03"></div>
+								<a href="https://www.ezadmin.co.kr/sub_01_05.html">
+									<h2>이지콜센터</h2>
+									<p>쇼핑몰 전용 콜센터 솔루션</p>
+									<span class="a_plus"></span>
+								</a>
+							</div>										
+						</div>
+
+					</li>
+					<li class="off">
+						<div class="service service04">
+							<div class="business_caption">
+								<div class="mobile bg04"></div>
+								<a href="https://www.ezadmin.co.kr/sub_01_03.html">
+									<h2>이지체인</h2>
+									<p>온/오프라인 재고 통합관리</p>
+									<span class="a_plus"></span>
+								</a>
+							</div>										
+						</div>
+					</li>
+					<li class="off">
+						<div class="service service05">
+							<div class="business_caption">
+								<div class="mobile bg06"></div>
+								<a href="https://www.ezadmin.co.kr/sub_01_07.html">
+									<h2>이지스마티</h2>
+									<p>스마트폰 재고관리 어플리케이션</p>
+									<span class="a_plus"></span>
+								</a>
+							</div>										
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+				<section class="ezadmin-section fp-section fp-table main-fifth" id="main-fifth-section">
+		<div class="fp-tableCell">
+			<h2 class="tit">이지어드민 서비스 체험하기</h2>
+			<div class="apply-wrapper">
+				<div class="apply apply01">
+					<a class="apply-rn" href="https://www.ezadmin.co.kr/sub_04_03.html">리플렛신청 바로가기</a>
+				</div>
+				<div class="apply apply02">
+					<a class="apply-rn" href="https://www.ezadmin.co.kr/sub_03_01.html">무료사용신청 바로가기</a>
+				</div>
+				<div class="apply apply03">
+					<a class="apply-rn" href="download/이지어드민_소개서_2025_v1.pdf" download>소개서 다운받기</a>
+				</div>
+			</div>
+		</div>
+	</section>
+			            <section class="ezadmin-section fp-section footer fp-auto-height" id="main-footer-section">
+                <!--footerArea-->
+				<footer class="footer">
+	<div class="ft_top">
+		<div class="w1200">
+			<ul class="fl">
+				<li><a href="/privacy.html" target="_blank" style="color:#2c77f4;">개인정보처리방침</a></li>
+				<li class="priv"><a href="/agreement.html" target="_blank">이용약관</a></li>
+				<li><a>이메일무단수집거부</a></li>
+				<li><a href="/sub_07_01.html" target="_blank">회사소개</a></li>
+                <li class="mobile950" style="float: right;">
+					<ul>
+						<li><a href="https://www.facebook.com/ezadmin" target="_blank"><img src="/images/newmain/sns1.png"></a></li>
+						<li><a href="https://blog.naver.com/ezadm" target="_blank"><img src="/images/newmain/sns2.png"></a></li>
+						<li><a href="https://www.youtube.com/channel/UC8Gvzdd0GWc9Btwax6kxN5A" target="_blank"><img src="/images/newmain/sns3.png"></a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="ft_bottom">
+		<div class="w1200">
+			<h2 class="ft_company">이지어드민</h2>
+			<div class="ft_info">
+				<p>핌즈(주)</p>
+				<p>주소 : 서울시 성동구 아차산로 38 개풍빌딩 8층</p>
+				<p><b class="pc">대표 : 황선영</b></p>
+				<p><b class="pc">개인정보책임자 : 권춘화 (chgwon@pimz.co.kr)</b></p>
+				<p><b class="pc">사업자등록번호 : 220-86-85908</b></p>
+				<p>팩스 : 02-6008-5388</p>
+				<p class="mobile950"><b class="pc">통신판매업신고 제2025-서울성동-1874호</b></p>
+				<p class="customer_center">가입문의 : 1668-2343(월~금 09:00~18:00, 점심시간 낮12시~오후1시, 주말 및 공휴일휴무)</p>
+				<p><b class="pc">운영시간외에는 1:1문의를 남겨주시면 빠르게 연락 드리겠습니다.</b></p>
+				<p class="copyright">Copyright © 2019-2026 PIMZ. All Rights Reserved.</p>
+			</div>
+			<div class="ft_icon_wrap">
+				<div style="display: flex; justify-content: center;">
+					<span class="ft_icon ft_icon01">청년친화강소기업</span>
+					<!-- 2025.09.18 대량문자 전송자격인증 -->
+									<span class="ft_icon ft_icon07">대량문자 전송자격인증</span>
+								</div>
+				<div>
+					<span class="ft_icon ft_icon03">KOITA</span>
+					<span class="ft_icon ft_icon06">내일채움</span>
+				</div>
+				<div>
+					<span class="ft_icon ft_icon05">인재육성중소기업</span>
+					<span class="ft_icon ft_icon04">서울형강소기업</span>
+				</div>
+						</div>
+		</div>
+		<!--span itemscope="" itemtype="http://schema.org/Organization">
+			<link itemprop="url" href="https://www.ezadmin.co.kr/">
+			<a itemprop="sameAs" href="https://www.youtube.com/channel/UC8Gvzdd0GWc9Btwax6kxN5A"></a>
+			<a itemprop="sameAs" href="https://www.facebook.com/ezadmin"></a>
+			<a itemprop="sameAs" href="https://www.instagram.com/ezadmin/"></a>
+			<a itemprop="sameAs" href="https://blog.naver.com/ezadm"></a>
+		</span-->
+	</div>
+</footer>
+            </section>
+        </div>
+        <div class="background-layer"></div>
+        <div class="pop-contents"></div>
+    </main>
+	<div class="bottom_btns">
+	<div id="youtube_btn" class="pc">
+		<a id="youtube_btn_img" target="_new" href="https://www.youtube.com/channel/UC8Gvzdd0GWc9Btwax6kxN5A" title="유튜브 바로가기">유뷰트 바로가기</a>
+	</div>
+	<div id="blog_btn" class="pc">
+		<a id="blog_btn_img" target="_new" href="https://blog.naver.com/ezadm" title="블로그 바로가기">블로그 바로가기</a>
+	</div>
+	<div id="naver_btn" class="pc">
+
+		<!-- Talk Talk Banner Script start -->
+		<div class="talk_banner_div" data-id="29356">
+			<div class="talk_preview_area">
+								<a href="#" onclick="javascript:window.open('https://talk.naver.com/ct/w4lj4h', 'talktalk', 'scrollbars=1, resizable=1, width=486, height=745');return false;" class="talk_banner_link">
+				<div class="talk_banner_preview talk_expose_green on" title="네이버톡톡" style="background:url('/images/main/icon_navertalk.png') no-repeat center/contain; width: 50px; height: 50px;">
+				</div>
+				</a>
+			</div>
+		</div>
+		<!-- Talk Talk Banner Script end -->
+	</div>
+
+</div>
+
+	<!-- 메인만 margin-top : 0 -->
+	<style>
+	body { margin-top: 0px !important; }
+	</style>
+	<!--? include "popup/popup_04.html" ?-->
+</body>
+</html>
+

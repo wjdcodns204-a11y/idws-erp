@@ -1,0 +1,5241 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="max-age=3600, public">
+<!--
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="images/icon_ezadmin2.ico" type="image/x-icon">
+<link rel="icon" href="images/icon_ezadmin2.ico" type="image/x-icon">
+
+<title>이지어드민V3.5+</title>
+
+<script type="text/javascript" src="js35/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="js35/jquery.cookie.js"></script>
+<script type="text/javascript" src="js35/jquery.notice.js"></script>
+<script type="text/javascript" src="js35/blockui.js"></script>
+<script type="text/javascript" src="js35/ui.js"></script>
+<script type="text/javascript" src="js35/wms.js"></script>
+<script type="text/javascript" src="js35/swiper.js"></script>
+<script type="text/javascript" src="js35/main35.js?ver=20260223212129"></script>
+<script type="text/javascript" src="js35/theme.js"></script>
+<!--
+<script type="text/javascript" src="js35/ezadmin35.js"></script>
+-->
+
+<!--
+<link rel="stylesheet" href="css25/ezlogin.css?ver=1" type="text/css" />
+<script type="text/javascript" src="js/ezlogin.js"></script>
+-->
+
+<link rel="stylesheet" type="text/css" href="css35/common.css?ver=20260223212129">
+<link rel="stylesheet" type="text/css" href="css35/layout.css?ver=20260223212129">
+<link rel="stylesheet" type="text/css" href="css35/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css35/swiper.css">
+<link rel="stylesheet" type="text/css" href="css35/ezadmin35.css?ver=20260223212129">
+<link rel="stylesheet" type="text/css" href="css35/main.css?ver=20260223212129">
+<link rel="stylesheet" href="css35/anti_bootstrap.css?ver=20260223212129">
+
+<script type="text/javascript" src="FusionCharts/fusioncharts.js"></script>
+<script type="text/javascript" src="FusionCharts/fusioncharts.charts.js"></script>
+<script type="text/javascript" src="FusionCharts/themes/fusioncharts.theme.zune.js"></script>
+
+<script type="text/javascript" src="js/fingerprint.js"></script>
+<script type="text/javascript" src="js/ezadmin.js?ver=20260223212129"></script>
+
+<link rel="stylesheet" href="/fontawesome6/css/fontawesome.css">
+<link rel="stylesheet" href="/fontawesome6/css/regular.css">
+<link rel="stylesheet" href="/fontawesome6/css/light.css">
+<link rel="stylesheet" href="/fontawesome6/css/solid.css">
+<link rel="stylesheet" href="/fontawesome6/css/thin.css">
+
+<link rel="stylesheet" href="css25/ezlogin.css?ver=1" type="text/css">
+<script type="text/javascript" src="js/ezlogin.js"></script>
+
+<script>
+//-- null function
+
+var ismobile = "";
+$(document).ready(function () {
+    // 메인 lnb height 
+    var asideh = $('.content').outerHeight();
+    $('.aside-wrap').height(asideh);  
+
+	});
+
+    function resize_height(befor_win_height, dir) { }
+    // 미처리 현황 권한 체크.
+    var m_auth_sub5 = "0";
+    var m_auth_sub8 = "0";
+    var g_domain = "reto123";
+
+
+</script>
+
+</head>
+
+<body class="bgline">
+	<div class="wrapper" id="wrap">
+
+<style>
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+#ezadmin_guide{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    z-index: 1101;
+	display: flex;
+	display: -ms-flexbox;
+    align-items: center;
+	
+
+//	display: none;
+}
+#ezadmin_guide .close_btn{
+	position:absolute;
+	top: 0;
+	right: 0;
+    width: 60px;
+    height: 60px;
+    text-indent: -9999px;
+	border: none;
+	background: none;
+}
+#ezadmin_guide .guide_btn{
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	width: 250px;
+	padding: 15px 0;
+	margin-left: -125px;
+	background: #000;
+    text-align: center;
+	color: #fff;
+	border-radius: 5px;
+}
+#ezadmin_guide .guide_btn > div{
+	display: flex;
+	display: -ms-flexbox;
+	align-items: center;
+    justify-content: center;
+	font-family: 'GmarketSansMedium' !important;
+    font-size: 17px;
+}
+#ezadmin_guide .guide_btn input{
+	margin: 1px 5px 0 0 !important;
+}
+#ezadmin_guide .guide_btn label{
+	margin: 0;
+    line-height: normal;
+}
+
+#ezadmin_guide [type=checkbox]:checked, [type=checkbox]:not(:checked) {
+    opacity: 1;
+}
+#ezadmin_guide input[type=checkbox]:before {
+    display: inline-block;
+    content: "";
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url(../images35/cs-sprite.png) no-repeat -21px -18px;
+}
+#ezadmin_guide input[type=checkbox] {
+    pointer-events: auto !important;
+    position: relative !important;
+    line-height: 1;
+	outline: none;
+}
+#ezadmin_guide input[type=checkbox]:checked:before {
+    background-position: -3px -18px;
+}
+</style>
+
+
+<div id="ezadmin_guide" style="display: none;">
+	<div style="margin: 0 auto; position: relative;">
+		<img src="images/popup/210118_ezadmin_guide_pop.png" usemap="ezadmin_guide">
+		<button type="button" class="close_btn">닫기</button>
+
+		<div class="guide_btn">
+			<div>
+				<input type="checkbox" name="ezadmin_guide_chk" id="ezadmin_guide_chk">
+				<label for="ezadmin_guide_chk">읽고 확인 함</label>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	function setCookies(key, value, expiredays) {
+		var todayDate = new Date();
+		todayDate.setDate(todayDate.getDate() + expiredays);
+		document.cookie = key + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	}
+
+	var getCookies = function(name) {
+		var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+		return value ? value[2] : null;
+	};
+
+	//var check_cs_policy = ;
+	var corp_type = 'new';
+
+	if( (corp_type == 'old' && getCookies('ezadmin_guide') == 'on') || $(window).width() < 1000 )
+		$("#ezadmin_guide").hide();
+
+
+$(function(){
+
+	$("#ezadmin_guide .close_btn").click(function(){
+
+		if( corp_type == 'new' )
+		{
+			if( $("input[type=checkbox][name=ezadmin_guide_chk]").is(":checked") )
+			{
+				$.post('main15_func.php',{'action': 'ezadmin_guide'},function(data){
+					alert("최상단 메뉴 중 [이지어드민 사용가이드]를 통해 재확인 가능하십니다.");
+					$("#ezadmin_guide .guide_btn").hide();
+				});
+			}
+		}
+		else
+		{
+			setCookies("ezadmin_guide", 'on', 1);
+		}
+
+		$("#ezadmin_guide").hide();
+	});
+
+});
+</script>
+
+<style>
+#modalRequiredChecklist {
+}
+#modalRequiredChecklist .modal-dialog {
+	width: auto !important;
+}
+#modalRequiredChecklist .modal-inner {
+}
+#modalRequiredChecklist .modal-inner .modal-body {
+	border-radius: 8px;
+	padding: 0;
+	display: flex;
+}
+#modalRequiredChecklist .modal-inner > .page-close,
+#modalRequiredChecklist .menu-inner > .page-close {
+	background: none;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+}
+#modalRequiredChecklist .modal-body > img {
+	border-radius: 8px;
+	width: 100%;
+}
+#modalRequiredChecklist .modal-body .content-box {
+	position: absolute;
+	top: 282px;
+	left: 38px;
+}
+#modalRequiredChecklist .modal-body .content-row {
+	display: flex;
+	width: 926px;
+	height: 102px;
+	gap: 18px;
+	margin-bottom: 30px;
+}
+#modalRequiredChecklist .modal-body .content-cont {
+	display: flex;
+	align-items: center;
+	color: #000;
+	width: 455px;
+	gap: 10px;
+}
+#modalRequiredChecklist .modal-body .content-cont > i {
+	font-size: 45px;
+	color: #fff;
+	width: 102px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#modalRequiredChecklist .modal-body .content-wrap {
+	font-size: 12px;
+	width: fit-content;
+	font-family: 'pretendard';
+}
+#modalRequiredChecklist .modal-body .content-summary {
+	font-weight: 800;
+	font-size: 17px;
+	margin-bottom: 8px;
+}
+#modalRequiredChecklist .modal-body .content-detail {
+	word-break: keep-all;
+}
+#modalRequiredChecklist .modal-body .accent {
+	color: #ff0000;
+}
+</style>
+
+
+<div class="modal-pop" id="modalRequiredChecklist">
+	<div class="modal-dialog">
+		<div class="modal-inner w1000">
+			<div class="modal-body" id="required_checklist">
+				<img src="images/popup/ezadmin_required_checklist.jpg">
+
+				<div class="content-box">
+					<div class="content-row">
+						<div class="content-cont">
+							<i class="fa-regular fa-database"></i>
+							<div class="content-wrap">
+								<h1 class="content-summary">
+								<font class="accent">3개월이 지난 주문 관련 정보</font>는<br>
+								백업됩니다.
+								</h1>
+								<span class="content-detail">발주일과 배송일이 다른 경우, 조회 시기에 따라 데이터에 차이가 <br>날 수 있습니다.</span>
+							</div>
+						</div>
+
+						<div class="content-cont">
+							<i class="fa-regular fa-trash-xmark"></i>
+							<div class="content-wrap">
+								<h1 class="content-summary">
+								이지어드민 <font class="accent">사용 종료 30일 이후 기존 데이터</font>는<br>
+								삭제됩니다.
+								</h1>
+								<span class="content-detail">해당 기간 중 대표자 직인이 포함된 자료열람신청서를 등기 발송<br>하면 필요한 자료를 열람할 수 있습니다.<span>
+							</span></span></div>
+						</div>
+					</div>
+
+					<div class="content-row">
+						<div class="content-cont">
+							<i class="fa-regular fa-hand"></i>
+							<div class="content-wrap">
+								<h1 class="content-summary">
+								<font class="accent">백업 시간</font>에는 서비스 이용이 일시<br>
+								중단됩니다.
+								</h1>
+								<span class="content-detail">이지어드민의 서버는 매일 새벽 4~5시에 자동 백업이 진행되며 <br>이 시간 중에는 서비스 이용이 중단됩니다.<span>
+							</span></span></div>
+						</div>
+
+						<div class="content-cont">
+							<i class="fa-regular fa-badge-check"></i>
+							<div class="content-wrap">
+								<h1 class="content-summary">
+								<font class="accent">택배계약코드 변경</font> 후에는 반영 여부를 반드시<br>
+								확인해야 합니다.
+								</h1>
+								<span class="content-detail">출력된 송장이 해당 택배사의 전산에 변경된 코드로 정상 반영<br>되었는지 재확인해야 합니다.<span>
+							</span></span></div>
+						</div>
+					</div>
+
+					<div class="content-row">
+						<div class="content-cont">
+							<i class="fa-regular fa-truck"></i>
+							<div class="content-wrap">
+								<h1 class="content-summary">
+								이지어드민에서는 <font class="accent">배송 이전 단계까지의 정보</font>를<br>
+								제공합니다.
+								</h1>
+								<span class="content-detail">배송 후 물품 분실이나 배송완료의 경우는 해당 택배사를 통해 <br>배송 정보를 확인할 수 있습니다.<span>
+							</span></span></div>
+						</div>
+
+						<div class="content-cont">
+							<i class="fa-regular fa-money-check-dollar"></i>
+							<div class="content-wrap">
+								<h1 class="content-summary">
+								<font class="accent">업무 외 시간 사용료 입금</font>도 정상적으로<br>
+								처리됩니다.
+								</h1>
+								<span class="content-detail">업무 외 시간 및 공휴일에 가상계좌로 사용료를 입금하면 <br>이지어드민 사용이 자동 연장됩니다.<span>
+							</span></span></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<a href="#" class="page-close"></a>
+		</div>
+	</div>
+	<div class="dim"></div>
+</div>
+
+<div class="gnb-head-wrap" style="left: 0px;">
+    <!-- 주메뉴 -->
+    <div class="gnb-area">
+	<ul class="gnb">
+				<li>
+			<button type="button"><a href="javascript:move_page35('B100');">기본정보관리</a></button>
+		</li>
+					<li>
+			<button type="button"><a href="javascript:move_page35('C200');">상품관리</a></button>
+		</li>
+			
+
+		<li>
+			<button type="button"><a href="javascript:move_page35('DC10');">주문배송관리</a></button>
+		</li>
+
+		<li>
+			<button type="button"><a href="javascript:move_page35('EN00');">C/S 관리</a></button>
+		</li>
+					<li>
+			<button type="button"><a href="javascript:move_page35('I100');">재고관리</a></button>
+		</li>
+					<li>
+			<button type="button"><a href="javascript:move_page35('F308');">정산통계</a></button>
+		</li>
+				<li>
+			<button type="button"><a href="javascript:move_page35('H100');">고객센터</a></button>
+		</li>
+        </ul>
+    </div>
+    <!-- //주메뉴-->
+    <!-- 기타(유저 정보, 알림 , 검색)-->
+    <div class="header-left-cont">
+        <div class="header-cont-wrap">
+			<div class="shortcut flex">
+																<button type="button" class="ez_btn_r btn-green" onclick="javascript:popup_new_cs(0);">CS창</button>
+										<button type="button" class="ez_btn_r btn-real-red" onclick="javascript:popup_new_1688();">1688</button>
+			
+			                        							<button type="button" class="ez_btn_r btn-primary" onclick="open_ntab();">새 탭</button>
+			</div>
+            <!-- 검색 -->
+            <div class="header-icons">
+				<button type="button" class="ez_btn_r btn-green" style="border-color: #04a24b; background-color: #04a24b; min-width: 36px;" onclick="excel_modal_popup('exceldownload')"><i class="fa-solid fa-arrow-down-to-line"></i></button>
+<!--
+                <button type="button" class="header-btn-search">검색 <i class="ico_new"></i></button>
+                <button type="button" class="header-btn-alert">알림<i class="ico_new"></i></button>
+                <button type="button" class="header-btn-excel" onclick="targetModalPopup('exceldownload')">엑셀<iclass="ico_new"></i></button>
+-->
+            </div>
+            <!-- 유저정보 -->
+            <div class="user-info" style="position:relative;">
+				<div>
+					<span id="notice_cnt_user" class="dropdown-toggle notice-badge-user" style="border-bottom:none;">1</span>
+    	            <span class="user-box">
+	                    <img src="../images35/img_user.png" alt="" style="width:30px; height:30px;">
+	                </span>
+				</div>
+                <div>
+                    <button type="button" class="user dropdown-toggle ellipsis">아이돈워너셀님 (reto123)</button>
+                    <div class="user-panel-box">
+                        <div class="user-panel-top"> reto123 </div>
+                        <div class="user-panel-body">
+                            <div class="user-pic">
+                                <img src="../../img/common/img_user_default.jpg" alt="" class="">
+                                <p>
+								일반사용자								</p>
+                            </div>
+                            <ul class="user-info-list">
+                                <!--li><a href="javascript:go_main('template=BA00');"><i class="uico-manage"></i>계정정보 관리</a></li-->
+                                <li><a href="template35.htm?template=BA00"><i class="uico-manage"></i>계정정보 관리</a></li>
+                                <li><a href="template35.htm?template=H100"><i class="fa-light fa-clipboard-list" style="color: #54b2ff; margin-left: 2px; margin-right: 12px; font-size: 18px;"></i><span style="color:#000;">공지사항</span><span id="notice_cnt_userlist" class="notice-badge-userlist">1</span></a></li>
+                                <li><a href="template35.htm?template=BA10"><i class="fa fa-ticket fa-lg" aria-hidden="true" style="color: #198cff;margin-right: 10px;"></i>쿠폰관리</a></li>
+								<li><a href="javascript: void(0);"><i class="uico-change"></i>테마변경</a>
+									<div class="theme-color-change">
+										<button class="bgline" data-theme="bgline" type="button">파랑</button>
+										<button class="theme-green" data-theme="theme-green" type="button">초록</button>
+										<button class="theme-navy" data-theme="theme-navy" type="button">남색</button>
+										<button class="theme-orange" data-theme="theme-orange" type="button">오렌지</button>
+										<button class="theme-pink" data-theme="theme-pink" type="button">핑크</button>
+										<button class="theme-purple" data-theme="theme-purple" type="button">보라</button>
+									</div>
+								</li>
+                            </ul>
+                        </div>
+                        <div class="user-panel-footer">
+                            <a href="/logout.php"><i class="uico-logout"></i>로그아웃</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //유저정보 -->
+						<a href="/logout.php" class="mr20"><span class="ez_btn_r btn-red btn_logout">로그아웃</span></a>
+            <!--알림 정보-->
+            <div class="inform-box">
+                <div class="inform-box-inner">
+                    <ul>
+                        <li>알람 메시지가 나옵니다.</li>
+                        <li>이지어드민 웹사이트에서 알림을 보낼수 있도록 설정합니다.</li>
+                        <li>알람 메시지가 나옵니다.</li>
+                        <li>이지어드민 웹사이트에서 알림을 보낼수 있도록 설정합니다.</li>
+                        <li>알람 메시지가 나옵니다.</li>
+                        <li>이지어드민 웹사이트에서 알림을 보낼수 있도록 설정합니다.</li>
+                    </ul>
+                    <div class="inform-more-text">
+                        <a href="javascript:void(0)">더보기 <i class="ico ico-more"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- //알림 정보-->
+	            <!-- 전체 메뉴 -->
+            <div class="allmenu-button">
+                <button type="button" class="header-btn-allmenu">전체메뉴</button>
+                <div class="allmenu-box">
+                    <div class="allmenu-icons">
+                        <ul>
+							<!--
+                            <li class="emphasis">
+                                <a href="javascript:void(0);" class="all-btn-view" onclick="targetModalPopup('allmenu')">전체 메뉴보기</a>
+                            </li>
+-->
+							<li><a href="javascript:show_ezadmin_guide();">이지어드민 사용가이드</a></li>
+							<li><a href="javascript:void(0);" onclick="targetModalPopup('modalRequiredChecklist')">이지어드민 필수확인사항</a></li>
+							<li><a href="template40.htm?template=BL30">다운로드관리자</a></li>
+							                				<!--
+									<li><a href="javascript:change_template_version();">이전버전으로 돌아가기</a></li>
+-->
+															                            <li><a href="javascript:popup_new_cs(1);">CS 상세</a></li>
+							<li><a href="template35.htm?template=HB00">모듈다운로드</a></li>
+							<li><a href="template35.htm?template=H900">FAQ</a></li>
+																			<li><a target="_blank" href="https://stock.ezapps.co.kr/login_redirect.php?key=2EuNKoOdI133qb1IJtunU8AsJiUq2cwp01INgSkBDTpBV7iHNSg4F2iWel7Tu52h&amp;method=openssl">이지리플</a></li><!--자동동기화-->
+																			<li><a href="template35.htm?template=HD00">필수설정</a></li>
+							<li><a href="https://www.youtube.com/playlist?list=PL2QlHA46MclTVYw7WG3Iqs3eaxxa0lVYK" onclick="LeftPosition()" target="new">영상가이드</a></li>
+                            <li><a href="javascript:popup_newsletter();">뉴스레터 신청</a></li>
+																																																		
+						                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 전체 메뉴 -->
+        </div>
+    </div>
+    <!-- //기타(유저 정보, 알림 , 검색)-->
+</div>
+
+<!-- 엑셀 다운로드 팝업 -->
+<!--  엑셀 다운로드 -->
+<script>
+function extract_file_name(url) {
+    // URL의 마지막 슬래시 뒤의 문자열을 추출합니다.
+    const file_name = url.substring(url.lastIndexOf('/') + 1);
+    return file_name;
+}
+
+// 24.06.03 hschoi 엑셀 다운로드 팝업
+function get_download_worklist () 
+{   
+    const request_obj = {
+        action :"get_download_worklist"
+        ,timeFlag : Date()
+    };
+    const excel_container = $('#excel_download_modal_body_container');
+    excel_container.empty();
+    const loader_tags = `<div>Loading ... </div>`;
+    excel_container.append(loader_tags);
+
+    //console.log(request_obj);
+
+    $.post("main35_func.php", request_obj, function(data){
+       	//console.log(data);
+        if( data )
+        {
+            render_excel_download_body(JSON.parse(data));
+        }
+    });
+
+}
+
+function render_excel_download_body(data) {
+
+    let excel_data = data?.data;
+
+
+    const page_info = data?.PPN;
+
+    //console.log("rendering !");
+    const excel_container = $('#excel_download_modal_body_container');
+    excel_container.empty(); // 기존 내용을 비웁니다.
+
+    //console.log("recv_data", data);
+    //console.log("excel_data", excel_data);
+
+    // 추후 날짜, row 별로 나눠야할거같음. 우선 나오게만 작업
+
+    let total_str = ""; // excel_downlod_modal_dialog 내부 html
+
+    excel_data?.forEach( data_row => {
+		// status 0 : 대기중
+		// status 1 : 작업중
+		// status 2 : 작업 완료
+
+        let row_str = ""; // 줄 html 
+        let progress_tags = ""; // 프로그래스 바 html
+
+        let working_percent = ( data_row.current_rows / data_row.total_rows ) * 100 ;
+        working_percent = Math.ceil(working_percent);
+
+		// status 0 : 작업 대기
+		if ( data_row.status == 0 )
+		{
+			working_percent = 0;
+		}
+	
+		// status 1 : 작업중
+		if ( data_row.status == 1 && working_percent > 99)
+		{
+			working_percent = 99; // status 2, 작업 완료가 아닌데 row 진행은 완료된 경우 99 고정
+		}
+
+		// status 2 : 작업완료
+		if ( data_row.status == 2 )
+		{
+			working_percent = 100;
+		}
+		else if( data_row.status == -1 )
+		{
+			progress_tags = `<div class="progress-box-inner">
+								<span style="color:red;">${data_row.error_msg}</span>
+							</div>`;
+		}
+		else if(working_percent)
+		{
+			progress_tags = `<div class="progress-box-inner">
+								<div class="progress-bar-blue">
+										<span style="width:${working_percent}%; color:black">
+											<em class="excel_working_percent_text">${working_percent}%</em>
+										</span>
+								</div>
+							</div>`;
+		}
+		else
+		{
+			progress_tags = `<div class="progress-box-inner">
+								<div class="progress-bar-area">
+										<span style="width:100%; color:#929292;">
+											<em class="excel_working_percent_text">다운로드 대기</em>
+										</span>
+								</div>
+							</div>`;
+		}
+        //console.log(working_percent);
+
+		// 기본 파일 명
+        let file_name_btn = ``;
+
+		if( data_row.status == 0 )
+        {
+			file_name_btn = "대기중";
+		}
+
+		if( data_row.status == 1 )
+        {
+			file_name_btn = "작업중";
+		}
+
+		// 작업완료 상태일 경우 파일명 /다운로드
+        if( data_row.status == 2 )
+        {
+			let extracted_file_name_from_url = "파일명 없음";
+
+			if ( data_row?.file_name )
+			{
+				extracted_file_name_from_url = extract_file_name(data_row.file_name);
+			} 
+
+			if ( data_row?.file_name )
+			{ 
+				file_name_btn =  `<i class="ico ico-excel"></i><a href="${data_row.file_name}" class="txt-link black" download>${extracted_file_name_from_url}</a>`;
+			}
+			else
+			{
+				file_name_btn = `파일 없음`;
+			}
+        }
+
+		if( data_row.status == -1 )
+        {
+			file_name_btn = "<font color=red>오류</font>";
+		}
+
+		if (!file_name_btn)
+		{
+			file_name_btn = "대기중";
+		}
+
+        // 취소, 재시도 버튼 없음
+        row_str += `<section class="excel-progress">
+                      <div class="progress-box">
+                        <p class="excel_file_name">${file_name_btn}</p>
+                            ${progress_tags}
+                            <ul class="dot-list">
+                                <li>
+                                    <div class="location">
+                                        <span>작업 페이지 : ${page_info[data_row.work_template]?.name ?? data_row.work_template }</span>
+                                    </div>
+                                </li>
+                                <li>작업자 : ${data_row.worker} </li>
+                                <li>생성요청시간 : ${data_row.crdate}</li>
+                            </ul>
+                        </div>
+                    </section>
+                    `;
+        total_str += row_str;
+    } );
+
+	if (!total_str)
+	{
+		total_str = `<div style='padding-top:30px;padding-left:15px;'>다운로드 내역이 없습니다.</div>`;
+	}
+
+    excel_container.append(total_str);
+}
+
+function refresh_excel_download ()
+{
+	// console.log("다중 클릭 막기위해 1초 딜레이");  
+    get_download_worklist();
+}
+
+</script>
+<style>
+.excel-download-refresher{
+	display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+	margin-left : 4px !important;
+	padding-top : 2px;
+	transition : 0.1s;
+}
+.excel-download-refresher:hover{
+	opacity : 0.8;
+}
+.notice-area{
+	border:1px solid #ddd;
+	border-radius:6px;	
+	padding:8px;
+	margin-top : 25px;
+	vertical-align : center;
+}
+.download-manager-bnt{
+	transition : 0.1s;
+	color : grey;
+	padding: 6px;
+	width : 110px;
+	text-align : center;
+	border : 1px solid #ddd;
+	border-radius : 4px;
+	float:right;
+	background-color : #f9f9f9;
+	margin-top : -15px;
+}
+.download-manager-bnt:hover{
+	opacity : 0.8;
+}
+.highlight-red{
+	color : red;
+	font-weight : 700;
+}
+.excel-btn-close {
+    font-size: 14px;
+    line-height: 34px;
+    min-width: 90px;
+    height: 36px !important;
+    padding: 0 18px;
+    border-radius: 18px;
+}
+.excel-btn-close:hover{
+	color: black;
+}
+.excel-btn-close:active:focus, .excel-btn-close:focus{
+	outline : 0px;
+}
+</style>
+<div class="modal-pop excel-download-box" id="exceldownload">
+    <div class="modal-dialog" id="excel_downlod_modal_dialog">
+        <div class="modal-inner">
+            <section class="modal-head">
+                <div class="modal-head-inner">
+                    <h1>작업관리자</h1>
+					<button type="button" class="ml10 excel-download-refresher" onclick="javascript:refresh_excel_download();">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#fff">
+						  <path d="M12 4V1L8 5l4 4V6c3.86 0 7 3.14 7 7 0 .77-.13 1.5-.36 2.19l1.46 1.46A8.941 8.941 0 0021 13c0-4.97-4.03-9-9-9zm-1 13c-3.86 0-7-3.14-7-7 0-.77.13-1.5.36-2.19L2.9 6.36A8.941 8.941 0 003 11c0 4.97 4.03 9 9 9v3l4-4-4-4v3z"></path>
+						</svg>
+					</button>
+                    <span class="label-id"></span>
+                </div>
+            </section>
+            <div class="modal-body">
+                <a class="download-manager-bnt" href="/template40.htm?template=BL30">다운로드 관리자</a>
+                <div class="notice-area">
+                    <p class="ico-notice" style="margin : 0px; margin-top:5px;">현재 화면에서는 <span class="highlight-red">오늘 작업 내역만 조회</span>됩니다.</p>
+                    <p class="ico-notice" style="margin : 0px; margin-top:5px;"><span class="highlight-red">과거 다운로드 이력</span>은 <span class="highlight-red">[다운로드관리자]</span>에서 확인할 수 있습니다.</p>
+                    <p class="ico-notice" style="margin : 0px; margin-top:5px;">상단 새로고침을 누르면 다운로드 현황이 업데이트 됩니다.</p>
+                </div>
+				<div id="excel_download_modal_body_container" style="min-height: 500px;">
+				</div>
+            </div>
+            <!--//modal-body-->
+            <div class="modal-footer">
+                <div class="modal-footer-btn">
+                    <button type="button" name="button" class="btn btn-lg btn-darkgray page-close excel-btn-close">닫기</button>
+                </div>
+            </div>
+            <a href="#" class="page-close"></a>
+        </div>
+    </div>
+    <div class="dim" id="dim-block"></div>
+</div>
+<!-- //엑셀 다운로드 -->
+
+<script>
+
+$(document).on('click','.fav-btn',function(event){
+
+	event.stopPropagation();
+	
+	if( $(this).hasClass('on') )
+	{
+		$(this).removeClass('on');
+		var action = "delete_mymenu";
+	}
+	else
+	{
+		$(this).addClass('on');
+		var action = "add_mymenu";
+	}
+
+    var params = {};
+    params["template"] = "mymenu";
+    params["action"] = action;
+    params["my_template"] = $(this).data("template");
+
+    $.post("function.htm", params, function(data){
+		get_menu();	
+	});
+});
+$(function(){
+	get_notice_cnt();
+
+	$(document).on('click','.theme-color-change > button',function(event){
+		event.stopPropagation();
+		document.cookie = "theme_color="+$(this).attr('data-theme');
+	});
+});
+
+
+// 하부업체
+function menu_alert(template)
+{
+	alert("사용권한이 없습니다.");
+}
+function move_page35(template)
+{
+/*
+	location.href = "template35.htm?template=" + template + "&time=" + Date();
+*/
+}
+
+function get_menu(){
+    var params = {};
+    params["template"] = "mymenu";
+    params["action"] = "get_mymenu";
+	params["readonly"] = "T";
+    $.post("function.htm", params, function(data){
+        var obj = JSON.parse(data);
+        draw_mymenu35(obj);
+    });
+}
+
+function draw_mymenu35(data){
+
+    var sMenuActiveClass = "active";
+    var sMenuActiveStyle = "display: block;";
+    var menu_tag = "";
+
+    $.each(data, function(index, el){
+        menu_tag += "<li class='lnb_list'>";
+            menu_tag += "<a classs='" + sMenuActiveClass + "' href='javascript: void(0);'>" + el['name'] + "</a>";
+            menu_tag += "<div class='lnb-one-depth' style='" + sMenuActiveStyle + "'>";
+				menu_tag += "<ul>";
+
+        $.each( el['data'] , function( _index, _el ){
+            var sMenuActiveClass = "";
+
+            if( _el['template'] == sMenuActiveClass ) 
+                sMenuActiveClass = "active";
+
+					menu_tag += "<li class='" + sMenuActiveClass + " lnb-two-depth'>";
+						menu_tag += "<p class='flex ai_c mb0'>";
+							menu_tag += "<button type='button' class='btn-favorite-del' data-template='"+ _el['template'] +"'></button>";
+							menu_tag += "<a href=\"javascript:move_page35('" + _el["template"] + "');\"><span>" + _el["name"] + "</span></a>";
+						menu_tag += "</p>";
+					menu_tag += "</li>";
+        });
+            menu_tag += "</ul></div></li>";
+
+    })
+    
+    $("#favorite_list").empty().append(menu_tag);
+    $(".lnb-setting-btns").removeClass('active');
+}
+
+// ui전환
+function change_template_version()
+{
+	var change_confirm = confirm("확인을 누르면 버전이 전환되며, 버전 전환을 위해 로그아웃이 필요합니다.");
+	if(change_confirm) {
+		$.post("main35_func.php", {
+			action   : "change_template_version",
+			timeFlag : Date()
+		},
+		function( response ){
+			location.href = "/logout.php";
+		});
+	}
+}
+
+function move_page35(template)
+{
+    location.href = "template35.htm?template=" + template + "&time=" + Date();
+}
+
+//-- CS창 열기
+function popup_new_cs(is_dup = 0)
+{
+	var d = new Date();
+	var n = d.getTime();
+
+			openwin25("popup25.htm?template=E900&_si=jiannaqjhorh1e3arvtvg82754&domain=reto123&login_id=idws&_=" + n, "new_cs_reto123", "2000","1500","yes");
+	}
+//-- 사입장기관리창 열기
+function popup_new_scm()
+{
+	openwin25("supply/template.htm?template=A100", "", "2000", "1500", "no", "no");
+}
+
+//-- ezerp 열기
+function popup_new_ezerp()
+{
+	openwin25("ezerp/index.htm", "", "2000", "1500", "no", "no");
+}
+
+//-- 뉴스레터신청 팝업 
+function popup_newsletter()
+{
+			openwin25('popup/news_letter_popup.html?template=E122&domain=reto123&login_id=idws', 'news_letter', "640","440","yes");
+	}
+
+
+
+function popup_new_sms()
+{
+			openwin3('popup35.htm?template=E111&name=&mobile=', 'smswin', 1600, 700);
+	} 
+function show_ezadmin_guide()
+{
+	$("#ezadmin_guide").show();
+}
+function open_ntab(){
+	window.open(document.location.href);
+}
+
+// 24.05.31 hschoi 엑셀 다운로드 팝업
+function excel_modal_popup (target)
+{
+	//  download_box40.htm 내부에 해당 함수 작성되어있습니다.
+	get_download_worklist();
+    var targetPopup = $('#' + target);
+
+    $('body').addClass('scroll-none');
+    targetPopup.addClass('active');
+
+    if ($(document).height() > $(window).height()) {
+      $('.content').css('padding-right', '30px');
+      $('.content-footer-btns').css('padding-right', '10px');
+      $('.gnb-head-wrap').css('width', 'calc(100% - 300px)');
+    }
+}
+
+function popup_new_1688()
+{
+	window.open("popup35.htm?template=1688", "landing_1688");
+}
+
+// 25.05.21 eclee 최근 공지사항 개수
+function get_notice_cnt(){
+    var params = {};
+    params["template"] = "H100";
+    params["action"] = "new_notice_cnt";
+    $.post("function.htm", params, function(data){
+
+		if (data > 0)
+		{
+			$("#notice_cnt_user").html(data);
+			$('#notice_cnt_user').addClass('notice-badge-user');
+
+			$("#notice_cnt_userlist").html(data);
+			$('#notice_cnt_userlist').addClass('notice-badge-userlist');
+		}
+    });
+}
+
+function open_ezadmin_api()
+{
+	let url = "https://www.ezadmin.co.kr/dev/ezapps_redirect.html";
+//	let url = "https://www3.ezadmin.co.kr/dev/ezapps_redirect.html";
+
+	const form = document.createElement('form');
+	form.method = 'POST';
+	form.action = url;
+	form.target = '_blank';
+
+	let data = {
+				key: "c385210c8022c503cbd5e34738e106d1e96d6fadf8971a1633cc3cacb33b25eb2095a12c44d96035f6614bf351c269bf",
+		login_already: true
+	};
+
+	Object.entries(data).forEach(([k, v]) => {
+		const input = document.createElement('input');
+		input.type = 'hidden';
+		input.name = k;
+		input.value = String(v);
+		form.appendChild(input);
+	});
+
+	document.body.appendChild(form);
+	form.submit();
+	form.remove();
+}
+
+function click_popup_board(no, type)
+{     
+	var url="link_click_process.php";
+	$.ajax({      
+			type:"POST",
+			url:url,    
+			data:{ "action": "click_popup_board", "no" : no, "type" : type } ,
+			success:function(args){  
+					console.log(args);
+			},   
+			error:function(e){  
+					console.log(e.responseText);
+			}
+	});
+}
+</script>
+
+
+
+
+
+<script>
+
+$(document).on('click', '.btn-favorite-del', function(data){
+	var template = $(this).data('template');
+	var li_length = $(this).closest('div.lnb-one-depth').find('li').length;
+	var lnb_list = $(this).closest('.lnb_list');
+	var lnb_two_depth = $(this).closest('li.lnb-two-depth');
+
+	$.post('function.htm',{
+		 "template"		: "mymenu"
+		,"action" 		: "delete_mymenu"
+		,"my_template" 	: template 
+	},function(data){
+		if( li_length == 1 )
+			lnb_list.remove();
+		else
+			lnb_two_depth.remove();
+
+		$(".fav-btn[data-template=" + template + "]").removeClass('on');
+		if( $("#mymenu_action").attr('template') == template )
+			$("#mymenu_action").removeClass('on');
+	});
+
+});
+</script>
+<!-- modal 관련 -->
+<style type="text/css">
+#modaladdition .table>tbody>tr>td, 
+#modaladdition .table>tbody>tr>th, 
+#modaladdition .table>tfoot>tr>td, 
+#modaladdition .table>tfoot>tr>th, 
+#modaladdition .table>thead>tr>td, 
+#modaladdition .table>thead>tr>th
+{
+	padding: 6px 20px;
+}
+#server_info { 
+	/*background: url(../images/popup/server_info.jpg);*/
+	background: url(../images/popup/server_info.png?t=20260223212130);
+	background-position: bottom;
+	height: 398px;
+}
+#domain_setting {
+	min-height: 300px !important;
+	padding: 0px !important;
+}
+#domain_setting_content {
+	padding: 25px;
+}
+#domain_setting_textarea {
+	font-family: tahoma, Gulim;
+	font-size:12px;
+	border: 1px solid #b7b7b7;
+	border-radius : 5px;
+	width: 100%;
+	height: 300px;
+	letter-spacing:0;
+	line-height:150%;
+	resize: none;
+	padding:25px;
+}
+.addition {
+	font-size: 15pt;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	display: inherit;
+}
+
+#modal_addtion .cont_area{
+    background: #fff;
+    padding-bottom: 30px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#modal_addtion h2{
+	text-align: center;
+    color: black;
+    padding-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#modal_addtion .table th, #modal_addtion .table td{
+    text-align: center;
+	border-bottom : solid 1px #ddd;
+}
+
+#modaladdition .icon_area{
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    padding: 45px 0;
+    background: #f65655;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#modal_addtion .table-dark{
+	color : black;
+}
+
+.additional-table-container{
+	max-height:330px;
+	overflow:auto;
+}
+
+input[name=as_cookie]+ label:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    position: absolute;
+    left: 0;
+    background-color: #eee;
+    border-radius: 2px;
+}
+input[name=as_cookie] + label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    margin-right: 15px;
+    font-size: 11px;
+}
+input[name=as_cookie]:checked + label:before {
+    content: url(/images/popup/btn_check.png);
+    font-weight: 800;
+    color: #fff;
+    background: #A53235;
+    text-align: center;
+    line-height: 18px;
+}
+</style>
+
+<script>
+	// 23.12.28
+	const additional_table_arr = [];
+	
+	const add_additional_service = (obj) => {
+		additional_table_arr.push(obj);
+	}
+
+	const print_additional_service = () => {
+		additional_table_arr.sort((a,b)=> 
+			{
+				// 1순위로 status를 비교
+				if (a.status && !b.status) {
+					return -1; // a가 status가 있는 경우, b는 없는 경우
+				} else if (!a.status && b.status) {
+					return 1; // b가 status가 있는 경우, a는 없는 경우
+				} else {
+					return a.end_date - b.end_date; // end_date를 기준으로 오름차순 정렬
+				}
+			});
+
+		let table_row_result = "";
+
+		additional_table_arr.map((service,idx)=>{
+			const row_color = idx % 2 && "background-color:#f9f9f9;";
+			const font_color = service.status && "color:red;";
+			table_row_result += `
+			<tr style='${row_color}'>
+				<td>${service.service_name}</td>
+				<td style='${font_color}'>${service.end_date_str}</td>
+			</tr>
+			`;
+			
+		});
+	
+		const tbody_element = document.getElementById('additional_service_info_table').querySelector('tbody');
+		tbody_element.innerHTML = table_row_result;
+	}
+
+</script>
+<div class="modal-pop" id="modalserverinfo">
+	<div class="modal-dialog">
+		<div class="modal-inner w800">
+			<section class="modal-head">
+				<div class="modal-head-inner">
+					<h1>서버 특장점 안내</h1>
+				</div>	
+			</section>
+			<div class="modal-body" id="server_info">
+			</div>
+			<div class="modal-footer">
+				<div class="modal-footer-btn">
+					<button type="button" name="button" class="btn btn-lg btn-darkgray page-close">닫기</button>
+				</div>
+			</div>
+			<a href="#" class="page-close"></a>
+		</div>
+	</div>
+	<div class="dim"></div>
+</div>
+<!-- 업체 세팅 -->
+<div class="modal-pop" id="modalsetting">
+    <div class="modal-dialog">
+        <div class="modal-inner w800">
+            <section class="modal-head">
+                <div class="modal-head-inner">
+                    <h1>업체 세팅 (reto123)</h1>
+                </div>
+            </section>
+            <div class="modal-body" id="domain_setting">
+				<div id="domain_setting_content"></div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-btn">
+                    <button type="button" id="save_domain_setting" is_save="false" name="button" class="btn btn-lg btn-primary">수정</button>
+                    <button type="button" name="button" class="btn btn-lg btn-darkgray page-close">닫기</button>
+                </div>
+            </div>
+            <a href="#" class="page-close"></a>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+
+
+<!-- 부가서비스 만료일 -->
+
+
+<script>
+	$(function() {
+	
+	
+		var as_pop_on = "0";
+
+		var pop_cookie = getCookie("as_pop");
+		if( as_pop_on*1 && pop_cookie != "ok")
+		{
+							targetModalPopup('modaladdition');
+					}
+
+		var m_use_quickfinder = "0";
+		});
+
+    function check_quickfinder_status(shop_seq)
+    {
+        $.post("function.htm", {
+            template : "quickfinder",
+            action   : "check_status",
+            shop_id  : "test_ezadmin",
+            shop_seq : shop_seq
+        },
+        function( response ){
+			if( response )
+			{
+				var html = "퀵파인더-<span class='ez_btn_blue'>정상</span>";
+				$("#quickfinder_status").html(html);
+			}
+			else
+			{
+				var html = "퀵파인더-<span class='ez_btn_red'>에러</span>";
+                $("#quickfinder_status").html(html);
+			}
+        });
+    }
+
+	// 쿠키가져오기
+	function getCookie(cookie_name) {
+		var x, y;
+		var val = document.cookie.split(';');
+
+		for (var i = 0; i < val.length; i++) {
+			x = val[i].substr(0, val[i].indexOf('='));
+			y = val[i].substr(val[i].indexOf('=') + 1);
+			x = x.replace(/^\s+|\s+$/g, '');
+			if (x == cookie_name) {
+				return unescape(y); 
+			}
+		}
+	}
+
+	$(".page-close").click(function(){
+		view_domain_setting();
+	});
+
+	$(".addi-expired-modal-close-area").click(function(){
+		$("#modaladdition").removeClass("active");
+	});
+
+	// 오늘하루닫기에 체크할 경우 쿠키 설정
+	$("#modaladdition button").click(function(){
+		if($('input:checkbox[name="as_cookie"]').is(":checked") ==  true)
+		{
+			setCookie("as_pop", 'ok', 1);
+		}
+	});
+
+	// 업체세팅 저장/수정
+	$("#save_domain_setting").click(function(){
+		var is_save = $("#save_domain_setting").attr("is_save");
+		if(is_save == "false")
+		{
+			$.post("function.htm?template=HA00&action=edit_setting&is_new=true", function(data) {
+				$("#domain_setting_content").html(data);
+			});
+			$("#save_domain_setting").text("저장");
+			$("#save_domain_setting").attr("is_save","true");
+		}
+		if(is_save == "true")
+		{	
+			save_domain_setting();
+		}
+	});
+
+	// 업체세팅 저장
+	function save_domain_setting()
+	{
+		var params = {};
+		params['template'] = "HA00";
+		params['action']   = "save_setting";
+		params['content']  = $("textarea#domain_setting_textarea").val();
+
+		$.post("function.htm", params, function(data) {
+			view_domain_setting(); 
+		});
+	}
+
+	// 업체세팅 불러오기
+	function view_domain_setting(modal)
+	{
+		}
+
+</script>
+
+<!-- root 전용 팝업 -->
+	<script>
+	/*--------------------------------------*/
+	/*  팝업 DIV 보이기 (위치 지정) */
+	function toggle_info(left, top) {
+		//alert( left + ":" + top );
+		top = $(".fa-address-book").position().top - 210;
+		$("#info_popup_div").css('top', top).css('left', left).toggle();
+	}
+	</script>
+	<style>
+		#info_popup_div {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 205px;
+		height: 200px;
+		z-index: 999;
+		display: none;
+		border: 2px solid #777777;
+		line-height: 150%;
+		background-color: #FFFFFF;
+		padding: 10px;
+	}
+	</style>
+		<div id="info_popup_div">
+	 &nbsp;&nbsp;<b>내정보</b><br>
+	· 도메인 &nbsp;&nbsp;&nbsp;: <b>reto123</b><br>
+	· 아이디 &nbsp;&nbsp;&nbsp;: idws<br>
+	· 사용자명 : 아이돈워너셀<br>
+	· 사용등급 : (7)<br>
+	· 접속주소 : 175.193.75.69<br>
+	· 최종접속 : 02-23 21:19:25<br>
+	· 접속서버 : 139.150.82.63<br>
+	· 웹서버 : 103.60.125.79	  </div>
+<!-- root 전용 팝업 -->
+
+		<!-- container -->
+		<div class="container main" id="container">
+			<!--aside-->
+			<aside class="aside-wrap main noFixed" style="left: 0px; height: 1552px;">
+				<!-- LNB 메뉴 탭-->
+				<div class="aside-box">
+					<div class="aside-left-menu">
+						<div class="lnb-nav-wrap">
+							<div class="lnb-left-menu">
+								<div class="lnb-pos-box">
+									<ul class="lnb-nav-tab">
+										<li data-tab="navtab1" class="gnb-home active"><a href="javascript:void(0)">홈</a></li>
+										<li data-tab="navtab2" class="gnb-favorite"><a href="javascript:void(0)">자주쓰는메뉴</a></li>
+										<li data-tab="navtab3" class="gnb-recent"><a href="javascript:void(0)">최근이용메뉴</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- 회원 서비스 정보 -->
+							<div class="lnb-nav-menu">
+								<h1 class="logo">
+ 			 															<a href="javascript:void(0)"><img src="../images35/logo.png" alt=""></a>
+																	</h1>
+								<div class="nofixed-inner">
+									<div class="lnb-area-box main">
+										<div class="lnb-tab-content active" id="navtab1">
+
+																					<!-- 이지어드민(프리미엄/베이직), wms 화주 lnb -->
+											<div class="admin-info-wrap">
+											
+<script type="text/javascript" src="RSA/javascript/jsbn.js"></script>
+<script type="text/javascript" src="RSA/javascript/prng4.js"></script>
+<script type="text/javascript" src="RSA/javascript/rng.js"></script>
+<script type="text/javascript" src="RSA/javascript/rsa.js"></script>
+
+<script>
+        
+           
+    
+    function encrypt(d) 
+    {
+        var rsa = new RSAKey();
+        rsa.setPublic("80863e5e41076dbff1e46891a0eed30bff4a87528e6841088245585455d5bbcfaa2f16e7f8a46f0e3624deeab2d2e9fbf0f981feb77749a739542712db60708f6f870282259f5fa6d2252e6c00cbc36d95cf94710a0d456641edfd60cfd53e5d6a3ebc5ef943ce8aed0b5f39dc58bba0da677f5dfc97950dded75334714661c5", "010001");
+        
+        return rsa.encrypt( d );
+    }
+
+</script>
+
+<style>
+.ez_ser{
+	overflow-x: auto;
+}
+.ez_ser .t-userinfo th, .ez_ser .t-userinfo td {
+    padding: 0 0 7px 0;
+    font-size: 12px;
+    color: #696969;
+}
+.ez_ser .t-userinfo th{
+	text-align: left;
+	font-weight: normal;
+}
+.ez_ser .t-userinfo td{
+	text-align: right;
+}
+</style>
+<script>	
+function switch_user()
+{
+    $("#switch_user").toggle();
+    $("#switch_user_arrow_off").toggle();
+    $("#switch_user_arrow_on").toggle();
+    return;
+}
+
+function play_user(domain, name, passwd)
+{
+	var id = "idws";
+
+	var crdate = "2026-02-23"
+	
+	var par = "";
+	par += "crdate=" + crdate;
+	par += "&domain=" + domain;
+	par += "&userid=" + name;
+	par += "&rootid=" + id;
+	par += "&is_switch_login=1";
+
+	encpar = encrypt(par);
+
+    var params = {};
+	params['encpar'] = encpar;
+
+	$.post("/login_process.php", params, function(data) {
+		document.location.reload();
+	});
+}
+
+</script>	
+
+
+			<div class="user-info-box">
+                <div class="ez_ser">
+                    <table class="t-userinfo">
+                        <colgroup>
+                            <col width="50px">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>도메인:</th>
+                                <td style="word-break: break-all;">reto123</td>
+                            </tr>
+                            <tr>
+                                <th>사용자:</th>
+                                <td style="word-break: break-all;">아이돈워너셀
+								
+								</td>
+                            </tr>
+                            <!--tr>
+                                <td>IP등록여부:</td>
+                                <td style="text-align:right;">&nbsp;
+                                                                        등록완료
+                                                                    <td>
+                                <td>
+                            </tr-->
+                            <tr>
+                                <th>현재 IP:</th>
+                                <td>175.193.75.69</td>
+                            </tr>
+							
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+			<div id="switch_user" style="display: none;">
+				<div style="width:200px; height:500px; overflow-y:scroll; background-color:#ffffff;">
+<div><a href="javascript:play_user('reto123', '레토');" style="color:#333; text-decoration:none; font-size:13px;">레토프로젝트(레토)</a></div><div><a href="javascript:play_user('reto123', 'ynrstore');" style="color:#333; text-decoration:none; font-size:13px;">와이앤알(ynrstore)</a></div><div><a href="javascript:play_user('reto123', 'lacluza');" style="color:#333; text-decoration:none; font-size:13px;">라클루자(lacluza)</a></div><div><a href="javascript:play_user('reto123', 'spmenhds');" style="color:#333; text-decoration:none; font-size:13px;">초인홀딩스(spmenhds)</a></div><div><a href="javascript:play_user('reto123', 'nahmik3');" style="color:#333; text-decoration:none; font-size:13px;">나믹스튜디오(nahmik3)</a></div><div><a href="javascript:play_user('reto123', 'alpha');" style="color:#333; text-decoration:none; font-size:13px;">알파버스(alpha)</a></div><div><a href="javascript:play_user('reto123', 'ecorr');" style="color:#333; text-decoration:none; font-size:13px;">ECORR(ecorr)</a></div><div><a href="javascript:play_user('reto123', 'ylez');" style="color:#333; text-decoration:none; font-size:13px;">와이엘(ylez)</a></div><div><a href="javascript:play_user('reto123', 'netherworld');" style="color:#333; text-decoration:none; font-size:13px;">네더월드(netherworld)</a></div><div><a href="javascript:play_user('reto123', 'dodowalking');" style="color:#333; text-decoration:none; font-size:13px;">도도워킹(dodowalking)</a></div><div><a href="javascript:play_user('reto123', 'anduskr');" style="color:#333; text-decoration:none; font-size:13px;">앤어스(anduskr)</a></div><div><a href="javascript:play_user('reto123', 'drpbg');" style="color:#333; text-decoration:none; font-size:13px;">닥터피부광컴퍼니(drpbg)</a></div><div><a href="javascript:play_user('reto123', 'boiltale');" style="color:#333; text-decoration:none; font-size:13px;">boiltale(boiltale)</a></div><div><a href="javascript:play_user('reto123', 'yourunicorn');" style="color:#333; text-decoration:none; font-size:13px;">yourunicorn(yourunicorn)</a></div><div><a href="javascript:play_user('reto123', 'bensgolf');" style="color:#333; text-decoration:none; font-size:13px;">벤스골프(bensgolf)</a></div><div><a href="javascript:play_user('reto123', 'idws');" style="color:#333; text-decoration:none; font-size:13px;">아이돈워너셀(idws)</a></div><div><a href="javascript:play_user('reto123', 'anuko');" style="color:#333; text-decoration:none; font-size:13px;">앤코코스메틱(anuko)</a></div><div><a href="javascript:play_user('reto123', 'theorth');" style="color:#333; text-decoration:none; font-size:13px;">디더블하우스(theorth)</a></div><div><a href="javascript:play_user('reto123', 'petmily');" style="color:#333; text-decoration:none; font-size:13px;">펫밀리(petmily)</a></div><div><a href="javascript:play_user('reto123', 'wkjcos1684');" style="color:#333; text-decoration:none; font-size:13px;">우경준코스메틱(wkjcos1684)</a></div><div><a href="javascript:play_user('reto123', 'lonely25');" style="color:#333; text-decoration:none; font-size:13px;">론리인테리어(lonely25)</a></div><div><a href="javascript:play_user('reto123', 'edel9975');" style="color:#333; text-decoration:none; font-size:13px;">에델커머스(edel9975)</a></div><div><a href="javascript:play_user('reto123', 'brighteast');" style="color:#333; text-decoration:none; font-size:13px;">브라이트이스트(brighteast)</a></div><div><a href="javascript:play_user('reto123', 'bml2025');" style="color:#333; text-decoration:none; font-size:13px;">바디마인드라이프(bml2025)</a></div><div><a href="javascript:play_user('reto123', 'jelltoxlab');" style="color:#333; text-decoration:none; font-size:13px;">젤톡스랩(jelltoxlab)</a></div><div><a href="javascript:play_user('reto123', 'glosome');" style="color:#333; text-decoration:none; font-size:13px;">글로썸(glosome)</a></div><div><a href="javascript:play_user('reto123', 'paiged12');" style="color:#333; text-decoration:none; font-size:13px;">제로슬래쉬(paiged12)</a></div><div><a href="javascript:play_user('reto123', 'psyglosome');" style="color:#333; text-decoration:none; font-size:13px;">싸이코파라다이스(psyglosome)</a></div><div><a href="javascript:play_user('reto123', 'butterflyer');" style="color:#333; text-decoration:none; font-size:13px;">버터플라이어(butterflyer)</a></div><div><a href="javascript:play_user('reto123', 'kihoworks');" style="color:#333; text-decoration:none; font-size:13px;">기호(kihoworks)</a></div><div><a href="javascript:play_user('reto123', 'edits');" style="color:#333; text-decoration:none; font-size:13px;">에디츠_오티아(edits)</a></div><div><a href="javascript:play_user('reto123', 'reto123');" style="color:#333; text-decoration:none; font-size:13px;">reto123(reto123)</a></div><div><a href="javascript:play_user('reto123', '');" style="color:#333; text-decoration:none; font-size:13px;"></a></div>				</div>
+			</div>
+
+
+												<div class="ezadimin-btns">
+													<span class="btn-ezadmin active">이지어드민</span>
+
+																										<span class="btn-ezadmin ">
+														<a href="https://www.ezadmin.co.kr/sub_01_08.html" target="new">이지리플</a>
+													</span>
+
+																										<span class="btn-ezadmin active">
+														<a href="https://www.ezadmin.co.kr/sub_01_13.html" target="new">알림톡</a>
+													</span>
+
+																										<span class="btn-ezadmin ">
+														<a href="https://www.ezadmin.co.kr/sub_01_12.html" target="new">이지데스크</a>
+													</span>
+
+																										<span class="btn-ezadmin ">
+														<a href="https://www.ezadmin.co.kr/sub_01_05.html" target="new">이지콜센터</a>
+													</span>
+
+																										<span class="btn-ezadmin ">
+														<a href="https://www.ezadmin.co.kr/sub_01_07.html" target="new">이지스마티</a>
+													</span>
+
+																										<span class="btn-ezadmin active">
+														<a href="https://www.ezadmin.co.kr/sub_01_116.html" target="new">이지피킹</a>
+													</span>
+
+																										<span class="btn-ezadmin ">
+														<a href="https://www.ezadmin.co.kr/sub_09_12.html" target="new">리얼패킹</a>
+													</span>
+
+																										<span class="btn-ezadmin ">
+														<a href="https://www.ezadmin.co.kr/sub_01_90.html" target="new">유통기한관리</a>
+													</span>
+
+																										<span class="btn-ezadmin ">
+														<a href="https://www.ezadmin.co.kr/sub_09_25.html" target="new">퀵파인더</a>
+													</span>
+
+																										<span class="btn-ezadmin ">
+														<a href="https://www.ezadmin.co.kr/sub_01_65.html" target="new">대량송장출력</a>
+													</span>
+
+												
+																										<span class="btn-ezadmin ">
+														<a href="https://www.ezadmin.co.kr/sub_01_03.html" target="new">이지체인</a>
+													</span>
+
+																										<span class="btn-ezadmin ">
+														<a href="https://www.ezadmin.co.kr/sub_01_68.html" target="new">바코드이미지</a>
+													</span>
+
+																										<span class="btn-ezadmin ">
+														<a href="#">이지API</a>
+													</span>
+																										<span class="btn-ezadmin active">
+														<a href="#">추가창고</a>
+													</span>
+																										<span class="btn-ezadmin ">
+														<a href="#">DB서버														</a>
+													</span>
+													
+													<div class="ezadmin-additional">
+														<a href="https://www.ezadmin.co.kr/sub_01_94.html" target="_blank">
+															<button type="button" class="btn btn-md ez_btn_real_blue btn-long">부가서비스 한눈에보기</button>
+														</a>
+																											<a class="btn btn-md ez_btn_pink btn-long" style="color: #fff !important;" href=" https://www.youtube.com/playlist?list=PL2QlHA46MclQT5RZDb9B4CoTlCsyHGbhV" target="_blank">이지WMS 매뉴얼 영상</a>
+																											<a href="/price_policy.html" target="_blank">
+															<button type="button" class="btn btn-md ez_btn_dark_blue btn-long">개발단가표</button>
+														</a>
+														<button type="button" class="btn btn-md btn-long btn-primary" onclick="targetModalPopup('modalRequiredChecklist')">이지어드민 필수확인사항</button>
+													</div>
+																								</div>
+
+
+
+												<section class="admin-section">
+													<h2>
+													서비스정보
+																										</h2>
+																										<dl class="dl-basic">
+														<dt>택배연동(송장)</dt>
+														<dd id="print_trans">CJ대한통운(신)-CJ1.0.32.409(web)</dd>
+													</dl>
+																										<dl class="dl-basic">
+														<dt>IP등록</dt>
+														<dd>
+																														등록완료 
+																														/ 175.193.75.69														</dd>
+													</dl>
+																								</section>
+
+																								<div class="main-area-footer">
+													<!-- 푸터 -->
+																										<div class="bank-area">
+														<dl>
+															<dt>
+																<span>국민은행</span>
+																<strong>530401-01-089102</strong>
+															</dt>
+															<dd>예금주 : 핌즈(주)</dd>
+														</dl>
+													</div>
+													<div class="footer-wrap main">
+														<footer>
+															<h3>고객센터</h3>
+															<strong>
+																														</strong>
+															<p>운영 시간 9시 ~ 18시<br>(점심시간 낮12시 ~ 오후1시 제외)</p>
+															<p class="copyright"> Copyright ⓒ PIMZ Inc.<br> All rights reserved. </p>
+														</footer>
+													</div>
+																									</div>
+											</div>
+																					</div>
+										 
+    <div class="lnb-tab-content" id="navtab2">
+        <div class="lnb-myfavorite-menu">
+            <div class="lnb-h3">
+                <h3>자주 쓰는 메뉴</h3>
+                <button type="button" class="lnb-setting-btns">셋팅</button>
+            </div>
+            <ul class="favorite-list" id="favorite_list"><li class="lnb_list"><a class="active" href="javascript:void(0)">상품관리</a><div class="lnb-one-depth" style="display: block;"><ul><li class=" lnb-two-depth"><p class="flex ai_c mb0"><button type="button" data-template="C200" class="btn-favorite-del"></button><a href="#" onclick="mDown('./template35.htm?template=C200');" onfocus="blur();"><span title="C200">&nbsp;전체상품목록</span></a></p></li></ul></div></li></ul></div></div><div class="lnb-tab-content" id="navtab3">
+            <div class="lnb-recently-menu">
+                <div class="lnb-h3">
+                    <h3>최근 이용 메뉴</h3>
+                </div>
+                <ul class="recently-list">      <!--
+                    <li><a href="#">CS 바로가기</a></li>
+                -->
+                </ul>
+            </div>
+        </div>									</div>
+								
+								</div>
+								<!-- //푸터 -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<!--aside-->
+<style type="text/css">
+    div#white_ip_popup { 
+/*
+		width: 700px; 
+		height: 500px; 
+		cursor:pointer; 
+		border: 3px solid #999999; 
+*/
+		cursor:default;
+		z-index: 9999; 
+		display: none; 
+	}
+    .white_ip_txt { 
+		color: #000; 
+/*
+		margin-top: -250px; 
+		position: fixed;
+		margin-left: 175px; 
+		-webkit-margin-start: 177px; 
+*/
+		font-size: 21px; 
+		padding: 0px 5px 0px 5px; 
+		background: #fff; 
+		position:absolute;
+		bottom: 68px;
+		left:175px;
+	}
+    .white_ip_txt2 { color: #FFF; margin-top: -150px; position: fixed; margin-left: 45px;  -webkit-margin-start: 45px; font-size: 16px; padding: 0px 5px 0px 5px; }
+    .table_wip { background: #FFF; background: #FFF; position: fixed; width: 300px; margin-top: -121px; font-size: 18px; }
+    .a { margin-left: 50px; }
+    .b { margin-left: 350px; }
+    .table_wip tr { height: 40px; }
+    .table_wip td { border: 1px solid #c8c5c5; }
+    .table_wip tr th { text-align: center; background: #ddd; border: 1px solid #c8c5c5;}
+/*
+    #btn_more { position: fixed; margin-top: -165px; margin-left: 190px;}
+*/
+	#btn_more { position: relative; margin-top: -165px; float: right; margin-right: 50px;}
+    #upd_ip_pop { cursor:pointer; }
+	.white_ip_upd_btn {
+		background: transparent;
+		width: 70px;
+		height: 35px;
+/*
+		position: fixed;
+		margin-top: -250px;
+		margin-left: 328px;
+*/
+		position: absolute;
+		bottom: 63px;
+		right: 20px;
+		cursor: pointer;
+	}
+	.white_ip_close_btn {
+		background: transparent;
+		width: 44px;
+		height: 44px;
+/*
+		position: fixed;
+		margin-top: -484px;
+		margin-left: 640px;
+*/
+		position:absolute;
+		top: 3px;
+		right: 3px;
+		cursor:pointer;
+	}
+
+@media all and (max-width:950px) {
+	#white_ip_popup {
+		display:none;
+	}
+}
+</style>
+<div id="white_ip_popup">
+    <!--img id="white_ip_img" src="/images/popup/bg_white_ip.png" usemap="#label_white_ip_map"-->
+    <img id="white_ip_img" src="/images/popup/221117_bg_white_ip.png" usemap="#label_white_ip_map">
+<!--
+    <map name="label_white_ip_map" style="z-index:1000;">
+        <area shape="rect" coords="633,14,682,73" href="#" onclick="close_white_ip_popup()" onfocus="this.blur()" target="_self">
+        <area shape="rect" coords="313,260,407,300" href="#" onclick="update_white_ip()" onfocus="this.blur()" target="_self">
+    </map>
+-->
+	<div class="white_ip_upd_btn" onclick="update_white_ip();"></div>
+	<div class="white_ip_close_btn" onclick="close_white_ip_popup();"></div>
+    <!-- 현재 접속 IP -->
+    <div class="white_ip_txt">175.193.75.69</div>
+
+
+</div>
+<script>
+$(function(){
+    $("#btn_more").click(function(){
+        openwin3('/all_wip.htm','all_wip', 315,420);
+    });
+
+    $("#upd_ip_pop").click(function(){
+        $.blockUI({
+            message: $('#white_ip_popup'),
+            css: {
+//                width: '706px',
+				width: '506px',
+				height: '506px',
+                top: '22%',
+                left: '29%'
+            }
+        });
+    });
+
+});
+function update_white_ip() 
+{
+    var url="white_ip_process.php";  
+    $.ajax({      
+            type:"POST",  
+            url:url,    
+            data:{ "action": "upd_white_ip" } , 
+            success:function(args){  
+                alert("175.193.75.69 등록되었습니다.");
+                window.location.reload();
+                //close_white_ip_popup();
+            },   
+            error:function(e){  
+                    console.log(e.responseText);  
+            }  
+    });  
+}
+function del_white_ip(del_ip) 
+{
+        alert("삭제권한이 없습니다.");
+ 
+}
+function close_white_ip_popup()
+{
+    $.unblockUI({message: $('#white_ip_popup')});
+    return false;
+}
+</script>
+
+<script>
+	//-- null function
+	var ismobile = "";
+
+	//---- HIDER MENU (Topbar) ----
+/*
+	if (ismobile == "mobile") {
+		hideTopbar();
+	} else {
+		openTopbar();
+	}
+*/
+</script>
+			<!-- content -->
+			<div class="content not-footer" id="content">
+				<!-- 메인 컨텐츠 영역 -->
+								<div class="main-content-wrap">
+					<div class="wrap-row table-wrapper">
+
+						<!-- 왼쪽 -->
+						<div class="main-left-cont">
+														
+														<div class="process-status"> 
+
+								<section class="calc4">
+									<div class="main-section-head">
+											<h1> 미처리현황 <div class="tool-tip-wrap tool-gray outline-gray ml8">
+													<a href="javascript:void(0)" class="tool-tip">툴팁</a>
+													<div class="tool-tip-area left2">
+														<section class="tool-tip-title">
+															<h1>미처리현황 도움말</h1>
+															<div class="tool-tip-inner">
+																<ul class="list-dash">
+																	<li>
+																		<ol class="num-list">
+																			<li>이지어드민 내에서 업무처리가 완료되지 않은 주문건을 조회합니다.</li>
+																		</ol>
+																	</li>
+																	<li>
+																		<ol class="num-list">
+																			<li>송장전송대기 : 판매처에 송장이 등록되지 않은 배송 상태 주문</li>
+																			<li>배송누락확인 : 택배사 전산상에 집하 이력이 있는 접수/송장 상태 주문</li>
+																			<li>취소철회확인 : 판매처에서 배송 가능 상태지만, 이지어드민에는 취소 상태인 주문</li>
+																		</ol>
+																	</li>
+																</ul>
+															</div>
+														</section>
+														<button type="button" class="tool-tip-close">닫기</button>
+													</div>
+												</div>
+												<button type="button" class="btn-gray-refresh ml4" onclick="javascript:load_sub5();">리로드</button>											</h1>
+
+									</div>
+									<div class="white-md-box ">
+	<dl>
+		<dt>송장출력예정</dt>
+		<dd><span id="print_wait">일반: 20 / 합포: 0</span><span class="font11"></span></dd>
+	</dl>
+	<dl>
+		<dt>송장전송대기</dt>
+		<dd><span class="black" id="trans_wait"><a href="template35.htm?winmode=none&amp;template=DL03&amp;chk_reg=0&amp;order_by=0&amp;act=1&amp;start_date=2026-02-22"><span>0</span> (02/22 ~)</a></span><span class="font11"></span></dd>
+	</dl>
+	<dl>
+		<dt>배송누락/분실</dt>
+		<dd><span class="red" id="trans_drop"><span><font color="#e30d1d" size="3"><a href="template35.htm?winmode=none&amp;template=FB00&amp;trans_check=1" style="color:#e30d1d">0</a> / <a href="template35.htm?winmode=none&amp;template=FB00&amp;trans_check=2" style="color:#e30d1d">0</a></font></span> (12/25 ~)</span> <span class="font11"></span></dd>
+	</dl>
+		</div>
+									</section>
+								</div>
+								<div class="process-status"> 
+                                <section class="calc4">
+																	<div class="main-section-head">
+                                            <h1>반품현황 <div class="tool-tip-wrap tool-gray outline-gray ml8">
+                                                    <a href="javascript:void(0)" class="tool-tip">툴팁</a>
+                                                    <div class="tool-tip-area">
+                                                        <section class="tool-tip-title">
+                                                            <h1>반품현황 도움말</h1>
+                                                            <div class="tool-tip-inner">
+                                                                <ul class="list-dash">
+                                                                    <li>
+                                                                        <ol class="num-list">
+                                                                    		<li>배송 이후 반품 진행 현황을 조회합니다.</li>
+                                                                        </ol>
+                                                                    </li>
+                                                                    <li>
+                                                                        <ol class="num-list">
+                                                                            <li>최근3일간 미취소판매처: 최근 3일간 이지오토를 통해서 취소 적용 이력이 없는 판매처</li>
+                                                                            <li>배송 후 취소: 판매처에서 취소된 배송 상태 주문</li>
+                                                                            <li>소셜환불예정: 판매처에서 취소/환불 예정인 배송 상태 주문</li>
+                                                                            <li>반품장기지연: 2주~2개월 간 배송 후 취소가 완료되지 않은 주문</li>
+                                                                        </ol>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </section>
+                                                        <button type="button" class="tool-tip-close">닫기</button>
+                                                    </div>
+                                                </div>
+												<button type="button" class="btn-gray-refresh ml4" onclick="javascript:load_sub7();">리로드</button>                                            </h1>
+                                    </div>
+                                    <!--
+<div class="white-md-box ">
+-->
+<div class="white-md-box">
+    <dl>
+        <dt>최근3일간 미취소판매처</dt>
+        <dd><span id="shop_cancel_status"><a href="template35.htm?winmode=none&amp;template=E809&amp;act=action&amp;view=1"><span> 1</span></a> (02/20 ~)</span> <span class="font11"></span></dd>
+    </dl>
+    <dl>
+        <dt>배송 후 취소</dt>
+        <dd><span id="deliv_cancel_new"><a href="template35.htm?winmode=none&amp;template=E807&amp;act=action&amp;view=1"><span> 62</span></a> (02/16 ~)</span> <span class="font11"></span></dd>
+    </dl>
+    <dl>
+        <dt>소셜환불예정 빠른환불</dt>
+        <dd><span id="auto_return_expect"><a href="template35.htm?winmode=none&amp;template=EN00&amp;search=1&amp;start_date=2026-02-10"><span>0</span> (02/10 ~)</a></span><span class="font11"></span></dd>
+    </dl>
+    <dl>
+        <dt>반품장기지연</dt>
+        <dd><span id="auto_return_expect_delay"><a href="template35.htm?winmode=none&amp;template=EN00&amp;search=1&amp;start_date=2025-12-25&amp;end_date=2026-02-09"><span>0</span> (12/25 ~ 02/09)</a></span> <span class="font11"></span></dd>
+    </dl>
+</div>
+																</section>
+							</div>
+							
+							<!--제휴서비스// -->
+							<section>
+								<div class="main-section-head">
+										<h1> 공지사항</h1>
+								</div>
+								<div class="white-md-box">
+
+								<div class="main-right-cont dflex" style="width:50%;">
+    <div class="tbl-round">
+        <ul class="tab-line-bottom item3" id="tab2">
+            <li class="active">
+				<a href="javascript:void(0)" class="disIB"><span>공지사항</span></a>
+				<a href="template35.htm?template=H100" class="disIB" target="new"><span class="ez_btn_r btn-primary btn_notice_mini">더보기</span></a>
+			</li>
+		            <li>
+				<a href="javascript:void(0)" class="disIB"><span>업그레이드</span></a>
+				<a href="template35.htm?template=H400" class="disIB" target="new"><span class="ez_btn_r btn-primary btn_notice_mini">더보기</span> </a>
+			</li>
+		            <li>
+				<a href="javascript:void(0)" class="disIB">이지오토</a>
+				<a href="javascript:void(0)" class="disIB" target="new"><span class="ez_btn_r btn_notice_mini"></span></a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" class="disIB">개인정보보호</a>
+				<a href="template40.htm?template=H410" class="disIB" target="new"><span class="ez_btn_r btn-primary btn_notice_mini">더보기</span></a>
+			</li>
+        </ul>
+        <div class="tab-con" id="tab2_con">
+            <div style="display: block;">
+				<ul class="notice-list">
+		<li>
+			<a href="template35.htm?template=H101&amp;no=2628">
+				<span class="label label-bg74"><font color="#fff">전체공지</font></span>
+				2026년 설연휴 단축근무 및 휴무 안내 			</a>
+			<span class="txt-date">02-13</span>
+		</li>
+		<li>
+			<a href="template35.htm?template=H101&amp;no=2626">
+				<span class="label label-bg74"><font color="#fff">전체공지</font></span>
+				도매꾹 자동발주 정상화 안내 			</a>
+			<span class="txt-date">02-12</span>
+		</li>
+		<li>
+			<a href="template35.htm?template=H101&amp;no=2617">
+				<span class="label label-bg74"><font color="#fff">전체공지</font></span>
+				[이지오토]굿웨어몰 판매처 자동발주, 자동송장전송 기능 추가 			</a>
+			<span class="txt-date">02-03</span>
+		</li>
+		<li>
+			<a href="template35.htm?template=H101&amp;no=2613">
+				<span class="label label-bg74"><font color="#fff">전체공지</font></span>
+				무신사 자동취소 정상화 공지 			</a>
+			<span class="txt-date">01-30</span>
+		</li>
+                    </ul>
+            </div>
+		            <div>
+                <ul class="notice-list">
+					<ul>
+	<li><a href="template35.htm?template=H401&amp;no=874">[이지어드민] Vip 사은품 증정</a> <span class="txt-date">06-27</span> </li>
+	<li><a href="template35.htm?template=H401&amp;no=873">[이지어드민] 비밀번호 찾기 / 로그인 제한 해제</a> <span class="txt-date">01-30</span> </li>
+	<li><a href="template35.htm?template=H401&amp;no=872">[이지어드민] 쉬운 판매처등록</a> <span class="txt-date">12-08</span> </li>
+	<li><a href="template35.htm?template=H401&amp;no=871">[이지어드민] 재고수불부</a> <span class="txt-date">08-17</span> </li>
+</ul>
+                </ul>
+            </div>
+		            <div class="table-inner">
+				<style>
+#ezauto .ezauto_scroll{
+	height: 200px !important;
+}
+.main-right-cont .ezauto_scroll{
+	width: 100%;
+	overflow-y: auto;/*scroll;*/
+
+	margin: 0;/**/
+	padding-bottom: 0;	
+}
+.main-right-cont .ezauto_scroll table{
+	width: 100%;
+}
+</style>
+
+
+<div class="ezauto_scroll notice-list">
+	<table class="tbl-col">
+		<thead>
+		<tr>
+			<th style="font-size: 13px; height: 30px;">시작시간</th>
+			<th style="font-size: 13px; height: 30px;">확인시간</th>
+			<th style="font-size: 13px; height: 30px;">IP주소</th>
+			<th style="font-size: 13px; height: 30px;">버전</th>
+		</tr>
+		</thead>
+		<tbody>
+					<tr>
+				<td style="padding: 5px; font-size: 12px;">02-20 09:23:19</td>
+				<td style="padding: 5px; font-size: 12px;">21:18:38</td>
+				<td style="padding: 5px; font-size: 12px;">112.170.111.202</td>
+				<td style="padding: 5px; font-size: 12px;">1.0.25.283</td>
+			</tr>
+					<tr>
+				<td style="padding: 5px; font-size: 12px;">02-23 17:38:52</td>
+				<td style="padding: 5px; font-size: 12px;">21:08:41</td>
+				<td style="padding: 5px; font-size: 12px;">220.88.32.68</td>
+				<td style="padding: 5px; font-size: 12px;">1.0.25.285</td>
+			</tr>
+					<tr>
+				<td style="padding: 5px; font-size: 12px;">02-16 10:27:08</td>
+				<td style="padding: 5px; font-size: 12px;">20:55:38</td>
+				<td style="padding: 5px; font-size: 12px;">112.170.111.202</td>
+				<td style="padding: 5px; font-size: 12px;">1.0.25.281</td>
+			</tr>
+					<tr>
+				<td style="padding: 5px; font-size: 12px;">02-23 08:53:33</td>
+				<td style="padding: 5px; font-size: 12px;">20:23:31</td>
+				<td style="padding: 5px; font-size: 12px;">112.170.111.202</td>
+				<td style="padding: 5px; font-size: 12px;">1.0.25.285</td>
+			</tr>
+		
+		</tbody>
+	</table>
+</div>
+
+            </div>
+			<div class="table-inner">
+				<ul class="notice-list">
+		<li>
+			<a href="template35.htm?template=H411&amp;no=25">【개인정보처리위탁(제공) 계약서】 안내</a>
+			<span class="txt-date">07-08</span>
+		</li>
+		<li>
+			<a href="template35.htm?template=H411&amp;no=24">【개인정보 수집 및 이용】 동의에 대한 약관 안내</a>
+			<span class="txt-date">07-08</span>
+		</li>
+		<li>
+			<a href="template35.htm?template=H411&amp;no=23">개인정보의 안정성 확보 조치에 관한 안내 _ 개인정보 파일 암호 설정</a>
+			<span class="txt-date">07-04</span>
+		</li>
+		<li>
+			<a href="template35.htm?template=H411&amp;no=22">제공사업자(쇼핑몰)의 요청이나 정책에 따른 셀러툴 내 개인정보 강제파기 </a>
+			<span class="txt-date">07-04</span>
+		</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+								</div>
+							</section>
+
+							<!--//제휴서비스-->
+
+							<section class="dflex w100p" style="gap: 8px;">
+								<!-- 처리현황// -->
+								<div class="process-status w100p"> 
+								<section class="main-status w100p">
+									<div class="main-section-head">
+										<div class="head-sub-inner">
+											<h1> 처리현황
+												<div class="tool-tip-wrap tool-gray outline-gray ml8">
+													<a href="javascript:void(0)" class="tool-tip">툴팁</a>
+													<div class="tool-tip-area left2">
+														<section class="tool-tip-title">
+															<h1>처리현황 도움말</h1>
+															<div class="tool-tip-inner">
+																<ul class="list-dash">
+																	<li>이지어드민 내에서의 주문 처리 현황을 조회합니다. </li>
+																	<li>
+																		<ol class="num-list">
+																			<li>발주 : 이지어드민으로 신규 수집된 상태</li>
+																			<li>접수 : 발주 주문을 합포단계까지 완료한 상태</li>
+																			<li>송장 : 접수 주문을 송장까지 발번한 상태</li>
+																			<li>배송 : 송장 주문을 배송처리한 상태</li>
+																		</ol>
+																	</li>
+																</ul>
+															</div>
+														</section>
+														<button type="button" class="tool-tip-close">닫기</button>
+													</div>
+												</div>
+												<button type="button" class="btn-gray-refresh ml4" onclick="javascript:load_sub8();">리로드</button>											</h1>
+										</div>
+									</div>
+									<style>
+.processing-status-wrap .white-box {
+	padding: 0;
+	justify-content: space-evenly;
+}
+.processing-status-wrap .white-box .txt-blue {
+	padding: 0;
+	width: 25%;
+    text-align: center;
+}
+.split-border {
+	width: 1px;
+    height: 50%;
+    background: #eee;
+}
+</style>
+
+<div class="processing-status-wrap">
+    <div class="white-box w100p">
+        <dl class="txt-blue blue">
+            <dt>발주</dt>
+            <dd id="process_status0">0</dd>
+        </dl>
+		<div class="split-border"></div>
+        <dl class="txt-blue pink">
+            <dt>접수</dt>
+            <dd id="process_status1"><a href="template35.htm?template=DS00&amp;search=1&amp;start_date=2026-02-16&amp;start_hour=00&amp;end_date=2026-02-23&amp;end_hour=23&amp;&amp;date_type=collect_date&amp;date_period_sel=0&amp;status_sel=2&amp;order_cs_sel=10&amp;sub_domain=29">20</a></dd>
+        </dl>
+		<div class="split-border"></div>
+        <dl class="txt-blue orange">
+            <dt>송장</dt>
+            <dd id="process_status7">0</dd>
+        </dl>
+		<div class="split-border"></div>
+        <dl class="txt-blue purple">
+            <dt>배송(금일)</dt>
+            <dd id="process_status8"><a href="template35.htm?template=DS00&amp;search=1&amp;start_date=2026-02-23&amp;start_hour=00&amp;end_date=2026-02-23&amp;end_hour=23&amp;&amp;date_type=trans_date_pos&amp;date_period_sel=0&amp;status_sel=4&amp;sub_domain=29">357</a></dd>
+        </dl>
+    </div>
+</div>
+								</section>
+								</div>
+								<!-- //처리현황 -->
+
+								<!-- 크로스보더// -->
+								<div class="process-status w100p"> 
+								<section class="main-status w100p">
+									<div class="main-section-head">
+										<div class="head-sub-inner justify-content-space">
+											<h1> 크로스보더
+																																			<a href="template35.htm?template=IS00" style="color:grey;" title="크로스보더 이동">
+													<i class="fa-regular fa-arrow-up-right-from-square font14 ml8"></i>
+												</a>
+											</h1>
+
+											<button type="button" class="ez_btn_r btn-real-red" onclick="javascript:popup_new_1688();">1688 구매</button>
+										</div>
+									</div>
+									<style>
+.head-sub-inner.justify-content-space {
+	justify-content: space-between !important;
+}
+.step-container {
+	width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.step-container:before {
+	content: '';
+	height: 1px;
+	width: 45%;
+	background: #FF5B00;
+	position: absolute;
+    top: 41%;
+	left: 10%;
+	z-index: 0;
+}
+.step-container:after {
+	content: '';
+	height: 1px;
+	width: 35%;
+	background: #198CFF;
+	position: absolute;
+    top: 41%;
+	right: 10%;
+	z-index: 0;
+}
+.step-container .step-wrap {
+	z-index: 1;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.step-container .step {
+	border: 1px solid #eef2f5;
+	background: #fff;
+	width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #000;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	z-index: 1;
+}
+.step-container .step-text {
+	font-size: 13px;
+    margin-top: 5px;
+    text-align: center;
+	color: #000;
+}
+/*
+.step.gray {
+	color: #7e8594;
+	background: #f6f7f9;
+}
+.step.blue {
+	color: #fff;
+	background: #55b2ff;
+}
+.step.red {
+	color: #fff;
+	background: #fd5274;
+}
+*/
+.step-container .step-wrap:nth-child(n+1) .step {
+	color: #FF5B00;
+	background: #FFFFFF;
+	border: 1px solid #FF5B00;
+}
+.step-container .step-wrap:nth-child(n+2) .step {
+	color: #FF5B00;
+	background: #FFD5AF;
+	border: 1px solid #FF5B00;
+}
+.step-container .step-wrap:nth-child(n+3) .step {
+	color: #FFF;
+	background: #FF9F48;
+	border: 1px solid #FF5B00;
+}
+.step-container .step-wrap:nth-child(n+4) .step {
+	color: #FFF;
+	background: #FF8D83;
+	border: 1px solid #FF5B00;
+}
+.step-container .step-wrap:nth-child(n+5) .step {
+	color: #FFF;
+	background: #FF5B00;
+	border: 1px solid #FF5B00;
+}
+.step-container .step-wrap:nth-child(n+6) .step {
+	color: #198CFF;
+	background: #FFFFFF;
+	border: 1px solid #198CFF;
+}
+.step-container .step-wrap:nth-child(n+7) .step {
+	color: #198CFF;
+	background: #E1EFFF;
+	border: 1px solid #198CFF;
+}
+.step-container .step-wrap:nth-child(n+8) .step {
+	color: #FFF;
+	background: #198CFF;
+	border: 1px solid #198CFF;
+}
+
+</style>
+
+<div class="processing-status-wrap">
+    <div class="white-box w100p">
+		<div class="step-container">
+			<a class="step-wrap step-0" href="template35.htm?template=IS00&amp;search=1&amp;start_date=2025-11-23&amp;end_date=2026-02-23&amp;date_type=crdate&amp;stat=0">
+				<div class="step">0</div>
+				<div class="step-text">견적대기</div>
+			</a>
+			<a class="step-wrap step-1" href="template35.htm?template=IS00&amp;search=1&amp;start_date=2025-11-23&amp;end_date=2026-02-23&amp;date_type=crdate&amp;stat=1">
+				<div class="step gray">0</div>
+				<div class="step-text">고객확인</div>
+			</a>
+			<a class="step-wrap step-2" href="template35.htm?template=IS00&amp;search=1&amp;start_date=2025-11-23&amp;end_date=2026-02-23&amp;date_type=crdate&amp;stat=2">
+				<div class="step gray">0</div>
+				<div class="step-text">고객결제</div>
+			</a>
+			<a class="step-wrap step-3" href="template35.htm?template=IS00&amp;search=1&amp;start_date=2025-11-23&amp;end_date=2026-02-23&amp;date_type=crdate&amp;stat=3">
+				<div class="step blue">0</div>
+				<div class="step-text">구매중</div>
+			</a>
+			<a class="step-wrap step-4" href="template35.htm?template=IS00&amp;search=1&amp;start_date=2025-11-23&amp;end_date=2026-02-23&amp;date_type=crdate&amp;stat=4">
+				<div class="step red">0</div>
+				<div class="step-text">입고완료</div>
+			</a>
+			<a class="step-wrap step-5" href="template35.htm?template=IS00&amp;search=1&amp;start_date=2025-11-23&amp;end_date=2026-02-23&amp;date_type=crdate&amp;stat=5">
+				<div class="step gray">0</div>
+				<div class="step-text">부분출고</div>
+			</a>
+			<a class="step-wrap step-6" href="template35.htm?template=IS00&amp;search=1&amp;start_date=2025-11-23&amp;end_date=2026-02-23&amp;date_type=crdate&amp;stat=6">
+				<div class="step blue">0</div>
+				<div class="step-text">전량출고</div>
+			</a>
+			<a class="step-wrap step-7" href="#">
+				<div class="step red">0</div>
+				<div class="step-text">출고완료</div>
+			</a>
+		</div>
+    </div>
+</div>
+								</section>
+								</div>
+								<!-- //크로스보더 -->
+							</section>
+						</div>
+						<!-- //왼쪽 -->
+
+						<!-- 오른쪽 -->
+						<div class="main-right-cont ">
+							<section class="main-service">
+<div class="main-section-head main-service-head">
+    <!--h1>배너</h1-->
+	<h1>&nbsp;</h1>
+</div>
+<div class="round-box">
+	<div class="swiper-container swiper-sidebanner">
+		<ul class="swiper-wrapper">
+		
+			<li class="swiper-slide" style="background-color: ; display: flex; align-items: ; justify-content: ;"><a href="https://www.ezadmin.co.kr/sub_01_12.html" target="_blank" onclick="click_popup_board('411', 'EZ07')">
+    	               <img src="https://cdn.ezadmin.co.kr/images/banner/250729_ezdesk_side.jpg" style="max-width:100%; max-height:100%;">
+	               </a></li>
+				</ul>
+	</div>
+</div>
+
+<script>
+</script>
+						</section></div>
+						<!-- //오른쪽 -->
+					</div>
+					
+					<div class="wrap-row table-wrapper">
+						<!-- 왼쪽 -->
+						<div class="main-left-cont">
+							<!-- 현황// -->
+							<div class="process-status"> <!-- 상품현황 오픈 후 item2 클래스 삭제 -->
+
+								<section>
+									<div class="main-section-head">
+										<div class="head-sub-inner">
+											<h1> 당일매출현황 <div class="tool-tip-wrap tool-gray outline-gray ml8">
+													<a href="javascript:void(0)" class="tool-tip">툴팁</a>
+													<div class="tool-tip-area left2">
+														<section class="tool-tip-title">
+															<h1>당일매출현황 도움말</h1>
+															<div class="tool-tip-inner">
+																<ul class="list-dash">
+																	<li>금일과 전일의 매출 및 취소 건수/금액, 송장/배송 상태 주문 건수를 조회합니다.</li>
+																</ul>
+															</div>
+														</section>
+														<button type="button" class="tool-tip-close">닫기</button>
+													</div>
+												</div>
+																							</h1>
+										</div>
+									</div>
+									<div class="white-md-box">
+										<div class="tbl-round div_main35_sub1">
+	<table class="tbl-register-row">
+		<caption>당일매출현황입니다.</caption>
+		<colgroup>                            
+			<col style="width:*">
+			<col style="width:14%">
+			<col style="width:14%">
+			<col style="width:14%">
+			<col style="width:14%">
+			<col style="width:14%">
+			<col style="width:14%">
+		</colgroup>
+		<thead>
+			<tr>
+			  <th style="padding: 0;" rowspan="2" scope="col">&nbsp;</th>
+			  <th style="padding: 0;" colspan="2" scope="col">매출</th>
+			  <th style="padding: 0;" colspan="2" scope="col">취소</th>
+			  <th style="padding: 0;" scope="col">송장</th>
+			  <th style="padding: 0;" scope="col">배송</th>
+		  </tr>
+			<tr>
+				<th style="padding: 0;" scope="col">건수</th>
+				<th style="padding: 0;" scope="col">금액</th>
+				<th style="padding: 0;" scope="col">건수</th>
+				<th style="padding: 0;" scope="col">금액</th>
+				<th style="padding: 0;" scope="col">건수</th>
+				<th style="padding: 0;" scope="col">건수</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>금일</td>
+				<td id="tsq">-</td>
+				<td id="tsa">-</td>
+				<td id="tcq">-</td>
+				<td id="tca">-</td>
+				<td id="ttq">-</td>
+				<td id="tdq">-</td>
+			</tr>
+			<tr>
+				<td>전일</td>
+				<td id="ysq">-</td>
+				<td id="ysa">-</td>
+				<td id="ycq">-</td>
+				<td id="yca">-</td>
+				<td id="ytq">-</td>
+				<td id="ydq">-</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+									</div>
+									<div class="main-section-head">
+										<div class="head-sub-inner">
+											<h1>배송지연현황조회 <div class="tool-tip-wrap tool-gray outline-gray ml8">
+													<a href="javascript:void(0)" class="tool-tip">툴팁</a>
+													<div class="tool-tip-area">
+														<section class="tool-tip-title">
+															<h1>배송지연현황조회 도움말</h1>
+															<div class="tool-tip-inner">
+																<ul class="list-dash">
+																	<li>이지어드민 내에서 접수/송장 상태(취소 제외)인 주문을 일자별로 조회합니다.</li>
+																</ul>
+															</div>
+														</section>
+														<button type="button" class="tool-tip-close">닫기</button>
+													</div>
+												</div>
+																							</h1>
+										</div>
+									</div>
+									<div class="white-md-box">
+										<div class="tbl-round div_main35_sub2">
+    <table class="tbl-register-row">
+		<caption>배송지연현황입니다.</caption>
+		<colgroup>
+			<col style="width:*">
+			<col style="width:12%">
+			<col style="width:12%">
+			<col style="width:12%">
+			<col style="width:12%">
+			<col style="width:12%">
+			<col style="width:12%">
+			<col style="width:15%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>장기지연<br><span class="font_small">11-01 이전/이후</span></th>
+								<th>5일차</th>
+				<th>4일차</th>
+				<th>3일차</th>
+				<th>2일차</th>
+				<th>1일차</th>
+				<th>금일</th>
+								<th>합계</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="font14" id="delay_long">-</span><span class="font11"></span></td>
+				<td><span class="red font14" id="delay_5">-</span> <span class="font11"></span></td>
+				<td><span class="red font14" id="delay_4">-</span> <span class="font11"></span></td>
+				<td><span class="red font14" id="delay_3">-</span> <span class="font11"></span></td>
+				<td><span class="red font14" id="delay_2">-</span> <span class="font11"></span></td>
+				<td><span class="red font14" id="delay_1">-</span> <span class="font11"></span></td>
+				<td><span class="red font14" id="delay_0">-</span> <span class="font11"></span></td>
+				<td><span class="red font14" id="delay_all">-</span> <span class="font11"></span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+									</div>
+
+									<section>
+                                    <div class="main-section-head">
+                                        <div class="head-sub-inner">
+                                            <h1>최근일 판매금액/판매수량/취소수량
+                                            </h1>
+                                        </div>
+                                    </div>
+                                    <div class="white-md-box">
+                                        <div class="chart_box" style="height: 160px;">
+                                                <table>
+                                                    <caption>퓨전차트</caption>
+                                                    <colgroup>
+                                                        <col style="width:32%">
+                                                        <col style="width:2%">
+                                                        <col style="width:32%">
+                                                        <col style="">
+                                                        <col style="width:32%">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="mtit">최근일 판매금액 (만원)</td>
+                                                            <td class="mtit">&nbsp;</td>
+                                                            <td class="mtit">최근일 판매수량 </td>
+                                                            <td class="mtit">&nbsp;</td>
+                                                            <td class="mtit">최근일 취소수량 </td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td class="mBox"><script>
+function main_chart1()
+{
+    $("#main_chart1_body").html("<img src='/images/indicator.gif'>");
+	$.post("main35_func.php?action=chart1&readonly=T", function(data) {
+		$("#main_chart1_body").css("border","none");
+		$("#main_chart1_body").html(data);
+	});
+}
+</script>
+<div class="chart-menus">최근일 판매금액(만원)</div>
+<table cellspacing="0" cellpadding="0" height="140">
+  <tbody><tr>
+  <td align="center" id="main_chart1_body">
+  </td>
+</tr>
+</tbody></table>
+
+</td>
+                                                        <td>&nbsp;</td>
+                                                        <td class="mBox"><script>
+function main_chart2()
+{
+    $("#main_chart2_body").html("<img src='/images/indicator.gif'>");
+	$.post("main35_func.php?action=chart2&readonly=T", function(data) {
+		$("#main_chart2_body").css("border","none");
+		$("#main_chart2_body").html(data);
+	});
+}
+</script>
+<div class="chart-menus">최근일 판매수량</div>
+<table cellspacing="0" cellpadding="0" height="140">
+  <tbody><tr>
+  <td align="center" id="main_chart2_body">
+  </td>
+</tr>
+</tbody></table>
+
+</td>
+                                                        <td>&nbsp;</td>
+                                                        <td class="mBox"><script>
+function main_chart3()
+{
+    $("#main_chart3_body").html("<img src='/images/indicator.gif'>");
+	$.post("main35_func.php?action=chart3&readonly=T", function(data) {
+		$("#main_chart3_body").css("border","none");
+		$("#main_chart3_body").html(data);
+	});
+}
+</script>
+<div class="chart-menus">최근일 취소수량</div>
+<table cellspacing="0" cellpadding="0" height="140">
+  <tbody><tr>
+  <td align="center" id="main_chart3_body">
+  </td>
+</tr>
+</tbody></table>
+
+</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                    </div>
+                                </section>
+
+								</section>
+
+
+            					<section>
+	<div class="ezbox">
+		<div class="main-section-head">
+			<div class="head-sub-inner">
+				<h1>카드뉴스</h1>&nbsp;&nbsp;
+				<button class="btn btn-md btn-primary" onclick="window.open('https://story.ezadmin.co.kr/','_blank') ">전체보기</button>
+			</div>
+		</div>
+		<div class="tbl-round" style="height:100%;">
+			<div class="ezoffice-event-wrap">
+				<div class="swiper-container ezoffice-event-container swiper-container-horizontal">
+					<ul class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-376px, 0px, 0px);"><li class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" style="width: 176px; margin-right: 12px;"><a href="https://story.ezadmin.co.kr/?p=2554" target="_new" onclick="click_popup_board(&quot;404&quot;, &quot;EZ16&quot;)"><img src="https://cdn.ezadmin.co.kr/images/banner/250613_ezadmin_kream_mini.jpg" class="ezevent_img"></a></li><li class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="5" style="width: 176px; margin-right: 12px;"><a href="https://wp.me/p7CosM-EN" target="_new" onclick="click_popup_board(&quot;369&quot;, &quot;EZ16&quot;)"><img src="https://cdn.ezadmin.co.kr/images/banner/241111_ezadmin_amood_mini.jpg" class="ezevent_img"></a></li>
+<li class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 176px; margin-right: 12px;"><a href="https://wp.me/p7CosM-FL" target="_new" onclick="click_popup_board(&quot;509&quot;, &quot;EZ16&quot;)"><img src="https://cdn.ezadmin.co.kr/images/banner/260127_ezadmin_goodwearmall_mini.jpg" class="ezevent_img"></a></li><li class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 176px; margin-right: 12px;"><a href="https://wp.me/p7CosM-FA" target="_new" onclick="click_popup_board(&quot;432&quot;, &quot;EZ16&quot;)"><img src="https://cdn.ezadmin.co.kr/images/banner/251216_ezadmin_LGE-Living_mini.jpg" class="ezevent_img"></a></li><li class="swiper-slide" data-swiper-slide-index="2" style="width: 176px; margin-right: 12px;"><a href="https://wp.me/p7CosM-Fu" target="_new" onclick="click_popup_board(&quot;431&quot;, &quot;EZ16&quot;)"><img src="https://cdn.ezadmin.co.kr/images/banner/251030_ezadmin_zbzo_mini.jpg" class="ezevent_img"></a></li><li class="swiper-slide" data-swiper-slide-index="3" style="width: 176px; margin-right: 12px;"><a href="https://wp.me/p7CosM-Fi" target="_new" onclick="click_popup_board(&quot;409&quot;, &quot;EZ16&quot;)"><img src="https://cdn.ezadmin.co.kr/images/banner/250516_ezadmin_shopify_mini.jpg" class="ezevent_img"></a></li><li class="swiper-slide" data-swiper-slide-index="4" style="width: 176px; margin-right: 12px;"><a href="https://story.ezadmin.co.kr/?p=2554" target="_new" onclick="click_popup_board(&quot;404&quot;, &quot;EZ16&quot;)"><img src="https://cdn.ezadmin.co.kr/images/banner/250613_ezadmin_kream_mini.jpg" class="ezevent_img"></a></li><li class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="5" style="width: 176px; margin-right: 12px;"><a href="https://wp.me/p7CosM-EN" target="_new" onclick="click_popup_board(&quot;369&quot;, &quot;EZ16&quot;)"><img src="https://cdn.ezadmin.co.kr/images/banner/241111_ezadmin_amood_mini.jpg" class="ezevent_img"></a></li>
+					<li class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 176px; margin-right: 12px;"><a href="https://wp.me/p7CosM-FL" target="_new" onclick="click_popup_board(&quot;509&quot;, &quot;EZ16&quot;)"><img src="https://cdn.ezadmin.co.kr/images/banner/260127_ezadmin_goodwearmall_mini.jpg" class="ezevent_img"></a></li><li class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 176px; margin-right: 12px;"><a href="https://wp.me/p7CosM-FA" target="_new" onclick="click_popup_board(&quot;432&quot;, &quot;EZ16&quot;)"><img src="https://cdn.ezadmin.co.kr/images/banner/251216_ezadmin_LGE-Living_mini.jpg" class="ezevent_img"></a></li></ul>
+				<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+				<a class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></a>
+				<a class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></a>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+$(function(){
+	var swiper2 = new Swiper('.ezoffice-event-container', {
+		slidesPerView: 2,
+		spaceBetween: 12,
+		loop: true,
+		navigation: {
+			nextEl: '.ezoffice-event-wrap .swiper-button-next',
+			prevEl: '.ezoffice-event-wrap .swiper-button-prev',
+		},
+	});
+});
+</script>
+
+								<section>
+									<div class="main-section-head">
+										<div class="head-sub-inner">
+											<h1>재고현황조회 <div class="tool-tip-wrap tool-gray outline-gray ml8">
+													<a href="javascript:void(0)" class="tool-tip">툴팁</a>
+													<div class="tool-tip-area left2">
+														<section class="tool-tip-title">
+															<h1>재고현황조회 도움말</h1>
+															<div class="tool-tip-inner">
+																<ul class="list-dash">
+																	<li>이지어드민 내에서의 재고 현황을 조회합니다.</li>
+																	<li>
+																		<ol class="num-list">
+																			<li>현재고: 현 기준 이지어드민 정상 재고 수량</li>
+																			<li>금일입고: 금일 입고 처리로 증가된 재고 수량</li>
+																			<li>금일출고: 금일 출고처리로 차감된 재고 수량</li>
+																			<li>금일배송: 금일 배송처리로 차감된 재고 수량</li>
+																			<li>재고경고: 재고경고수량보다 현재고수량이 적은 상품</li>
+																			<li>재고위험: 재고위험수량보다 현재고수량이 적은 상품</li>
+																			<li>악성재고: 최근 1개월 동안 정상재고는 1개 이상이나, 주문이 없었던 재고</li>
+																		</ol>
+																	</li>
+																</ul>
+															</div>
+														</section>
+														<button type="button" class="tool-tip-close">닫기</button>
+													</div>
+												</div>
+																							</h1>
+										</div>
+									</div>
+									<div class="white-md-box">
+										<div class="tbl-round div_main35_sub3">
+	<table class="tbl-register-row">
+		<caption>재고현황입니다.</caption>
+		<colgroup>
+			<col style="width:*">
+			<col style="width:14%">
+			<col style="width:14%">
+			<col style="width:14%">
+			<col style="width:14%">
+			<col style="width:14%">
+			<col style="width:14%">                            
+		</colgroup>
+		<thead>
+			<tr>
+				<th>현재고</th>
+				<th>금일입고</th>
+				<th>금일출고</th>
+				<th>금일배송</th>
+				<th>재고경고</th>
+				<th>재고위험</th>
+				<th>악성재고</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="font14" id="stock_all">-</span><span class="font11"></span></td>
+				<td><span class="font14" id="stock_in">-</span> <span class="font11"></span></td>
+				<td><span class="font14" id="stock_out">-</span> <span class="font11"></span></td>
+				<td><span class="font14" id="stock_trans">-</span> <span class="font11"></span></td>
+				<td><span class="font14" id="stock_alarm1">-</span> <span class="font11"></span></td>
+				<td><span class="font14" id="stock_alarm2">-</span> <span class="font11"></span></td>
+				<td><span class="font14" id="stock_alarm3">-</span> <span class="font11"></span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+									</div>
+    <div class="wrap-row">
+        <div class="ezoffice-swiper">
+            
+<section>
+	<div class="ezbox">
+		<div class="main-section-head">
+			<div class="head-sub-inner">
+				<h1><a href="http://ezoffice2.cafe24.com/index.html" target="new">이지오피스</a></h1>
+			</div>
+		</div>
+		<div class="tbl-round" style="height:100%;">
+			<div class="ezoffice-container-wrap">
+				<div class="swiper-container ezoffice-container swiper-container-horizontal">
+					<ul class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-398px, 0px, 0px);"><li class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="9" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=03" target="_blank">
+									<img src="../images25/main/product03.gif" alt="">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>TSK-4500 PLUS</span>
+											<strong>무선바코드스캐너</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">660,000원</strong>
+							</div>
+						</li><li class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="10" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=02" target="_blank">
+									<img src="../images25/main/product02.gif" alt="">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>루칸코리아 LK-B30</span>
+											<strong>송장프린터</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">550,000원</strong>
+							</div>
+						</li>
+						
+						<li class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=24" target="_blank">
+									<img src="../images25/main/product24.jpg" alt="" class="mt10 mb22">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>안찢어지는 HDP 30*50 롤타입 감열 바코드 용지 (32000매)</span>
+											<strong>HDP 30*50 롤타입 감열 바코드 용지</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">119,000원</strong>
+							</div>
+						</li>
+						
+						
+						<li class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=20" target="_blank">
+									<img src="../images25/main/product20.gif" alt="" class="mt10 mb22">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>이지 PP 정전기 방지 속봉투 200매</span>
+											<strong>이지 PP 정전기 방지 속봉투</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">4,900원</strong>
+							</div>
+						</li>
+						
+						
+						<li class="swiper-slide" data-swiper-slide-index="2" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=21" target="_blank">
+									<img src="../images25/main/product21.gif" alt="" class="mt10 mb22">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>이지컷 HDPE 아이보리 500매</span>
+											<strong>택배봉투 이지컷 HDPE 소량인쇄</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">113,000원</strong>
+							</div>
+						</li>
+						
+						
+						<li class="swiper-slide" data-swiper-slide-index="3" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=08" target="_blank">
+									<img src="../images25/main/product08.gif" alt="">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>4.8접지방식 3만2천장</span>
+											<strong>바코드 감열지(개별박스)</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">199,000원</strong>
+							</div>
+						</li>
+						
+						
+						<li class="swiper-slide" data-swiper-slide-index="4" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=09" target="_blank">
+									<img src="../images25/main/product09.gif" alt="">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>3*5 롤타입 3만2천장</span>
+											<strong>바코드 감열지(롤타입)</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">149,000원</strong>
+							</div>
+						</li>
+						
+						
+						<li class="swiper-slide" data-swiper-slide-index="5" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=22" target="_blank">
+									<img src="../images25/main/product22.gif" alt="" class="mt10 mb22">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>이지컷 HDPE 메탈그레이 무지 100매</span>
+											<strong>택배봉투 이지컷 HDPE</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">4,500원</strong>
+							</div>
+						</li>
+						
+						
+						<li class="swiper-slide" data-swiper-slide-index="6" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=06" target="_blank">
+									<img src="../images25/main/product06.gif" alt="">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>PM3 블루투스 무선 스캐너</span>
+											<strong>바코드 스캐너</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">330,000원</strong>
+							</div>
+						</li>
+						
+						
+						<li class="swiper-slide" data-swiper-slide-index="7" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=05" target="_blank">
+									<img src="../images25/main/product05.gif" alt="">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>FuzzyScan F560 유선스캐너</span>
+											<strong>모니터스캔가능</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">165,000원</strong>
+							</div>
+						</li>
+						
+						
+						<li class="swiper-slide" data-swiper-slide-index="8" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=10" target="_blank">
+									<img src="../images25/main/product10.gif" alt="">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>라벨 거치대(롤타입 감열바코드 용지 전용)</span>
+											<strong>라벨 거치대</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">55,000원</strong>
+							</div>
+						</li>
+						
+						
+						<li class="swiper-slide" data-swiper-slide-index="9" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=03" target="_blank">
+									<img src="../images25/main/product03.gif" alt="">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>TSK-4500 PLUS</span>
+											<strong>무선바코드스캐너</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">660,000원</strong>
+							</div>
+						</li>
+						
+						
+						<li class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="10" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=02" target="_blank">
+									<img src="../images25/main/product02.gif" alt="">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>루칸코리아 LK-B30</span>
+											<strong>송장프린터</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">550,000원</strong>
+							</div>
+						</li>
+						
+										<li class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=24" target="_blank">
+									<img src="../images25/main/product24.jpg" alt="" class="mt10 mb22">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>안찢어지는 HDP 30*50 롤타입 감열 바코드 용지 (32000매)</span>
+											<strong>HDP 30*50 롤타입 감열 바코드 용지</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">119,000원</strong>
+							</div>
+						</li><li class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 187px; margin-right: 12px;">
+							<div class="ezoffice-box">
+								<a href="/ezoffice/product.php?product_no=20" target="_blank">
+									<img src="../images25/main/product20.gif" alt="" class="mt10 mb22">
+								</a>
+									<div class="ezoffice-swiper-desc">
+										<p>
+											<span>이지 PP 정전기 방지 속봉투 200매</span>
+											<strong>이지 PP 정전기 방지 속봉투</strong>
+										</p>
+									</div>
+									<strong class="ftpointcolor">4,900원</strong>
+							</div>
+						</li></ul>
+				<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+				<a class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></a>
+				<a class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></a>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+$(function(){
+	var swiper1 = new Swiper('.ezoffice-container', {
+		slidesPerView: 2,
+		spaceBetween: 12,
+		loop: true,
+		navigation: {
+			nextEl: '.ezoffice-container-wrap .swiper-button-next',
+			prevEl: '.ezoffice-container-wrap .swiper-button-prev',
+		},
+	});
+});
+</script>
+        </div>
+    </div>
+								</section>
+
+							</div>
+
+						</div>
+						<!-- //왼쪽 -->
+
+						<!-- 오른쪽 -->
+						<!-- 메시지 정보-->
+						<div class="main-right-cont">
+											
+<section>
+	<div class="main-section-head">
+		<div class="head-sub-inner">
+			<h1>메시지 정보</h1>
+		</div>
+	</div>
+	<div class="tbl-round">
+
+		<div class="alerm-gary-box">
+			<div>
+				<dl class="dot-flex">
+					<dt>SMS 잔여건수 </dt>
+					<dd>
+						<strong class="ftpointcolor">0</strong>건
+						<br><span class="font11">(<span>무료 </span>0 + <span>충전</span> 0)</span>
+					</dd>
+				</dl>
+				<dl class="dot-flex">
+					<dt>알림톡 잔여건수 </dt>
+					<dd><strong class="ftpointcolor">0</strong>건</dd>
+				</dl>
+			</div>
+		</div>
+
+	</div><!-- //.tbl-round -->
+</section>
+							<br>
+							<section>
+
+	<div class="ezbox">
+		<div class="main-section-head">
+			<div class="head-sub-inner" style="height: 37px;">
+			</div>
+		</div>
+		<div class="tbl-round">
+			<div class="ezoffice-event2-wrap">
+				<div class="swiper-container ezoffice-event-container2 swiper-container-horizontal">
+					<ul class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-277px, 0px, 0px);"><li class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="4" style="width: 265px; margin-right: 12px;">
+			<div onclick="click_popup_board(&quot;145&quot;,&quot;EZ15&quot;); open_cardnews_popup(&quot;https://www.ezadmin.co.kr/sub_01_89.html&quot;, &quot;메모바코드&quot;, 145);" style="cursor:pointer;">
+				<img src="https://cdn.ezadmin.co.kr/images/banner/210906_memo_barcode_cardnews.png">
+							</div>
+		</li>
+		<li class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 265px; margin-right: 12px;">
+			<div onclick="click_popup_board(&quot;356&quot;,&quot;EZ15&quot;); open_cardnews_popup(&quot;https://www.globox.co.kr/sub_09_13.html&quot;, &quot;화주 알림 서비스&quot;, 356);" style="cursor:pointer;">
+				<img src="https://cdn.ezadmin.co.kr/images/banner/240923_wms_alim_cardnews.jpg">
+							</div>
+		</li>
+		<li class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 265px; margin-right: 12px;">
+			<div onclick="click_popup_board(&quot;207&quot;,&quot;EZ15&quot;); open_cardnews_popup(&quot;https://www.ezadmin.co.kr/sub_01_102.html&quot;, &quot;직진배송 라벨출력&quot;, 207);" style="cursor:pointer;">
+				<img src="https://cdn.ezadmin.co.kr/images/banner/220617_zigzag_straight_cardnews.jpg">
+							</div>
+		</li>
+		<li class="swiper-slide" data-swiper-slide-index="2" style="width: 265px; margin-right: 12px;">
+			<div onclick="click_popup_board(&quot;184&quot;,&quot;EZ15&quot;); open_cardnews_popup(&quot;https://story.ezadmin.co.kr/?p=2195&quot;, &quot;쿠팡로켓배송&quot;, 184);" style="cursor:pointer;">
+				<img src="https://cdn.ezadmin.co.kr/images/banner/211217_coupang_rocket_cardnews.png">
+							</div>
+		</li>
+		<li class="swiper-slide" data-swiper-slide-index="3" style="width: 265px; margin-right: 12px;">
+			<div onclick="click_popup_board(&quot;152&quot;,&quot;EZ15&quot;); open_cardnews_popup(&quot;https://www.ezadmin.co.kr/sub_01_93.html&quot;, &quot;실시간주문알림&quot;, 152);" style="cursor:pointer;">
+				<img src="https://cdn.ezadmin.co.kr/images/banner/211019_realtime_cardnews.png">
+							</div>
+		</li>
+		<li class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="4" style="width: 265px; margin-right: 12px;">
+			<div onclick="click_popup_board(&quot;145&quot;,&quot;EZ15&quot;); open_cardnews_popup(&quot;https://www.ezadmin.co.kr/sub_01_89.html&quot;, &quot;메모바코드&quot;, 145);" style="cursor:pointer;">
+				<img src="https://cdn.ezadmin.co.kr/images/banner/210906_memo_barcode_cardnews.png">
+							</div>
+		</li>
+					<li class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 265px; margin-right: 12px;">
+			<div onclick="click_popup_board(&quot;356&quot;,&quot;EZ15&quot;); open_cardnews_popup(&quot;https://www.globox.co.kr/sub_09_13.html&quot;, &quot;화주 알림 서비스&quot;, 356);" style="cursor:pointer;">
+				<img src="https://cdn.ezadmin.co.kr/images/banner/240923_wms_alim_cardnews.jpg">
+							</div>
+		</li></ul>
+				<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+				<a class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></a>
+				<a class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></a>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+var swiper4 = new Swiper('.ezoffice-event-container2', {
+	slidesPerView: 1,
+	spaceBetween: 12,
+	loop: true,
+	navigation: {
+		nextEl: '.ezoffice-event2-wrap .swiper-button-next',
+		prevEl: '.ezoffice-event2-wrap .swiper-button-prev',
+	},
+});
+
+function open_cardnews_popup(url, link, no)
+    {
+        window.open(url, "", "width=1920, height=1000, scrollbars=1");
+        count_popup_hit(link, no);
+    }
+function open_alimtalk_landing(link, no)
+    {
+        link = typeof link == "undefined" ? "" : link;
+        no = typeof no == "undefined" ? "" : no;
+        window.open("about:blank","alimtalk_landing","width=1900 height=980");
+        $("[name=image_alimtalk_form]").submit();
+        count_popup_hit(link, no);
+    }
+  function count_popup_hit(link, no)
+  {
+//console.log(link);
+      var url="link_click_process.php";
+      $.ajax({
+              type:"POST",
+              url:url,
+              data:{ "action": "set_hit_count", "link" : link, "no" : no } ,
+              success:function(args){
+                      console.log(args);
+              },
+              error:function(e){
+                      console.log(e.responseText);
+              }
+      });
+	}
+
+  function link_click_stat(link, no, type)
+  {
+        no = typeof no == "undefined" ? "" : no;
+        type = typeof type == "undefined" ? "" : type;
+//console.log(link);
+        var url="link_click_process.php";  
+        $.ajax({      
+                type:"POST",  
+                url:url,    
+                data:{ "action": "set_link_click", "link" : link, "type" : type } , 
+                success:function(args){  
+                        console.log(args); 
+                },   
+                error:function(e){  
+                        console.log(e.responseText);  
+                }  
+        });
+
+        count_popup_hit(link, no);
+  }
+
+  function count_popup_hit(link, no)
+  {
+//console.log(link);
+      var url="link_click_process.php";
+      $.ajax({
+              type:"POST",
+              url:url,
+              data:{ "action": "set_hit_count", "link" : link, "no" : no } ,
+              success:function(args){
+                      console.log(args);
+              },
+              error:function(e){
+                      console.log(e.responseText);
+              }
+      });
+  }
+</script>
+						</div>
+						<!-- //메시지 정보-->
+					</div>
+
+
+					<!-- //메인 컨텐츠 영역 -->
+					
+
+<style>
+    div#session_timeout_warn { width: 490px; height: 350px; border: 0px solid #333333; display: none; z-index: 999999; position:absolute; top: 50%; left: 50%; margin-top: -200px; margin-left: -250px; background: url('/images25/session_timeout_warn_over.png') no-repeat left top; border:5px solid #999999;}
+    #session_timeout_warn_sec { border: none; width:60px; height:26px; position: absolute; left: 210px; top:136px; font-size:20px; text-align:right; background:transparent; color:red;}
+    #session_timeout_warn_btn { border: none; width:100px; height:40px; position: absolute; left: 196px; top:272px; background:transparent; cursor:pointer;}
+
+    div#session_timeout_done { width: 960px; height: 360px; border: 0px solid #333333; display: none; z-index: 999999; position:absolute; top: 50%; left: 50%; margin-top: -200px; margin-left: -480px;  background: url('/images25/session_timeout_over.png') no-repeat left top; border-radius: 1%; }
+    #session_timeout_done_sec { border: none; width:65px; height:28px; position: absolute; left: 450px; top:150px; font-size:18px; text-align:right; background:transparent; color:red;}
+    #session_timeout_done_btn { border: none; width:110px; height:42px; position: absolute; left: 424px; top:234px; background:transparent; cursor:pointer;}
+
+</style>
+
+
+<div id="session_timeout_warn">
+	<input type="text" name="session_timeout_warn_sec" id="session_timeout_warn_sec" value="" readonly="">
+	<input type="button" name="session_timeout_warn_btn" id="session_timeout_warn_btn" tabindex="1">
+</div>
+<div id="session_timeout_done">
+	<input type="text" name="session_timeout_done_sec" id="session_timeout_done_sec" value="" readonly="">
+	<input type="button" name="session_timeout_done_btn" id="session_timeout_done_btn" tabindex="1">
+</div>
+
+<script>
+
+
+	var tmpl_code = '-3668';
+
+	var show_warning = false;
+	$(function() {
+
+		
+		$("#session_timeout_warn_btn").click(function() {
+			$("#session_timeout_warn").hide();
+		});
+
+		$("#session_timeout_done_btn").click(function() {
+			$("#session_timeout_done").hide();
+					document.location.href = "http://www.ezadmin.co.kr";
+				});
+
+		$('#session_timeout_warn_btn').click(function(){
+
+			reset_session_time();
+		});
+	});
+	function reset_session_time()
+	{
+		var params = {};
+		params["template"] = "session";
+		params["action"]   = "reset_session_check_time";
+		$.post("/function.htm", params, function(data) {
+			var obj = JSON.parse(data);
+			epoch = new Date().getTime();
+		});
+	}
+	//----------------------------------
+	// javascript session timeout
+	function SessionTimeout() { this.session_timer ="";   this.warining_timer = ""; }
+    
+    SessionTimeout.prototype.pause = function(){
+        if(typeof this.session_timer !== 'undefined') this.session_timer = clearInterval(this.session_timer);
+        return this.session_timer;
+    }
+	SessionTimeout.prototype.init = function() {
+		timed_out = false;
+		timeout_min = "0";
+
+		if (timeout_min == 0 || timeout_min == "") return;
+
+		loop_sec = 60;
+		epoch = new Date().getTime();
+
+		window.addEventListener('touchstart',Timeout,false);
+		window.addEventListener('click',Timeout,false);
+		window.addEventListener('keypress', Timeout, false);
+
+		function Timeout() {
+
+			epoch = new Date().getTime();
+			 if (timed_out == true) return;
+
+
+			this.session_timer = clearInterval(this.session_timer);
+			this.session_timer = setInterval(checkSession, loop_sec*1000);
+		}
+		function warningCheck()
+		{
+			timeout_sec = timeout_min * 60 * 1000;      // Actual timeout in milliseconds
+			warn_sec = timeout_sec - (1 * 60 * 1000);   // Warning time  before 2 miniute
+			epoch2 = new Date().getTime();
+
+			remain_sec = Math.round((epoch + timeout_sec - epoch2) / 1000);
+			if (remain_sec <= 0) return;
+
+			if (!show_warning) {
+				show_warning = true;
+				$("#session_timeout_warn").show();
+				this.warning_timer = clearInterval(this.warning_timer);
+				$("#session_timeout_warn_sec").val(remain_sec);
+				this.warning_timer = setInterval(warningCheck, 5000);
+			}
+			else
+			{
+				$("#session_timeout_warn_sec").val(remain_sec);
+				if(remain_sec <= 0 )
+				{
+					show_warning = false;
+					$("#session_timeout_warn").hide();
+				}
+			}
+		}
+		function checkSession() 
+		{
+			if(typeof(no_session_out)!=="undefined")
+			{
+				if(no_session_out==1)
+				return;
+			}
+
+			// 이미 어디선가 세션 만료가 됐으면 서버로 호출을 보내지 않는다.
+			if(timed_out == true)
+			{
+                this.session_timer = clearInterval(this.session_timer);
+				return;
+			}
+
+			timeout_sec = timeout_min * 60 * 1000;      // Actual timeout in milliseconds
+			warn_sec = timeout_sec - (1 * 60 * 1000);   // Warning time  before 2 miniute
+
+			epoch2 = new Date().getTime();
+            if($("#load_grid1").is(":visible"))
+            {
+
+                this.session_timer = clearInterval(this.session_timer);
+				this.session_timer = setInterval(checkSession, loop_sec*1000);
+            }
+			else if (epoch2 > epoch + warn_sec && epoch2 < epoch + timeout_sec && !show_warning) 
+			{
+				this.warning_timer = clearInterval(this.warning_timer);		
+				this.warning_timer = setInterval(warningCheck, 5000);
+
+			} else if (epoch2 > epoch + timeout_sec) {
+
+				this.session_timer = clearInterval(this.session_timer);
+
+				// server ajax call
+				var params = {};
+				params["template"] = "session";
+				params["action"]   = "session_timeout";
+				
+								
+				$.post("/function.htm", params, function(data) {
+				    var obj = JSON.parse(data);
+				    if(obj.timeout == 1)
+				    {
+        				// show popup div
+        				$("#session_timeout_warn").hide();
+
+						if (timeout_min < 60)
+						{
+        					$("#session_timeout_done_sec").val(timeout_min + "분");
+						}
+						else
+						{
+							var hour = timeout_min/60;
+        					$("#session_timeout_done_sec").val(hour + "시간");
+						}
+
+        				$(".navbar").removeClass('navbar-fixed-top');
+        				$("#gnbCollapse").hide();
+        				$.blockUI({ message: $('#session_timeout_done')});
+
+        				timed_out = true;
+				    }
+				    else
+			        {
+						if (show_warning) {
+							this.warning_timer = clearInterval(this.warning_timer);
+							show_warning = false;
+							$("#session_timeout_warn").hide();
+						}
+
+						if(obj.session_timeout_check_time)
+							epoch  = obj.session_timeout_check_time;
+						else
+							epoch = new Date().getTime();
+
+						this.session_timer = clearInterval(this.session_timer);
+			            this.session_timer = setInterval(checkSession, loop_sec*1000);
+			        }
+				});
+			}
+			else 
+			{
+				this.session_timer = clearInterval(this.session_timer);
+				this.session_timer = setInterval(checkSession, loop_sec*1000);
+			}
+
+		}
+		this.session_timer = clearInterval(this.session_timer);
+		this.session_timer = setInterval(checkSession, loop_sec*1000);
+
+	}
+
+	var sessionTimeout = new SessionTimeout();
+	sessionTimeout.init();
+	
+</script>
+	<!-- 창업센터 -->
+		<div class="main-footer">
+		<ul class="main-footer-list">
+			<li>
+				<dl>
+					<dt>회사명</dt>
+					<dd>핌즈(주)</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>대표이사</dt>
+					<dd>황선영</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>소재지</dt>
+					<dd>서울시 성동구 아차산로 38 개풍빌딩 8층</dd>
+				</dl>
+			</li>
+		</ul>
+		<ul class="main-footer-list">
+			<li>
+				<dl>
+					<dt>사업자등록번호</dt>
+					<dd>220-86-85908 </dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>통신판매업신고</dt>
+					<dd>제2025-서울성동-1874호</dd>
+				</dl>
+			</li>
+				</ul>
+		<ul class="main-footer-list">
+			<li>
+				<dl>
+					<dt>개인정보관리자 </dt>
+					<dd>권춘화 <a href="mailto:chgwon@pimz.co.kr">chgwon@pimz.co.kr</a> </dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>대표이메일 </dt>
+					<dd><a href="mailto:syhwang@pimz.co.kr">syhwang@pimz.co.kr</a></dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>팩스</dt>
+					<dd>(02)6008-5388</dd>
+				</dl>
+			</li>
+		</ul>
+		<ul class="main-footer-list">
+			<li>
+				<dl>
+					<dt>Copyright © <b>PIMZ</b> Inc. All rights reserved.</dt>
+				</dl>
+			</li>
+		</ul>
+	</div>
+	
+
+				
+<!-- 메인으로 옮김
+<script type=text/javascript src='/js/jquery.cookie.js'></script>
+<script type=text/javascript src='/js/jquery.notice.js'></script>
+<script type=text/javascript src='/js/blockui.js'></script>
+-->
+
+<style type="text/css">
+.blockOverlay{
+	z-index: 1101 !important;
+}
+.blockMsg{
+	z-index: 1102 !important;
+}
+
+div#service_stop_vacct {
+	top: -232px;
+    position: relative;
+    font-size: 17px;
+    left: 38px;
+}
+div#service_stop_total_amount {
+	top: -202px;
+    position: relative;
+    font-size: 17px;
+    left: -74px;
+}
+div#service_stop_str {
+    top: -183px;
+    position: relative;
+    font-size: 20px;
+	color: #ffffff;
+}
+
+div#service_stop { width: 500px; height: 400px; z-index: 9999; display: none; }
+div#service_warning { width: 500px; height: 500px; z-index: 9999; display: none; }
+div#service_warning .account-wrap {
+	position: absolute;
+    background: #ffdb35;
+    top: 64%;
+    left: 5%;
+    right: 5%;
+    display: flex;
+    font-size: 20px;
+    padding: 10px 8px;
+    justify-content: space-between;
+}
+div#service_warning .account-info {
+}
+div#service_warning .account-owner {
+}
+div#service_warning2 { width: 500px; height: 500px; z-index: 9999; display: none; }
+div#service_warning3 { width: 500px; height: 500px; z-index: 9999; display: none; }
+div#cafe24_notice { width: 500px; height: 500px; z-index: 9999; display: none; }
+div#passwd_keep { width: 500px; height: 500px; z-index: 99999; display: none; background-image: url('/images/popup/161121_security.jpg?ver=86497620'); }
+
+div#passwd_keep #old_passwd  { position:absolute; top:290px; left: 170px;}
+div#passwd_keep #new_passwd  { position:absolute; top:328px; left: 170px;}
+div#passwd_keep #new_passwd2 { position:absolute; top:365px; left: 170px;}
+div#passwd_keep .passwd { height: 20px; width:170px; padding:4px;}
+div#passwd_keep .passwd_btn1 { position:absolute; top:410px; left: 100px;}
+div#passwd_keep .passwd_btn2 { position:absolute; top:410px; left: 200px;}
+div#passwd_keep .passwd_btn3 { position:absolute; top:410px; left: 300px;}
+div#regular_servercheck { width: 450px; height: 500px; color: #333333; z-index: 9999; display: none; cursor:auto; position:fixed; top: 50%; left: 50%; margin-top: -260px; margin-left: -225px; }
+div#sys_notice_board,
+div#internal_board{
+	color: #333333;
+	background-color:#FFFFFF;
+	width: 100%;
+/*
+	width: 600px; 
+	height: 450px; 
+	border: 8px solid #ffffff;
+*/
+	display:none;
+	cursor:default;
+/*
+	position:fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 9999;
+	margin-top: -250px;
+	margin-left: -300px;
+*/
+	border-radius: 8px;
+
+	max-height: 500px;
+	flex-direction: column;
+}
+div#internal_board_title {
+	background-color:#198cff; 
+}
+#internal_board_content_subject {
+	display: flex;
+	align-items:center;
+}
+div#sys_notice_title {
+	background-color:#E30D1D; 
+}
+div#sys_notice_title,
+div#internal_board_title {
+	/*	
+	width: 580px; 
+	height: 30px; 	
+	*/
+	height: 58px;
+	padding:15px 20px;
+	color: #FFFFFF; 
+	font-weight: none;    
+	font-size: 18px; 
+	text-align: left;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}
+/*
+div#sys_notice_title span { position:absolute; top: 10%; left: 50%; margin-top: -35px; margin-left: -290px; }
+#sys_notice_board_close img { position: absolute; top: 53px; right: 20px; width: 25px; height: 25px;        margin-top: -40px; cursor:pointer; }
+*/
+div#sys_notice_content,
+div#internal_board_content {
+/*
+	width: 580px;
+	height: 380px;
+	overflow-y: scroll;
+*/
+	height: calc(100% - 58px);
+	overflow-y: auto;
+
+	padding: 15px 25px 30px; 
+	line-height:150%;
+	text-align: left;
+	font-size:14px;
+}
+
+#kakao_alimtalk_notice .kakao_alimtalk_notice_close {
+	position: absolute;
+    top: 0; 
+    right: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 10000;
+}
+#kakao_alimtalk_notice .kakao_alimtalk_notice_open {
+	position: absolute;
+    bottom: 10%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;  
+    height: 50px; 
+    cursor: pointer;
+    z-index: 10000;
+}
+
+</style>
+
+
+<div>
+	<!-- 서비스 중지(D+11 이후) -->
+	<div id="service_stop">
+		<!--<img id="service_stop_img" src="/images25/alert.jpg?v=86497620">-->
+		<img id="service_stop_img" src="/images35/alert.png?v=86497620">
+		<div id="service_stop_vacct"><span>국민은행 핌즈(주) 530401-01-089102</span></div>
+		<div id="service_stop_total_amount"><span>별도문의</span></div>
+		<div id="service_stop_str"><span>항상 최선을 다하는 이지어드민이 되겠습니다.</span></div>
+
+	</div>
+
+	<!-- 미입금 팝업(D-1 ~ D-10일) 2018-06-13 cwkim 추가-->
+		<div id="service_warning">
+		<img id="service_warning_img" src="/images25/alert2_1.png" usemap="#label_alert2_map">
+		<map name="label_alert2_map" style="z-index:999;">
+				<area shape="rect" alt="" coords="430,0,499,65" href="#" id="c_service_warning" onfocus="this.blur()" target="_self">
+			<!--
+				<area shape="rect" alt="" coords="430,0,499,65" href="#" onclick="close_service_warning()" onfocus="this.blur()" target="_self">
+				<area shape="rect" alt="" coords="13,13,136,38" href="#" onclick="hide_service_warning()" onfocus="this.blur()" target="_self">
+			-->
+		</map>
+		<div class="account-wrap">
+			<div class="account-info">국민은행 029390-29-022427</div>
+			<div class="account-owner">예금주 : 핌즈(주)</div>
+		</div>
+	</div>
+
+	
+
+	<!---- 공지사항 팝업 ----->
+	<div id="sys_notice_board">
+		<div id="sys_notice_title">
+			<span id="sys_notice_content_subject"></span>
+			<div id="sys_notice_board_close" onclick="hide_board('sys_notice_board');"><img src="/images25/2017_X.png"></div>
+		</div>
+		<div id="sys_notice_content">
+			<img id="sys_notice_content_image" src="">
+			<span id="sys_notice_content_text"></span><br>
+
+			<div id="sys_notice_footer" class="fr mt10">
+				<div class="form-control">
+					<label>
+						<input type="checkbox" id="notice_popup_today" value="1">
+						<span>오늘 하루 다시 보지 않기</span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---- 업체게시판 팝업 ----->
+	<div id="internal_board">
+		<div id="internal_board_title">
+			<span id="internal_board_content_subject"></span>
+			<div id="internal_board_board_close" onclick="hide_board('internal_board');"><img src="/images25/2017_X.png"></div>
+		</div>
+		<div id="internal_board_content">
+			<span id="internal_board_content_text"></span>
+		</div>
+	</div>
+	
+	
+</div>
+
+<script src="js/rwdImageMaps_min.js"></script>
+<script>
+$(function() {
+
+//	$("#kakao_alimtalk_notice").off("touchstart");
+
+	$('img[usemap]').rwdImageMaps();
+//	$(window).resize(function() {
+//console.log("resize");
+//		$('img[usemap]').rwdImageMaps();
+//		return;
+//	});
+
+    		show_internal_board(); 
+			if (ismobile != "mobile")
+		{
+			//--------------------------------------
+			//-- night job  popup
+			var objDate = new Date();
+//			var hours = objDate.getHours();
+//			var minutes = objDate.getMinutes();
+//			var day = objDate.getDay();
+			const utc = objDate.getTime() + (objDate.getTimezoneOffset() * 60 * 1000);
+			const KR_TIME_DIFF = 9 * 60 * 60 * 1000;
+			var krDate = new Date(utc + KR_TIME_DIFF);
+			var kr_hours = krDate.getHours();
+			var kr_minutes = krDate.getMinutes();
+			var kr_day = krDate.getDay();
+
+//			   $("#right_free_popup").show();
+//				$("#side_banner").show();
+//				$("#side_banner2").show();
+//				$("#side_banner3").show();
+//			   $("#right_event_popup").show();
+//			   $("#quick_guide").show();
+//			   $("#simple_trans").show();
+
+			//---------------------------------------
+			// 새벽 4시 ~ 5시 사이에는 서버작업 팝업 게시 
+			//
+//			if (hours == 4) {
+
+			if( kr_hours == 4 ) {
+				$("#regular_servercheck").show();
+			}
+		}
+            
+
+ 
+});
+
+    function hide_board(id)
+    {
+        $.unblockUI({ message: $('#'+id)});
+		if(id == 'sys_notice_board')
+		{
+			if($("#notice_popup_today").prop("checked"))
+				$.cookie("is_notice_popup_today", 20260223);
+
+			show_internal_board();
+		}
+    }
+
+    function show_internal_board()
+    {
+		    }
+
+  function link_click_video()
+  {
+        var url="link_click_process.php";  
+        $.ajax({      
+                type:"POST",  
+                url:url,    
+                data:{ "action": "set_link_click", "link" : "배송고도화 동영상(20180530)" } , 
+                success:function(args){  
+                        console.log(args); 
+                },   
+                error:function(e){  
+                        console.log(e.responseText);  
+                }  
+        });  
+  }
+
+  function link_click_stat(link, no, type)
+  {
+		no = typeof no == "undefined" ? "" : no;
+		type = typeof type == "undefined" ? "" : type;
+//console.log(link);
+        var url="link_click_process.php";  
+        $.ajax({      
+                type:"POST",  
+                url:url,    
+                data:{ "action": "set_link_click", "link" : link, "type" : type } , 
+                success:function(args){  
+						console.log(args); 
+                },   
+                error:function(e){  
+                       	console.log(e.responseText);  
+                }  
+        });
+
+		count_popup_hit(link, no);
+  }
+
+  function count_popup_hit(link, no)
+  {
+//console.log(link);
+      var url="link_click_process.php";
+      $.ajax({
+              type:"POST",
+              url:url,
+              data:{ "action": "set_hit_count", "link" : link, "no" : no } ,
+              success:function(args){
+                      console.log(args);
+              },
+              error:function(e){
+                      console.log(e.responseText);
+              }
+      });
+  }
+
+  function close_service_warning()
+  {
+        $.unblockUI({message: $('#service_warning')});
+        return false;
+  }
+
+  function hide_service_warning()
+  {
+        setCookie("service_warning", 'ok', 1);    
+        $.unblockUI({message: $('#service_warning')});
+  }
+
+  function close_service_warning2()
+  {
+        $.unblockUI({message: $('#service_warning2')});
+        return false;
+  }
+
+  function hide_service_warning2()
+  {
+        setCookie("service_warning2", 'ok', 1);
+        $.unblockUI({message: $('#service_warning2')});
+  }
+
+  function close_cafe24_notice()
+  {
+        $.unblockUI({message: $('#cafe24_notice')});
+        return false;
+  }
+
+  function hide_cafe24_notice()
+  {
+        setCookie("cafe24_notice", 'ok', 1);
+        $.unblockUI({message: $('#cafe24_notice')});
+  }
+
+  function reset_cafe24_notice()
+  {
+        var popup_option = 'directories=no, toolbar=no, location=no, menubar=no, status=no, scrollbars=no, resizable=no, left=400, top=200, width=800, height=900';
+        window.open("popup25.htm?template=B103&shop_id=&is_focus=1", "reg_new", popup_option);
+  }
+    function alimtalk_event()
+    {
+        openwin3('/template/E/E125.htm', 'alimtalk_card', 550, 610);    
+    }
+    
+    function showEZloginPopup()
+    {
+        if (GetCookie("popup_ezlogin2") != "done") {
+                wEZlogin = window.open('/popup/ezlogin_intro.html', 'wEZlogin', 'width=400,height=619,resizable=no,scrollbars=no');
+                wEZlogin.focus();
+        }
+    }
+    function show_ezmon(domain, ip)
+    {
+        wmon = window.open('http://manager.ezmon.co.kr/serverview.html?domain='+domain+'&ip='+ip, 'wmon', 'width=1100,height=700,resizable=no,screenX=0,screenY=0,scrollbars=no,menubars=no');
+        wmon.focus();
+    }
+    
+    
+ 
+    
+    function hide_popup(id, expire)
+    {
+        setCookie(id, 'ok', expire);
+        $("#"+id).hide();
+    } 
+
+    
+    function passwd_submit()
+    {
+        if (!$("#old_passwd").val()) {
+            alert('현재 비빌번호를 입력하세요');
+            $("#old_passwd").focus();
+            return;
+        }
+        if (!$("#new_passwd").val()) {
+            alert('새 비빌번호를 입력하세요');
+            $("#new_passwd").focus();
+            return;
+        }
+        if (!$("#new_passwd2").val()) {
+            alert('비빌번호 확인을 입력하세요');
+            $("#new_passwd2").focus();
+            return;
+        }
+
+        if ($("#new_passwd").val() != $("#new_passwd2").val()) {
+            alert('새로운 비밀번호와 확인이 일치하지 않습니다.');
+            $("#new_passwd").focus();
+            return;
+        }
+
+        if ($("#old_passwd").val() == $("#new_passwd").val()) {
+            alert('기존 비밀번호와 새로운 비밀번호가 동일합니다.');
+            $("#new_passwd").focus();
+            return;
+        }
+
+        if ( $("#new_passwd").val().indexOf("&") >= 0 )
+        {
+            alert('& 기호는 사용하실 수 없습니다.');
+            $("#new_passwd").focus();
+            return;
+        }
+        
+        if ( $("#new_passwd").val().indexOf("+") >= 0 )
+        {
+            alert('+ 기호는 사용하실 수 없습니다.');
+            $("#new_passwd").focus();
+            return;
+        }
+            
+
+        var params = {};
+        params['template']      = "BA00";
+        params['action']        = "change_passwd";
+        params['old_passwd']    = $("#old_passwd").val();
+        params['new_passwd']    = $("#new_passwd").val();
+
+        $.post("/function.htm", params, function(data) {
+            $("#old_passwd").val('');
+            $("#new_passwd").val('');
+            $("#new_passwd2").val('');
+
+            if (data == 1) {
+                alert("요청하신 대로 비멀번호가 변경되었습니다.");
+                $.unblockUI({ message: $("#passwd_keep")});
+            } 
+            else if ( data == 0 )
+                alert("입력한 기존 비밀번호가 일치하지 않습니다. 다시 확인해주세요");
+            else
+                alert(data);    
+        });
+    }
+
+    function passwd_reset()
+    {
+        $("#old_passwd").val('');
+        $("#new_passwd").val('');
+        $("#new_passwd2").val('');
+        $("#old_passwd").focus();
+    }
+    
+    function passwd_later()
+    {
+        $.cookie("password_later", "ok", {expires: 1});
+        $.unblockUI({ message: $("#passwd_keep")});
+        $(".navbar").removeClass('navbar-fixed-top');
+    }
+    
+    function hide_popup_event() 
+    {
+        // 오늘하루닫기에 체크할 경우 쿠키 설정
+        if($('input:checkbox[name="not_today"]').is(":checked") ==  true)
+        {
+            setCookie("bxslider2_bg", 'ok', 1);
+            setCookie("pop_top", 'ok', 1);
+        }
+        $(".bxslider2_bg").hide();
+        $(".pop_top").hide();
+    }
+
+    function hide_main_popup(id)
+    {
+        $("."+id).hide();
+        $("."+id).remove();
+        
+        if ($("ul.bxslider2 li:not(.bx-clone)").size() <= 0) 
+            hide_popup_event();
+        else
+            slider.reloadSlider();
+            
+        setCookie(id, 'ok', 1);
+        //slider_init();
+    }
+
+    function review_event()
+    {
+        var content = $("ul.bxslider2 li:not(.bx-clone) #review_input").val().replace(/\n/g, "<br>");
+        var tel = $("ul.bxslider2 li:not(.bx-clone) #review_tel").val();
+        var url="event_process.php";  
+
+        if( !tel )
+            alert("연락처를 적어주세요.");
+        if( !content )
+            alert("오행시를 적어주세요.");
+
+        if( tel && content )
+        {
+            $.ajax({      
+                type:"POST",  
+                url:url,    
+                data:{ "action": "set_ezadmin_review"
+                     , "category" : "오행시" 
+                     , "content" : content
+                     , "tel" : tel
+                     } , 
+                success:function(args){  
+                    alert(args);
+                    hide_popup_event();
+                },   
+                error:function(e){  
+                    console.log(e.responseText);  
+                }  
+            });  
+        }
+    }
+
+    function new_ezevent()
+    {
+        var content = $("ul.bxslider2 li:not(.bx-clone) #ezevent_input").val().replace(/\n/g, "<br>");
+        var tel = $("ul.bxslider2 li:not(.bx-clone) #ezevent_tel").val();
+        var etc = $("ul.bxslider2 li:not(.bx-clone) input[name=ezevent]:checked").val();
+        var url="event_process.php";
+
+        if( !tel )
+            alert("연락처를 적으시개");
+        if (!etc )
+            alert("기능을 고르시개");
+
+        if( tel && etc)
+        {
+            $.ajax({
+                type:"POST",
+                url:url,
+                data:{ "action": "set_new_event"
+                     , "category" : "고르시개"
+                     , "content" : content
+                     , "tel" : tel
+                     , "etc" : etc
+                     } ,
+                success:function(args){
+                    alert(args);
+                    hide_popup_event();
+                },
+                error:function(e){
+                    console.log(e.responseText);
+                }
+            });
+        }
+    }
+
+	function open_alimtalk_landing(link, no)
+	{
+		link = typeof link == "undefined" ? "" : link;
+		no = typeof no == "undefined" ? "" : no;
+
+		window.open("about:blank","alimtalk_landing","width=1900 height=980");
+		$("[name=image_alimtalk_form]").submit();
+
+		count_popup_hit(link, no);
+	}
+
+	function open_sc_page()
+	{
+		var height = $(window).height();
+		window.open('https://www.sc.co.kr/url/bb/ptnsl/ez','sc_page','width=500 height='+height);
+	}
+
+	function open_ezevent_popup(domain, id)
+	{
+		window.open("http://admin04.ezadmin.co.kr/ezevent01.html?domain="+domain+"&userid="+id, "ezevent", "width=500 height=900");
+	}
+
+	function open_cardnews_popup(url, link, no)
+	{
+		window.open(url, "", "width=1920, height=1000, scrollbars=1");
+
+		count_popup_hit(link, no);
+	}
+
+	function open_add_serv_landing(link, no)
+	{
+		link = typeof link == "undefined" ? "" : link;
+		no = typeof no == "undefined" ? "" : no;
+
+		window.open("about:blank","add_serv_landing","width=600 height=900");
+		$("[name=add_serv_form]").submit();
+
+		count_popup_hit(link, no);
+	}
+
+	// 24.05.24 hschoi 공지사항 팝업 스크롤 상단 이동 로딩 
+	 $(document).ready(function() {
+		$(window).one('load', function() {
+			$('#sys_notice_content').scrollTop(0);
+		});
+     });
+			
+	function close_privacy_notice()
+    {
+          $("#privacy_notice").css('display','none');
+          return false;
+    }
+
+	function close_kakao_alimtalk_notice(e) {
+console.log(e);
+        // 오늘하루닫기에 체크할 경우 쿠키 설정
+        if($('input:checkbox[name="notice_popup_today"]').is(":checked") ==  true)
+        {
+            setCookie("kakao_alimtalk_notice", 'ok', 1);
+        }
+
+	    $("#kakao_alimtalk_notice").css('display', 'none');
+	    return false;
+	}
+	  		
+    function go_allow()
+    {
+          location.href = "/template40.htm?template=BA00";
+    }
+	  		
+    function go_privacy()
+    {
+          location.href = "/template40.htm?template=H410";
+    }
+
+    function go_kakao_alimtalk()
+    {
+	    window.open("https://www.ezadmin.co.kr/sub_01_13.html", "_blank");
+    }
+
+</script>
+
+	
+
+    
+	
+	<style>
+.popup_timer {
+	position: absolute;
+    top: 50%;
+    left: 31%;
+    color: #fff;
+    font-weight: bold;
+}
+.popup_timer .txt {
+	margin-right: 10px;
+}
+.popup_timer .datetime {
+	font-size: 20px;
+}
+
+@media all and (max-width: 950px) {
+	#promotion-pop {
+		display:none;
+	}
+}
+
+.modal-pop.active {
+	z-index:1104;
+}
+
+</style>
+
+<script>
+const countdown_timer = function(id, date, popup_id) {
+	var p_date = new Date(date);
+	const SEC = 1000;
+	const MIN = SEC * 60;
+	const HOUR = MIN * 60;
+	const DAY = HOUR * 24;
+	var timer;
+
+	function show_remaining() {
+		var now = new Date();
+		var time_diff = p_date - now;
+		
+		if( time_diff < 0 ) {
+			$(".popup_timer."+id).children(".datetime").text("timeout");
+			$("#"+popup_id).remove();
+			return;
+		}
+
+		var days = Math.floor(time_diff / DAY);
+		var hours = Math.floor((time_diff % DAY) / HOUR);
+		var minutes = Math.floor((time_diff % HOUR) / MIN);
+		var seconds = Math.floor((time_diff % MIN) / SEC);
+		days = ("0"+days).slice(-2);
+		hours = ("0"+hours).slice(-2);
+		minutes = ("0"+minutes).slice(-2);
+		seconds = ("0"+seconds).slice(-2);
+
+		var datetime_text = days+"일 "+hours+":"+minutes+":"+seconds;
+
+		$(".popup_timer."+id).children(".datetime").text(datetime_text);
+	}
+
+	timer = setInterval(show_remaining, 1000);
+}
+
+//countdown_timer("popup_timer179", "2021-12-31 10:18:00", "211230_add_serv_event_pop");
+</script>
+
+<!-- 팝업 프로모션 -->
+<div class="modal-pop promotion-pop" id="promotion-pop">
+	<div class="promotion-modal-dialog">
+		<div class="promotion-modal-inner">
+			<div class="promotion-img-wrap">
+				<div class="promotion-img-inner">
+					<div class="swiper-container promotion-container swiper-container-horizontal">
+						<ul class="swiper-wrapper" style="transition-duration: 0ms;">
+
+							<li id="globox_nfa_3pl_sub_popup" class="swiper-slide globox_nfa_3pl_sub_popup" style="background-color:; display: flex; align-items: center; justify-content: center;">
+								<img src="https://cdn.ezadmin.co.kr/images/banner/globox_nfa_3pl_sub_popup.jpg" style="max-width:100%; max-height:100%;" usemap="#label_globox_nfa_3pl_sub_popup_map">
+																								<map name="label_globox_nfa_3pl_sub_popup_map" style="z-index:999;">
+									<area shape="rect" alt="" coords="422,2,501,62" href="#" onclick="hide_main_popup();" onfocus="this.blur()" target="_self">
+									<area shape="rect" alt="" title="" coords="159,425,341,478" href="https://globox.co.kr/v2/globox_nfa_3pl_sub.html" target="new" onclick="click_popup_board(&quot;426&quot;, &quot;EZ06&quot;);">
+																	</map>
+														</li>
+									
+						</ul>
+					<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+					<div class="swiper-button-next" style="display: none;"></div>
+					<div class="swiper-button-prev" style="display: none;"></div>
+				</div>
+			</div>
+						<div class="promotion-footer">
+				<div class="promotion-btn">
+					<div class="form-inline">
+						<div class="form-control">
+							<label id="close-one-day" style="display: none">
+								<input type="checkbox" class="close-one-day">
+								<span>하루동안 보지않기</span>
+							</label>
+							<label id="close-three-day">
+								<input type="checkbox" class="close-three-day">
+								<span>3일동안 보지않기</span>
+							</label>
+						</div>
+					</div>
+					<a href="javascript:void(0);" class="margin-right-auto par-close">닫기</a>
+				</div>
+			</div>
+			<a href="#" class="page-close">팝업 전체 닫기</a>
+					</div>
+	</div>
+	<div class="dim"></div>
+</div>
+<!-- //팝업 프로모션 -->
+<!-- 팝업_필수 공지 -->
+<div class="modal-pop main-pop">
+	<div class="main-modal-dialog">
+		<div class="main-modal-inner">
+			<div class="main-modal-body">
+				<figure>
+					<img src="../img/temp/img_notice.png" alt="">
+				</figure>
+			</div>
+			<div class="main-modal-footer">
+				<p>잠깐! 필수 정보는 확인 하셨나요?</p>
+			</div>
+			<div class="promotion-footer">
+				<div class="promotion-btn">
+					<div class="form-inline">
+						<div class="form-control">
+							<label>
+								<input type="checkbox" class="custom-control-input">
+								<span>하루동안 보지않기</span>
+							</label>
+						</div>
+					</div>
+					<a href="javascript:void(0);" class="margin-right-auto">닫기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dim"></div>
+</div>
+<!-- //팝업_필수 공지 -->
+
+<div class="modal-pop reject-pop">
+	<div class="reject-modal-dialog">
+		<div class="reject-modal-inner">
+			<div class="reject-modal-body">
+				<figure>
+					<img src="/images/popup/251028_2026diary_reject_pop.jpg" alt="" usemap="#label_reject_map" style="z-index:999; border-radius: 8px;">
+					<map name="label_reject_map" style="z-index:999;">
+						<area shape="rect" alt="" coords="83,231,246,271" href="#" onclick="submit_2026diary_address(1);" onfocus="this.blur()" target="_self">
+						<area shape="rect" alt="" coords="255,230,417,271" href="#" onclick="reject_pop(false);" onfocus="this.blur()" target="_self">
+					</map>
+				</figure>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="js/rwdImageMaps_min.js"></script>
+<script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script><script charset="UTF-8" type="text/javascript" src="//t1.kakaocdn.net/postcode/api/core/260203/1770274162295/260203.js"></script>
+<script>
+
+function isTouchClickable() {
+	return ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+}
+var isTouchClickable = isTouchClickable();
+
+
+$(document).ready(function(){
+	$('img[usemap]').rwdImageMaps();
+});
+
+getCookieRemove();
+
+// jwsuh. 나중에는 특정 팝업id가 아닌 .modal-pop으로 적용
+if( $("#promotion-pop").length > 0 && !isTouchClickable )
+	$("#promotion-pop").addClass('active');
+
+//$("#promotion-pop").addClass('active');
+
+if( $(".promotion-container .swiper-slide").length > 1 )
+{
+	var swiper3 = new Swiper('.promotion-container', {
+		slidesPerView: 1,
+		loop: true,
+		navigation: {
+			nextEl: '#promotion-pop .swiper-button-next',
+			prevEl: '#promotion-pop .swiper-button-prev',
+		},
+		autoplay: {
+			delay: 3000
+		},
+	});
+
+	swiper3.on("slideChange", function() {
+		var currentSlide = swiper3.slides[swiper3.activeIndex];
+		
+		if ($(currentSlide).attr('id') === '250102_dc_end_pop3') {
+			$('#close-one-day').hide();
+			$('#close-three-day').show();
+		} else {
+			$('#close-one-day').show();
+			$('#close-three-day').hide();
+		}
+	});
+
+}
+else if( $(".promotion-container .swiper-slide").length == 1 )
+{
+	$(".promotion-pop .swiper-button-next,.promotion-pop .swiper-button-prev").hide();
+	var swiper3 = new Swiper('.promotion-container', {
+		slidesPerView: 1,
+	});
+}
+else
+{
+	$("#promotion-pop").hide();
+	$("#promotion-pop").removeClass('active');
+}
+
+
+$(".par-close").click(function(){
+
+	if( $(".close-one-day").is(":checked") )
+	{
+		var get_id = swiper3.slides[swiper3.activeIndex].getAttribute("id");
+		setCookie(get_id, 'Y', 1);
+		$(".close-one-day").prop('checked', false);
+	}
+	
+	if( $(".close-three-day").is(":checked") )
+	{
+		var get_id = swiper3.slides[swiper3.activeIndex].getAttribute("id");
+		setCookie(get_id, 'Y', 3);
+		$(".close-three-day").prop('checked', false);
+	}
+
+	swiper3.removeSlide(swiper3.activeIndex);
+
+	var $parent = $(this).closest('.modal-pop');
+	var left_slide = $parent.find(".swiper-slide").length;
+	if( !left_slide )
+		$parent.hide();
+	
+	var currentSlide = swiper3.slides[swiper3.activeIndex];
+		
+	if ($(currentSlide).attr('id') === '250102_dc_end_pop3') {
+		$('#close-one-day').hide();
+		$('#close-three-day').show();
+	} else {
+		$('#close-one-day').show();
+		$('#close-three-day').hide();
+	}
+});
+
+function hide_main_popup()
+{
+	var get_id = swiper3.slides[swiper3.activeIndex].getAttribute("id");
+	var $parent = $("#"+get_id).closest('.modal-pop');
+
+	if(get_id != "241119_ezprint_end_pop")
+	{
+		if( $(".close-one-day").is(":checked") )
+		{
+			var get_id = swiper3.slides[swiper3.activeIndex].getAttribute("id");
+			setCookie(get_id, 'Y', 1);
+			$(".close-one-day").prop('checked', false);
+		}
+		
+		if( $(".close-three-day").is(":checked") )
+		{
+			var get_id = swiper3.slides[swiper3.activeIndex].getAttribute("id");
+			setCookie(get_id, 'Y', 3);
+			$(".close-three-day").prop('checked', false);
+		}
+	}
+	
+//	swiper3.removeSlide(swiper3.activeIndex - 1);
+	swiper3.removeSlide(swiper3.realIndex);
+	swiper3.update();
+
+	var left_slide = $parent.find(".swiper-slide").length;
+	var left_id = $(swiper3.slides[0]).attr("id");
+	var left_one = true;
+	swiper3.slides.each( function(idx, item) {
+		if( left_id == $(item).attr("id") ) {
+			left_id = $(item).attr("id");
+		} else {
+			left_one = false;
+			return;
+		}
+	});
+
+	if( !left_slide )
+		$parent.hide();
+
+	if( left_one ) {
+		swiper3.autoplay.stop();
+		$(".swiper-button-next, .swiper-button-prev").hide();
+	}
+	
+	var currentSlide = swiper3.slides[swiper3.activeIndex];
+		
+	if ($(currentSlide).attr('id') === '250102_dc_end_pop3') {
+		$('#close-one-day').hide();
+		$('#close-three-day').show();
+	} else {
+		$('#close-one-day').show();
+		$('#close-three-day').hide();
+	}
+}
+
+function open_add_serv_landing(link, no)
+{
+	link = typeof link == "undefined" ? "" : link;
+	no = typeof no == "undefined" ? "" : no;
+
+	window.open("about:blank","add_serv_landing","width=600 height=900");
+	$("[name=add_serv_form]").submit();
+
+	count_popup_hit(link, no);
+}
+
+function open_add_serv_landing2(link, no)
+{
+	link = typeof link == "undefined" ? "" : link;
+	no = typeof no == "undefined" ? "" : no;
+
+	window.open("about:blank","add_serv_landing2","width=600 height=900");
+	$("[name=add_serv_form2]").submit();
+
+	count_popup_hit(link, no);
+}
+	
+function open_daum_zipcode()
+{                                       
+	new daum.Postcode({
+		oncomplete: function(data) {
+			
+			var fullAddr = ''; 
+			var extraAddr = ''; 
+			
+			if (data.userSelectedType === 'R') { 
+				fullAddr = data.roadAddress;
+				
+			} else { 
+				fullAddr = data.jibunAddress;
+			}
+			
+			if(data.userSelectedType === 'R'){
+				if(data.bname !== ''){
+					extraAddr += data.bname;
+				}
+				if(data.buildingName !== ''){
+					extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+				}
+				fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+			}
+			var zonecode = data.zonecode;
+			
+			$(".zipcode").val(zonecode); 
+			$("#corp_address").val(fullAddr);
+			$("#corp_address_detail").focus();
+			
+		}
+	}).open();      
+}
+
+function submit_diary_address(is_reject)
+{
+	if(is_reject == '0')
+	{
+		if( $(".swiper-slide-active #address").val().trim() == '' ) {
+			alert("주소를 입력해 주세요.");
+			return;
+		}
+		
+		if( $(".swiper-slide-active #address_detail").val().trim() == '' ) {
+			alert("상세주소를 입력해 주세요.");
+			return;
+		}
+		
+		if( $(".swiper-slide-active #phone").val().trim() == '' ) {
+			alert("연락처를 입력해 주세요.");
+			return;
+		}
+		
+		if ( confirm("입력하신 정보가 맞는지 재확인해 주시길 바랍니다.") == false )
+			return;
+	}
+	
+	$.post("ins_sys_event.php", {
+		action: "input_diary_address",
+		domain: "reto123",
+		writer: "아이돈워너셀",
+		login_id: "idws",
+		company: "주식회사 슈퍼맨로지스",
+		zipcode: $(".swiper-slide-active #zipcode").val(),
+		address: $(".swiper-slide-active #address").val(),
+		address_detail: $(".swiper-slide-active #address_detail").val(),
+		phone: $(".swiper-slide-active #phone").val(),
+		is_reject: is_reject
+	},
+				 function(data) {
+		var res = JSON.parse(data);
+		
+		if( res.error ) {
+			alert(res.err_msg);
+		}
+		
+		location.reload();
+	});
+}
+
+function submit_2026diary_address(is_reject)
+{
+    if(is_reject == '0')
+    {
+        if( $("#corp_address_detail").val().trim() == '' ) {
+            alert("상세주소를 입력해 주세요.");
+            return;
+        }
+
+		if( $("#phone").val().trim() == '' ) {
+			alert("수령자 연락처를 입력해 주세요.");
+			return;
+		}
+
+        if ( confirm("입력하신 정보가 맞는지 재확인해 주시길 바랍니다.") == false )
+            return;
+    }
+    
+    $.post("ins_sys_event.php", {
+        action: "input_diary_address",
+        domain: "reto123",
+        writer: "아이돈워너셀",
+        login_id: "idws",
+        company: "주식회사 슈퍼맨로지스",
+        address: $("#corp_address").val(),
+        address_detail: $("#corp_address_detail").val(),
+        phone: $("#phone").val(),
+        is_reject: is_reject
+    },
+
+    function(data) {
+        var res = JSON.parse(data);
+        
+        if( res.error ) {
+            alert(res.err_msg);
+        }
+       
+		if(is_reject == '0')
+			alert("신청이 완료되었습니다.");
+ 
+        location.reload();
+    });
+}
+
+function popup_close() {
+    $.unblockUI();
+}
+
+function reject_pop(is_pop)
+{
+	if(is_pop)
+		$(".reject-pop").addClass('active');
+	else
+		$(".reject-pop").removeClass('active');
+}
+
+$(function(){
+	$(document).delegate("#corp_address_detail", "change", function(event){
+		if ( event.handled !== true )
+		{
+			$(".corp_address_detail").val($(this).val());
+			event.handled = true;
+		}
+	});
+	
+	$(document).delegate("#phone", "change", function(event){
+		if ( event.handled !== true )
+		{
+			$(".phone").val($(this).val());
+			event.handled = true;
+		}
+	});
+});
+</script>
+<script>
+    // jquery.notice.js에서 호출함 2021.12.24 ysjang
+    function sellergo_notice_close()
+    {
+        $.post("function.htm", { 
+            template    : "sellergo", 
+            action      : "set_sellergo_alarm_notification_close"
+        },
+        function( response ){
+        });
+    }
+</script>
+<link rel="stylesheet" type="text/css" href="css/jquery.notice.css">
+<script type="text/javascript" src="/js/jquery.notice.js"></script>
+<script type="text/javascript" src="/js/jquery.notice3.js"></script>
+
+
+<style>
+.notice-item{
+	    background: #df0000;
+}
+.notice-item {
+	top: -85px;
+	right: -28px;
+	line-height:20px;
+	margin: 0px;
+}
+.notice-item p {
+	margin: 0px;
+}
+
+
+
+.notice-wrap {
+	border: transparent;
+	background : transparent;
+}
+
+.notice-wrap1 {
+	position: fixed;
+    bottom: 450px;
+    right: 950px;
+    width: 250px;
+    z-index: 9999;
+	border: transparent;
+    background: transparent;
+	font-size: 12px;
+    line-height: 29px;
+	height: 30px;
+    margin-top: -10px;
+    padding: 0 20px;
+	border-radius: 15px;
+}
+
+.notice-item1 {
+	top: -85px;
+    right: -28px;
+    line-height: 25px;
+    margin: auto;
+ 	background : #ffffff;
+	border-radius: 8px;
+    color: #ababab;
+    font-family: 'Noto Sans KR', 'notokr-R';
+	font-size: 20px;
+    display: block;
+    position: relative;
+	width : 450px;
+	height : 200px;
+	border: 1px solid;	
+	text-align: center;
+}
+
+.notice-item-close1 {
+    position: absolute;
+    font-family: Arial;
+    font-size: 20px !important;
+    font-weight: bold;
+    right: 8px;
+    top: -4px;
+    cursor: pointer;
+	color: white;
+	margin-top: 14px;
+    margin-right: 3px;
+}
+
+.notice-item1 p {
+    margin-top: 10px;
+	font-weight: 400;
+    line-height: 1.4;
+    color: #7d8693;
+	font-size: 15px;
+	padding: 10px;
+
+}
+
+.notice-item1.notice p {
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.notice-item1.notice div {
+	text-align : center;
+	font-size : 15px;
+}
+
+.notice-item1.notice span {
+    color :#474747;
+}
+
+.notice-item1.notice p i {
+	font-size: 2.7em;
+   	color : #FC494E;
+    margin-bottom : 10px;
+}
+
+.notice-item-header {
+    display: -webkit-flex;
+    height: 45px;
+    padding: 3px 0 0 11px;
+   	align-items: center;
+	border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #FC494E;
+	color: white;
+}
+
+.notice-item1.notice {
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+</style>
+
+<script language="javascript">
+
+  $(function() {
+
+    function set_stock_alarm_timeout()
+    {
+        setTimeout(function(){
+            get_main15_func_sub5();
+            set_stock_alarm_interval();
+        }, 1000 * 0 );
+    }
+    function set_stock_alarm_interval()
+    {
+        setInterval(function(){
+            get_main15_func_sub5();
+        }, 1000 * 60 * 0 );
+    }
+
+	function config_change_interval(lastUpdate)
+	{
+		config_change_notice(lastUpdate);		
+
+		setInterval(function(){
+			config_change_notice(lastUpdate);
+		}, 1000 * 60 * 2);
+	}
+
+	function config_change_notice(lastUpdate)
+	{
+		var str = "<i class='fa-regular fa-triangle-exclamation'></i><div><span>환경설정 변경( "+ lastUpdate + " )으로</span><br><span style='color:red; font-weight:bold;'>재로그인</span><span>이 필요합니다.</span></div>";
+		$(".notice-wrap1").html("");
+        $.noticeAdd1({ text : str, stay : true });
+	}
+
+	function add_notice(str)
+	{
+		$(".notice-wrap").html("");
+		$.noticeAdd({ text : str, stay : true });
+		$(".notice-item.notice a").css("color","yellow");
+	}
+
+	function get_main15_func_sub5_str()
+	{
+				var main_func = "main35_func.php";
+		
+		var notice_html = "";
+
+		$.ajax({
+			 url : main_func
+			,type :'post'
+			,async: false
+			,data: {
+				action   : "sub5",
+				timeFlag : Date()
+			}
+			,dataType : "json"
+			,success: function(obj){
+
+				var str = "재고알림";
+				//str += "총재고 : "+ obj.stock_all;
+				//str += "<br>금일입고 : "+ obj.stock_in;
+				//str += "<br>금일출고 : "+ obj.stock_out;
+				//str += "<br>금일배송 : "+ obj.stock_trans;
+				//str += "<br>악성재고 : "+ obj.stock_alarm3;
+				str += "<br>경고수량 : "+ obj.stock_alarm1+"";
+				str += "<br>위험수량 : "+ obj.stock_alarm2+"";
+
+				notice_html += str;
+			}
+		});
+
+		return notice_html;
+	}
+
+	function get_period_alarm_str()
+	{
+        var notice_html = "";
+
+        $.ajax({
+             url : 'main35_func.php'
+            ,type :'post'
+            ,async: false
+            ,data: {
+                 action   : "get_period_alarm_products"
+                ,timeFlag : Date()
+            }
+            ,dataType : "json"
+            ,success: function(obj){
+				if( obj > 0 ) {
+					 						notice_html = "<br>유통기한 임박상품 : <a href='template40.htm?template=I700&period_alarm_start=1&from=main'>" + obj + "</a>";
+									}
+            }
+        });
+
+        return notice_html;
+	}
+    
+    function get_main15_func_sub5()
+    {
+		var str = "";
+
+				
+		//console.log(str);
+
+		$(".notice-wrap").html("");
+		$.noticeAdd({ text : str, stay : true });
+		$(".notice-item.notice a").css("color","yellow");
+    }
+        
+    //셀러고 품절/판매 작업 실패 알림 2021.10.08 ysjang
+    ////////////////////////////////////////////////////////////////////////////////
+    function set_sellergo_alarm_timeout()
+    {
+        setTimeout(function(){
+            get_sellergo_sold_work_fail();
+            set_sellergo_alarm_interval();
+        }, 1000 * 600 );
+    }
+    function set_sellergo_alarm_interval()
+    {
+        setInterval(function(){
+            get_sellergo_sold_work_fail();
+        }, 1000 * 60 * 10 );
+    }
+    
+    function get_sellergo_sold_work_fail()
+    {
+        $.post("function.htm", { 
+            template    : "sellergo", 
+            action      : "get_sellergo_sold_work_history_fail"
+        },
+        function( response ){
+            var res = JSON.parse(response);
+            
+            if(res.cnt > 0 && res.is_closed != 1)
+            {
+                var str = "셀러고 실패 알림";
+                str += "<br>금일 실패 건: <a href='template35.htm?template=IG90&search_fail=1'><span>"+res.cnt+"</span></a>";
+                $.noticeAdd({ text : str, stay : false });
+                $(".notice-item.notice a").css("color","yellow");
+            }
+        });
+    }
+    ////////////////////////////////////////////////////////////////////////////////
+  });
+</script>
+				</div>
+				<!-- content -->
+							</div>
+			<!-- //container -->
+		</div>
+
+ 		
+
+<style>
+divaPiGRPcerDD#authcodeaPiGRPcerDD { 
+	width: 350px; 	
+    letter-spacing: -0.5px;
+	display: none;
+	z-index: 999999;
+}
+divaPiGRPcerDD#authcodeaPiGRPcerDD button{
+	border: none;
+} 
+div#authcode_headeraPiGRPcerDD {    
+    background: #495B73;
+    color:#FFFFFF;    
+    height: 50px;
+	padding: 0 15px;
+}
+div#authcode_headeraPiGRPcerDD div.titleaPiGRPcerDD{
+	font-size: 17px;
+	line-height: 50px;
+}
+div#authcode_bodyaPiGRPcerDD {
+    padding: 30px 20px 15px;
+}
+div#authcode_bodyaPiGRPcerDD div.noticeaPiGRPcerDD{
+	display: block;
+	margin-bottom: 15px;
+	font-size: 14px;
+	color: #333;
+}
+div#authcode_bodyaPiGRPcerDD .auth_img_wrapaPiGRPcerDD{
+	display: flex;
+	display: -ms-flex;
+	flex-grow: 1;
+	height: 67px;
+}
+div#authcode_bodyaPiGRPcerDD .auth_imgaPiGRPcerDD{
+	display: flex;
+	display: -ms-flex;
+	flex-grow: 1;
+	border: 1px solid #cbd4e2;
+}
+div#authcode_bodyaPiGRPcerDD .auth_imgaPiGRPcerDD > img{
+	width: 65px;
+}
+div#authcode_bodyaPiGRPcerDD .auth_img_wrapaPiGRPcerDD #btn_refreshaPiGRPcerDD{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #cbd4e2;
+	border-left: none;
+	background: #fff;
+    box-sizing: border-box !important;
+}
+div#authcode_bodyaPiGRPcerDD .auth_img_wrapaPiGRPcerDD #btn_refreshaPiGRPcerDD img{
+    vertical-align: middle;
+}
+div#authcode_bodyaPiGRPcerDD input[type="text"] {
+    padding: 10px;
+    margin-top: 10px;
+	width: calc(100% - 20px);
+	border: 1px solid #cbd4e2;
+    font-size: 20px;
+}
+div#authcode_bodyaPiGRPcerDD input[type="text"]::placeholder {
+	color: #cecece;
+}
+div#authcode_bodyaPiGRPcerDD div.incorrect_alretaPiGRPcerDD{
+	display: block;
+	color: #f00;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	padding-top: 10px;
+}
+div#authcode_footeraPiGRPcerDD #authcode_buttonaPiGRPcerDD {
+    background: #198CFF;
+    padding: 10px 30px;
+    border-radius: 25px;
+    display: inline-block;
+    vertical-align: middle;
+	font-size: 14px;
+}
+div#authcode_footeraPiGRPcerDD {
+    background: #F6F7F9;
+    color:#FFFFFF;    
+	text-align: center;
+	padding: 14px;
+}
+</style>
+
+<!-- 인증 -->
+<divapigrpcerdd id="authcodeaPiGRPcerDD" style="width: 350px;">
+	<div id="authcode_headeraPiGRPcerDD">
+		<div class="titleaPiGRPcerDD">보<apigrpcerdd style="display:none"></apigrpcerdd>안 코<apigrpcerdd style="display:none"></apigrpcerdd>드 입<apigrpcerdd style="display:none"></apigrpcerdd>력</div>
+	</div>
+	<div id="authcode_bodyaPiGRPcerDD">
+		<div class="noticeaPiGRPcerDD">정보통신망법(제4조~13조) 보안업무 규정에 따라 <br>이지어드민은 보안문자를 확인하고 있습니다.</div>
+		<div class="auth_img_wrapaPiGRPcerDD">
+			<div class="auth_imgaPiGRPcerDD">
+						</div>
+			<button type="button" id="btn_refreshaPiGRPcerDD">
+				<img src="images25/common/refresh.png">
+			</button>
+		</div>
+		<input id="inputAuthCodeaPiGRPcerDD" type="text" maxlength="4" placeholder="보안코드를 입력하세요." onkeyup="checkNumber(this);">
+		<div class="incorrect_alretaPiGRPcerDD"></div>
+	</div>
+	<div id="authcode_footeraPiGRPcerDD">
+		<button type="button" id="authcode_buttonaPiGRPcerDD">입력 완료</button>
+	</div>
+</divapigrpcerdd>
+
+
+<script>
+    var cnt = 0;
+    //if(typeof ismobile !== "undefined" )
+    {
+        //if(ismobile != "mobile") 
+        checkLastAuthCheck();
+    }
+    
+    
+    
+    function nvl(str, defaultStr){
+         
+        if(typeof str == "undefined" || str == null || str == "")
+            str = defaultStr ;
+         
+        return str ;
+    }
+
+	function checkNumber(e){
+		var numPattern = /([^0-9])/;
+		var numPattern = e.value.match(numPattern);
+		if(numPattern != null){
+			//alert("숫자만 입력해 주세요!");
+			e.value = "";
+			e.focus();
+			return false;
+		}
+
+	}
+
+    function showAuthCode()
+    {
+        getAuthCode();
+        
+        $('head').append('<script src=\'/js/blockui.js\'><\/script>');
+        $(".navbar").removeClass('navbar-fixed-top');
+        $("*").css("z-index","1").unbind();        
+        $("a").attr("href","#").attr("onclick","");        
+        $("#wrapper, #body_container").css("margin-top","0px");
+        
+        $("#btn_refreshaPiGRPcerDD").click(function(){ getAuthCode(); });
+        $("#authcode_buttonaPiGRPcerDD").click(function(){ checkAuthCode(); });
+        
+        $("#inputAuthCodeaPiGRPcerDD").keydown(function(key) {
+            if (key.keyCode == 13) {
+                checkAuthCode(); 
+            }
+        });
+
+
+        $.blockUI({
+            message: $('#authcodeaPiGRPcerDD'),
+            css: {
+                width		: '350px',
+                top			: '30%',
+                left		: '40%',
+    			'text-align': 'left',
+    			'border'	: 'none',
+    			'cursor'	: 'inherit'
+            }
+        });
+        $("script").remove();
+        $("*").addClass("blockUI blockOverlay blockMsg blockPage");
+        $("#inputAuthCodeaPiGRPcerDD").focus();
+        
+        //var MutationObserverCnt = 0;
+        //var target = $(".blockOverlay")[0];
+        //var config = { attributes: "style", childList: true, characterData: true };
+        //new MutationObserver(function(mutations) {
+        //        mutations.forEach(function(mutation) {
+        //            $("*").addClass("blockUI blockOverlay blockMsg blockPage");
+        //                                                    
+        //            MutationObserverCnt++;
+        //            
+        //            //if(MutationObserverCnt > 10) location.reload();
+        //    });
+        //}).observe(target, config);;
+    }
+
+
+    function checkAuthCode()
+    {   
+        if($("#inputAuthCodeaPiGRPcerDD").val().length == 4 )
+        {
+            $.ajax({
+                type:"POST",
+                url:"authcode_process.php",
+                data:{ "action": "checkAuthCode", "inputAuthCode" : $("#inputAuthCodeaPiGRPcerDD").val() } ,
+                success:function(res)
+                {
+                    var obj = JSON.parse(res);
+                    if(obj.error > 0 )
+                    {
+                        $(".incorrect_alretaPiGRPcerDD").text('* 보안코드가 다릅니다.');
+                        if(obj.error > 1 )
+                        {
+                            $(".incorrect_alretaPiGRPcerDD").text('* 입력횟수 초과로 보안문자가 갱신됩니다.');
+                            getAuthCode();
+                        }
+                        $("#inputAuthCodeaPiGRPcerDD").focus();
+                    }
+                    else
+                    {
+                        //$.unblockUI({message: $('#authcodeaPiGRPcerDD')});
+                        location.reload();
+                    }
+                    
+                },
+                error:function(e){
+                    console.log(e.responseText);
+                }
+            });
+        }
+        else
+        {
+            cnt++;
+            $(".incorrect_alretaPiGRPcerDD").text('* 보안코드가 다릅니다.');
+            $("#inputAuthCodeaPiGRPcerDD").focus();
+            
+            if(cnt >= 5)
+            {
+                $(".incorrect_alretaPiGRPcerDD").text('* 입력횟수 초과로 보안문자가 갱신됩니다.');
+                getAuthCode();
+                cnt = 0 ;
+            }
+        }
+        
+    }
+    function checkLastAuthCheck()
+    {
+        $.ajax({
+                type:"POST",
+                url:"authcode_process.php",
+                data:{ "action": "checkLastAuthCheck" } ,
+                success:function(res)
+                {
+                    var obj = JSON.parse(res);
+                    if( obj.showAuthCode > 0)
+                    {
+                        showAuthCode();
+                    } else {
+											}
+                    
+                },
+                error:function(e){
+                    console.log(e.responseText);
+                }
+            });
+    }
+
+    // 미입금 팝업 21.01.18 cwkim
+    // 5일 경과 - 30초 지연 / 7일 경과 - 1분 지연
+    function check_block()
+    {
+        var params = {};
+        params['domain']   = "reto123";
+        $.post("/check_block_process.php", params, function(data) {
+            var arr = eval("(" + data + ")");
+
+            var sec = 0;
+            var sec_str = "";
+
+            if(arr.is_login_stop == 0) {
+                if( ( arr.diff <= -1 && arr.diff >= -5 
+						&& 1 
+						&& !0 
+					)
+					||(arr.diff < -5 && arr.diff >= -7) 
+					|| ( arr.diff < -7 && arr.diff >= -10) 
+				) 
+				{
+                    if ( (arr.diff <= -1 && arr.diff >= -5 
+							&& 1 
+							&& !0						) 
+						|| (arr.diff < -5 && arr.diff >= -7) 
+					) 
+					{
+                        sec = 30;
+                        sec_str = sec +"초";
+                    } else if ( arr.diff < -7 ) {
+                        sec = 60;
+                        sec_str = "1분";
+                    }
+					else // 예외처리 추가
+					{
+                        sec = 60;
+                        sec_str = "1분";
+					}
+
+                    $.blockUI({
+                        message: $('#service_warning')
+                        ,css: {
+                             width: '506px'
+                            ,top: '23%'
+                            ,left: '35%'
+							,'z-index': '1102'	
+                         }
+						,overlayCSS:{'z-index': '1101'}
+                        ,timeout : sec * 1000
+                    });    
+                        
+                    $("#c_service_warning").click(function(){
+                        alert(sec_str + ' 후 자동으로 사라집니다.');
+                    });
+                }
+
+            } 
+        });    
+    }
+
+    function getAuthCode()
+    {
+        $.ajax({
+                type:"POST",
+                url:"authcode_process.php",
+                data:{ "action": "getAuthCode" } ,
+                success:function(res)
+                {
+                    $(".auth_imgaPiGRPcerDD").html("");
+                    obj = JSON.parse(res);
+                    if( obj.img.length > 0)
+                    {
+                        $.each( obj.img, function( key, val ) 
+                        {
+                            var img = "<img src=\"data:image/png;base64,"+val+"\" width='40px'>";
+                            $(".auth_imgaPiGRPcerDD").append(img);
+                        });
+                        $("#inputAuthCodeaPiGRPcerDD").focus();
+                    }
+                },
+                error:function(e){
+                    console.log(e.responseText);
+                }
+            });
+    }
+</script>
+
+</div></body></html>
