@@ -8,6 +8,7 @@ const HR_TABS = [
     { label: "직원 명부", href: "/hr/employees" },
     { label: "근태 조회", href: "/hr/attendance" },
     { label: "휴가 일정", href: "/hr/leaves" },
+    { label: "💰 급여·연차", href: "/hr/payroll" },
     { label: "공용 캘린더", href: "/hr/calendar" },
     { label: "업무 보드", href: "/hr/tasks" },
 ];
