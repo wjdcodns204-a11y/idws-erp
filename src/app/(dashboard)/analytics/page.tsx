@@ -1,37 +1,29 @@
 import { createSupabaseServer } from '@/lib/supabase';
-import { redirect } from 'next/navigation';
-import AnalyticsDashboardClient from './components/AnalyticsDashboardClient';
+import AnalyticsClient from './AnalyticsClient';
 
 export default async function AnalyticsPage() {
     const supabase = await createSupabaseServer();
-    const { data: { session } } = await supabase.auth.getSession();
-    if (!session) redirect('/');
 
-    const thisYear = new Date().getFullYear();
+    // 최근 6개월 데이터 미리 로드
+    const months: string[] = [];
+    for (let i = 5; i >= 0; i--) {
+        const d = new Date();
+        d.setMonth(d.getMonth() - i);
+        months.push(d.toISOString().slice(0, 7));
+    }
 
-    // 매출 목표 조회
-    const { data: goals } = await supabase
-        .from('sales_goals')
-        .select('*')
-        .eq('year', thisYear);
-
-    // 이번 달 & 작년 동월 매출 집계 (sales_rows API 호출로 처리)
-    const thisMonth = new Date().getMonth() + 1;
-    const lastYear = thisYear - 1;
+    const [{ data: revenues }, { data: expenses }, { data: csRequests }] = await Promise.all([
+        supabase.from('revenue_records').select('*').in('year_month', months),
+        supabase.from('expense_records').select('*').in('year_month', months),
+        supabase.from('cs_requests').select('platform, request_type, status, created_at').gte('created_at', new Date(Date.now() - 6 * 30 * 24 * 60 * 60 * 1000).toISOString()),
+    ]);
 
     return (
-        <div className="max-w-7xl mx-auto space-y-6">
-            <div>
-                <h1 className="text-2xl font-bold tracking-tight text-slate-800">매출 분석 대시보드</h1>
-                <p className="text-slate-500 text-sm mt-1">플랫폼별 매출 추세, 목표 달성률, 상품 랭킹을 한눈에 확인하세요.</p>
-            </div>
-
-            <AnalyticsDashboardClient
-                goals={goals || []}
-                thisYear={thisYear}
-                thisMonth={thisMonth}
-                lastYear={lastYear}
-            />
-        </div>
+        <AnalyticsClient
+            initialRevenues={revenues || []}
+            initialExpenses={expenses || []}
+            initialCsRequests={csRequests || []}
+            months={months}
+        />
     );
 }
