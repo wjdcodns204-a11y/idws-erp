@@ -44,6 +44,12 @@ export default async function SettingsPage() {
         .from('system_settings')
         .select('*');
 
+    // KPI 설정 로드
+    const { data: kpiData } = await supabase
+        .from('dashboard_kpi')
+        .select('monthly_goal, low_stock_threshold')
+        .maybeSingle();
+
     return (
         <div className="max-w-4xl mx-auto space-y-6">
             <div>
@@ -54,6 +60,7 @@ export default async function SettingsPage() {
                 platformFees={platformFees || []}
                 systemSettings={systemSettings || []}
                 isMaster={currentUser?.role === 'master'}
+                initialKpi={kpiData || { monthly_goal: 210000000, low_stock_threshold: 20 }}
             />
         </div>
     );

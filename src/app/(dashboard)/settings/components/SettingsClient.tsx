@@ -8,16 +8,38 @@ type SystemSetting = { key: string; value: string; description: string; };
 export default function SettingsClient({
     platformFees,
     systemSettings,
-    isMaster
+    isMaster,
+    initialKpi,
 }: {
     platformFees: PlatformFee[];
     systemSettings: SystemSetting[];
     isMaster: boolean;
+    initialKpi?: { monthly_goal: number; low_stock_threshold: number };
 }) {
     const [fees, setFees] = useState<PlatformFee[]>(platformFees);
     const [settings, setSettings] = useState<SystemSetting[]>(systemSettings);
     const [isSaving, setIsSaving] = useState(false);
     const [newPlatform, setNewPlatform] = useState({ platform_name: '', fee_pct: 0, color: '#6366f1' });
+
+    // KPI 설정 상태
+    const [monthlyGoal, setMonthlyGoal] = useState(initialKpi?.monthly_goal || 210000000);
+    const [lowStockThreshold, setLowStockThreshold] = useState(initialKpi?.low_stock_threshold || 20);
+    const [kpiSaving, setKpiSaving] = useState(false);
+    const [kpiSaved, setKpiSaved] = useState(false);
+
+    const handleSaveKpi = async () => {
+        setKpiSaving(true);
+        try {
+            const res = await fetch('/api/dashboard/kpi', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ monthly_goal: monthlyGoal, low_stock_threshold: lowStockThreshold }),
+            });
+            if (res.ok) { setKpiSaved(true); setTimeout(() => setKpiSaved(false), 3000); }
+            else alert('저장 실패. 다시 시도해주세요.');
+        } catch { alert('오류 발생'); }
+        finally { setKpiSaving(false); }
+    };
 
     const handleFeeChange = (id: string, field: keyof PlatformFee, value: string | number) => {
         setFees(prev => prev.map(f => f.id === id ? { ...f, [field]: value } : f));
@@ -76,6 +98,36 @@ export default function SettingsClient({
 
     return (
         <div className="space-y-8">
+            {/* ─── KPI 목표 설정 섹션 ─── */}
+            <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                <div className="px-6 py-5 border-b border-slate-100 flex justify-between items-center">
+                    <div>
+                        <h2 className="text-base font-bold text-slate-800">🎯 대시보드 KPI 목표</h2>
+                        <p className="text-sm text-slate-500 mt-0.5">메인 대시보드에 표시될 목표와 경고 기준을 설정합니다.</p>
+                    </div>
+                    <button onClick={handleSaveKpi} disabled={kpiSaving}
+                        className={`px-5 py-2 text-sm font-bold text-white rounded-lg shadow-sm transition-all active:scale-95 disabled:bg-slate-300 ${kpiSaved ? 'bg-emerald-500' : 'bg-indigo-600 hover:bg-indigo-700'}`}>
+                        {kpiSaving ? '저장 중...' : kpiSaved ? '✓ 저장됨' : 'KPI 저장'}
+                    </button>
+                </div>
+                <div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">월 매출 목표 (원)</label>
+                        <input type="number" value={monthlyGoal} onChange={e => setMonthlyGoal(Number(e.target.value))}
+                            placeholder="210000000" step={1000000}
+                            className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-sm font-mono outline-none focus:ring-2 focus:ring-indigo-500" />
+                        <p className="text-xs text-slate-400 mt-1">현재: {(monthlyGoal / 100000000).toFixed(1)}억원</p>
+                    </div>
+                    <div>
+                        <label className="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">재고 부족 기준 수량 (개)</label>
+                        <input type="number" value={lowStockThreshold} onChange={e => setLowStockThreshold(Number(e.target.value))}
+                            placeholder="20" min={1}
+                            className="w-full border border-slate-200 rounded-lg px-4 py-2.5 text-sm font-mono outline-none focus:ring-2 focus:ring-indigo-500" />
+                        <p className="text-xs text-slate-400 mt-1">이 수량 이하 상품을 대시보드에서 경고 표시</p>
+                    </div>
+                </div>
+            </div>
+
             {/* 플랫폼 수수료 섹션 */}
             <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
                 <div className="px-6 py-5 border-b border-slate-100 flex justify-between items-center">
