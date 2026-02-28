@@ -1,21 +1,5 @@
 // src/lib/prisma.ts
-// Prisma Client 싱글톤 — 개발 환경에서 핫 리로드 시 다중 인스턴스 방지
+// 이 프로젝트는 Supabase로 마이그레이션되었습니다.
+// 하위 호환성을 위해 빈 더미 파일로 유지합니다.
 
-import { PrismaClient } from '@prisma/client';
-
-const globalForPrisma = globalThis as unknown as {
-    prisma: PrismaClient | undefined;
-};
-
-export const prisma =
-    globalForPrisma.prisma ??
-    new PrismaClient({
-        log:
-            process.env.NODE_ENV === 'development'
-                ? ['query', 'error', 'warn']
-                : ['error'],
-    });
-
-if (process.env.NODE_ENV !== 'production') {
-    globalForPrisma.prisma = prisma;
-}
+export const prisma = null;
